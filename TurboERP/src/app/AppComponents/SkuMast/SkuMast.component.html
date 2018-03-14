@@ -1,0 +1,272 @@
+<div class="page-content-wrapper animated fadeInRight">
+    <div class="page-content" >
+      <div class="row wrapper border-bottom page-heading">
+        <div class="col-lg-12">
+          <h2> <a href="/SkuMast" routerLinkActive="active" style="cursor: context-menu;">SkuMast</a> <span style="font-size:14px">/<b>{{GetUrl}}</b></span></h2>
+          
+        </div>
+      </div>
+      
+    <div class="wrapper-content ">
+  <!-- Horizontal Form start -->
+  <div class="col-lg-12 top20 bottom20">
+       <div class="widgets-container">
+  <!-- <h5>All form elements </h5>
+  <hr> -->
+  <form #myForm="ngForm" class="form-horizontal">
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="form-group">
+          <label class="col-sm-3 control-label">Buyer</label>
+          <div class="col-sm-3">
+            <input placeholder="Code" class="form-control" type="text" [(ngModel)]=model.BUYER_CODE name="model.BUYER_CODE" #field="ngModel" required> 
+          </div>
+            <label class="col-sm-6 control-label" style="text-align:left">INTERNATIONAL CASA</label>
+          </div>
+          
+          <div class="form-group">
+          <label class="col-sm-3 control-label">Exporter Item Code</label>
+          <div class="col-sm-3">
+            <input placeholder="Exporter Item Code" class="form-control" [(ngModel)]=model.ITEM_CODE name="model.ITEM_CODE" type="text">
+          </div>
+          <label class="col-sm-6 control-label" style="text-align:left">ALMIRAH WITH IRON GRILL</label>
+          </div>
+          
+          <div class="form-group">
+                <label class="col-sm-3" style="text-align:right">Buyer SKU No.</label>
+                <div class="col-sm-9">
+                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">
+                </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-md-3" style="text-align:right">Itching Stamp</label>
+            <div class="col-md-9">
+              <input placeholder="Itching Stamp" class="form-control"  name="" type="text">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-md-3" style="text-align:right">Item Name</label>
+            <div class="col-md-9">
+              <input placeholder="Item Name1" class="form-control" [(ngModel)]=model.ITEM_NAME1 name="model.ITEM_NAME1" type="text">
+              <input placeholder="Item Name2" class="form-control" [(ngModel)]=model.ITEM_NAME2 name="model.ITEM_NAME2" type="text">
+              <input placeholder="Item Name3" class="form-control" [(ngModel)]=model.ITEM_NAME3 name="model.ITEM_NAME3" type="text">
+              <input placeholder="Item Name4" class="form-control" [(ngModel)]=model.ITEM_NAME4 name="model.ITEM_NAME4" type="text">
+            </div>
+          </div>
+
+        </div>
+        <!--For Image Only Start-->
+        <div class="col-md-3">
+          <div class="row">
+            <div class="col-md-6">
+              <table border="1">
+                <tr style="background:black; color:white; text-align:center ">
+                    <td>Item Photo</td>
+                </tr>
+                <tr>
+                  <td>
+                      <img src="assets\images\SkuMast\Almerah.png" alt="Item Image" style="height:100px; width:100px">
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="col-md-6">
+                <table border="1">
+                    <tr style="background:black; color:white; text-align:center ">
+                        <td>Item Label</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">
+                          <img src="assets\images\SkuMast\Almerah.png" alt="Item Image" style="height:70px; width:70px">
+                      </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; padding-left:10px; height:25px">
+                            <input id="upload" type="file" style="display:none" />
+                            <a href="" id="upload_link" title="Upload">
+                                <span class="fa fa-upload"></span>
+                            </a>&nbsp;
+                            
+                            <a href="" id="upload_link" title="Delete">
+                                <span class="fa fa-remove"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr style="background:black; color:white; text-align:center ">
+                        <td>Case Label</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">
+                          <img src="assets\images\SkuMast\Almerah.png" alt="Item Image" style="height:70px; width:70px">
+                      </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; padding-left:10px; height:25px">
+                            <input id="upload" type="file" style="display:none" />
+                            <a href="" id="upload_link" title="Upload">
+                                <span class="fa fa-upload"></span>
+                            </a>&nbsp;
+                            
+                            <a href="" id="upload_link" title="Delete">
+                                <span class="fa fa-remove"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr style="background:black; color:white; text-align:center ">
+                        <td>Brand Label</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">
+                          <img src="assets\images\SkuMast\Almerah.png" alt="Item Image" style="height:70px; width:70px">
+                      </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; padding-left:10px; height:25px">
+                            <input id="upload" type="file" style="display:none" />
+                            <a href="" id="upload_link" title="Upload">
+                                <span class="fa fa-upload" ></span>
+                            </a>&nbsp;
+                            
+                            <a href="" id="upload_link" title="Delete">
+                                <span class="fa fa-remove"></span>
+                            </a>
+                        </td>
+                    </tr>
+                  </table>
+            </div>
+
+          </div>
+        </div>
+        <!--For Image Only End-->
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label class="col-md-3" style="text-align:right">Exporter's Selling Price</label>
+            <div class="col-md-2">
+              <select id="fob" name="FOB" class="form-control">
+                <option value="1">FOB</option>
+                <option value="2">C&I</option>
+                <option value="3">EXW</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <input class="form-control" type="text">
+            </div>
+            <div class="col-md-3">
+              <input class="form-control" type="text">
+            </div>
+          </div>
+        
+          <div class="form-group">
+            <label class="col-md-3" style="text-align:right">Exchange Rate</label>
+            <div class="col-md-8">
+              <input placeholder="Exchange Rate" class="form-control"  name="" type="text">
+            </div>
+          </div>
+        
+          <div class="form-group">
+            <label class="col-md-3" style="text-align:right">Buyer's Selling Price</label>
+            <div class="col-md-4">
+              <input placeholder="Buyer's Selling Price" class="form-control"  name="" type="text">
+            </div>
+            <div class="col-md-4">
+              <input placeholder="Buyer's Selling Price" class="form-control"  name="" type="text">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-md-3" style="text-align:right">Date</label>
+            <div class="col-md-8">
+              <input placeholder="Date" class="form-control" [(ngModel)]=model.SALE_DATE name="model.SALE_DATE" type="text">
+            </div>
+          </div>
+          
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+            <div class="col-md-12">
+              <table>
+                <tr>
+                  <td>
+                      <label class="radio-inline">
+                        <input type="radio" value="cms" name="radio">
+                        Inch
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" value="cms" name="radio">
+                        Cms
+                      </label>
+                  </td>
+                  <td>
+                    Unit/Qty.
+                  </td>
+                  <td>
+                    Lenght
+                  </td>
+                  <td>
+                    Breadth
+                  </td>
+                  <td>
+                    Height
+                  </td>
+                  <td>
+                    CBM
+                  </td>
+                  <td>
+                    Weight(Kgs)
+                  </td>
+                  <td></td>
+                  <td>
+                    Buyer EAN/UPC/Barcode No.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Item
+                  </td>
+                  <td>
+                      <input class="form-control" type="text">
+                  </td>
+                  <td>
+                      <input class="form-control" type="text">
+                  </td>
+                  <td>
+                      <input class="form-control" type="text">
+                  </td>
+                  <td>
+                      <input class="form-control" type="text">
+                  </td>
+                  <td>
+                      <input class="form-control" type="text">
+                  </td>
+                </tr>
+
+              </table>
+            </div>
+          </div>
+          </div>
+          <div class="row">
+
+          <div class="form-group">
+          <div class="col-sm-4 col-sm-offset-2">
+                <button class="btn aqua" type="button" (click)="SaveSkuMast()">{{btnText}}</button>
+            <button class="btn btn-danger" routerLink="/SkuMast" routerLinkActive="active" type="button">Cancel</button>
+          
+          </div>
+          </div>
+  </div>
+
+  </form>
+  </div>
+  <!--Horizontal Form End -->
+  </div>
+  </div>
+  </div>
+  </div>

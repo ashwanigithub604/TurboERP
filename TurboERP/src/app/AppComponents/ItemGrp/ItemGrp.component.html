@@ -1,0 +1,64 @@
+<div class="page-content-wrapper animated fadeInRight">
+    <div class="page-content" >
+      <div class="row wrapper border-bottom page-heading">
+        <div class="col-lg-12">
+          <h2> <a href="/ItemGrp" routerLinkActive="active" style="cursor: context-menu;">ItemGrp</a> <span style="font-size:14px">/<b>{{GetUrl}}</b></span></h2>
+          <!-- <ol class="breadcrumb">
+          
+            <li class="active"> <strong>{{GetUrl}}</strong> </li>
+          </ol> -->
+        </div>
+      </div>
+      
+      <div class="wrapper-content ">
+        <div class="row">
+  <!-- Horizontal Form start -->
+  <div class="col-lg-12 top20 bottom20">
+       <div class="widgets-container">
+  <!-- <h5>All form elements </h5>
+  <hr> -->
+  <form #myForm="ngForm" class="form-horizontal">
+  <div class="form-group">
+  <label class="col-sm-2 control-label">Code*</label>
+  <div class="col-md-10">
+    <input placeholder="Code" class="form-control" type="text" [(ngModel)]=model.GRP_CODE name="model.GRP_CODE" #field="ngModel" required> 
+    
+  </div>
+  </div>
+  
+  <div class="form-group">
+  <label class="col-sm-2 control-label">Group Name</label>
+  <div class="col-md-10">
+    <input placeholder="Group Name" class="form-control" [(ngModel)]=model.GRP_NAME name="model.GRP_NAME" type="text">
+  </div>
+  </div>
+  
+  <div class="form-group">
+        <label class="col-sm-2" style="text-align:right">Prefix</label>
+        <div class="col-md-10">
+          <input placeholder="Prefix" class="form-control" [(ngModel)]=model.GRP_PREFIX name="model.GRP_PREFIX" type="text">
+        </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="col-sm-2" style="text-align:right">Photo</label>
+    <div class="col-md-10">
+      <input placeholder="Photo" class="form-control" [(ngModel)]=model.PICT_PATH name="model.PICT_PATH" type="text">
+    </div>
+  </div>
+  
+  <div class="form-group">
+  <div class="col-sm-4 col-sm-offset-2">
+        <button class="btn aqua" type="button" (click)="SaveItemGrp()">{{btnText}}</button>
+    <button class="btn btn-danger" routerLink="/ItemGrp" routerLinkActive="active" type="button">Cancel</button>
+  
+  </div>
+  </div>
+  </form>
+  </div>
+  </div>
+  <!--Horizontal Form End -->
+  </div>
+  </div>
+  </div>
+  </div>
