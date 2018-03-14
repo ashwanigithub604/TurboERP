@@ -1,0 +1,67 @@
+<div class="page-content-wrapper animated fadeInRight">
+    <div class="page-content" >
+      <div class="row wrapper border-bottom page-heading">
+        <div class="col-lg-12">
+          <h2> Form Stuff </h2>
+          <ol class="breadcrumb">
+            <li> <a href="index.html">Home</a> </li>
+            <li> <a>UI Features</a> </li>
+            <li class="active"> <strong> Form Stuff </strong> </li>
+          </ol>
+        </div>
+      </div>
+      
+      <div class="wrapper-content ">
+        <div class="row">
+<!-- Horizontal Form start -->
+<div class="col-lg-12 top20 bottom20">
+<div class="widgets-container">
+<h5>All form elements </h5>
+<hr>
+<form method="get" class="form-horizontal" >
+<!-- <div class="form-group">
+  <label class="col-sm-2 control-label">Company Name</label>
+  <div class="col-sm-1">
+    <input placeholder="Company Name" class="form-control" type="text" [(ngModel)]=model.COMPANY_PID name="model.COMPANY_PID">
+  </div>
+</div> -->
+
+<div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label text_aliment">Company Name</label>
+    <div class="col-sm-2">
+     <select class="form-control bottom15 manage_select" name="account" [(ngModel)]="selectedValue">
+        <option value="0">--Select--</option>
+        <option  [ngValue]="category.Pid" *ngFor="let category of CompModel ">{{category.value}}</option>  
+</select>
+    </div>
+  </div>
+<div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label text_aliment">Warehouse Name</label>
+  
+  <div class="col-xs-3">
+    <input placeholder="Warehouse Name" id="wa" class="form-control bottom15 manage_select" [(ngModel)]=model.WAREHOUSE_NAME name="model.WAREHOUSE_NAME" type="text">
+  </div>
+</div>
+
+<div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label text_aliment">Address</label>
+        <div class="col-xs-3">
+      <input placeholder="Address" id="Ad" class="form-control" [(ngModel)]=model.ADDRESS name="model.ADDRESS" type="text">
+    </div>
+  </div>
+
+<div class="form-group">
+  <div class="col-sm-4 col-sm-offset-2">
+        <button class="btn aqua" type="button" (click)="SaveWarehouse()">{{btnText}}</button>
+    <button class="btn btn-danger" routerLink="/Warehouse" routerLinkActive="active" type="button">Cancel</button>
+  
+  </div>
+</div>
+</form>
+</div>
+</div>
+  <!--Horizontal Form End -->
+  </div>
+  </div>
+  </div>
+  </div>
