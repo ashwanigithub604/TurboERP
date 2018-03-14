@@ -27,7 +27,6 @@ namespace TurboERP_DAL.Models
     
         public virtual DbSet<BankHdr> BankHdrs { get; set; }
         public virtual DbSet<BuyCat> BuyCats { get; set; }
-        public virtual DbSet<Buyer> Buyers { get; set; }
         public virtual DbSet<CartPly> CartPlies { get; set; }
         public virtual DbSet<Continen> Continens { get; set; }
         public virtual DbSet<Country> Countries { get; set; }
@@ -58,10 +57,15 @@ namespace TurboERP_DAL.Models
         public virtual DbSet<UnitMast> UnitMasts { get; set; }
         public virtual DbSet<Usergroup> Usergroups { get; set; }
         public virtual DbSet<UserGroupRight> UserGroupRights { get; set; }
-        public virtual DbSet<Usermast> Usermasts { get; set; }
         public virtual DbSet<UserRight> UserRights { get; set; }
         public virtual DbSet<VehiCat> VehiCats { get; set; }
         public virtual DbSet<VehiMast> VehiMasts { get; set; }
         public virtual DbSet<BankDtl> BankDtls { get; set; }
+        public virtual DbSet<SkuMast> SkuMasts { get; set; }
+        public virtual DbSet<Company> Companies { get; set; }
+        public virtual DbSet<Warehousemast> Warehousemasts { get; set; }
+        public virtual DbSet<Buyer_Contact> Buyer_Contact { get; set; }
+        public virtual DbSet<Usermast> Usermasts { get; set; }
+        public virtual DbSet<Buyer> Buyers { get; set; }
     }
 }

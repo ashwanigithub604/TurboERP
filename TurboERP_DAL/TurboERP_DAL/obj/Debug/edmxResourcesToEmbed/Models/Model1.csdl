@@ -24,140 +24,10 @@
     <Key>
       <PropertyRef Name="CAT_CODE" />
     </Key>
-    <Property Name="PID" Type="Int32" />
+    <Property Name="PID" Type="Int32" Nullable="false" />
     <Property Name="CATEGORY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="CAT_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="MARK_UP" Type="Decimal" Precision="6" Scale="2" />
-  </EntityType>
-  <EntityType Name="Buyer">
-    <Key>
-      <PropertyRef Name="Pid" />
-    </Key>
-    <Property Name="Pid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="SHORT_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="BUYER_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
-    <Property Name="TALLYID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="BUYER_NAME" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="SHORT_NAME" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="ADD1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="ADD2" Type="String" MaxLength="46" FixedLength="false" Unicode="false" />
-    <Property Name="ADD3" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="ADD4" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="ADD5" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="COUN_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
-    <Property Name="CONT_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
-    <Property Name="CURR_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
-    <Property Name="BANK_ADD1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="BANK_ADD2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="BANK_ADD3" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="BANK_ADD4" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="PORT_DISC" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
-    <Property Name="FIN_DEST" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
-    <Property Name="NOTIFY1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="NOTIFY2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="NOTIFY3" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="NOTIFY4" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="NOTIFY5" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="NOTIFY6" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="NOTIFY7" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="NOTIFY8" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="NOTIFY9" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="NOTIFY10" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="PHONE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="MOBILE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="EMAIL" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
-    <Property Name="TELEX" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="FAX" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="AGNT_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
-    <Property Name="TYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-    <Property Name="CMSN" Type="Decimal" Precision="5" Scale="2" />
-    <Property Name="CNT_PRSN" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="PAY_TERM1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="PAY_TERM2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="PAY_TERM3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="PAY_TERM4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="PAY_TERM5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="PAY_TERM6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="PAY_TERM7" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="PAY_TERM8" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="RMK1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="RMK2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="RMK3" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="RMK4" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="OPEN_BAL" Type="Decimal" Precision="12" Scale="2" />
-    <Property Name="ST_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
-    <Property Name="ST_NO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
-    <Property Name="DEAL_ITM" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-    <Property Name="VISITOR" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="M0411" Type="Boolean" />
-    <Property Name="VISIT_ADD1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="VISIT_ADD2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="VISIT_ADD3" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="RMK5" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="BANK_ACNO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-    <Property Name="SWIFT_ACNO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-    <Property Name="RELA_SINCE" Type="DateTime" Precision="3" />
-    <Property Name="SOURCE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
-    <Property Name="CATEGORY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="ADD_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="CAT_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
-    <Property Name="EDIT_DT" Type="DateTime" Precision="3" />
-    <Property Name="ENTRY_DT" Type="DateTime" Precision="3" />
-    <Property Name="WEB_ADDR" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
-    <Property Name="PICTPATH1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="PICTPATH2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="PICTPATH3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="PICTPATH4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="PICTPATH5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="PICTDESC1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="PICTDESC2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="PICTDESC3" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="PICTDESC4" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="PICTDESC5" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="BANKCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
-    <Property Name="MER_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
-    <Property Name="DESP_CODE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-    <Property Name="FREEZE" Type="Boolean" />
-    <Property Name="DISCOUNT" Type="Decimal" Precision="10" Scale="3" />
-    <Property Name="FREIGHT" Type="Decimal" Precision="10" Scale="3" />
-    <Property Name="INSURANCE" Type="Decimal" Precision="10" Scale="3" />
-    <Property Name="REMARKS1" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="REMARKS2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="REMARKS3" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="REMARKS4" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="REMARKS5" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="REMARKS6" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="REMARKS7" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="REMARKS8" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="REMARKS9" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="REMARKS10" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="USER_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="PRE_CARY" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="VESSEL" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="RCT_PRCRG" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="PART_LDING" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="PAYTERMCD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="VATRATE" Type="Decimal" Precision="5" Scale="2" />
-    <Property Name="PANNO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="TINNO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="ATT_FILE1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="ATT_FILE2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="ATT_FILE3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="ATT_FILE4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="ATT_FILE5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="BUY_FWRD" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
-    <Property Name="LSELECTED" Type="Boolean" />
-    <Property Name="LLSTSELD" Type="Boolean" />
-    <Property Name="CITY_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
-    <Property Name="OTHER_REF" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-    <Property Name="CLIENT" Type="Decimal" Precision="2" Scale="1" />
-    <Property Name="PICT_PATH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="STATE_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
-    <Property Name="GSTPRIFIX" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="GSTIN_CAT" Type="Boolean" />
-    <Property Name="GSTIN_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-    <Property Name="GST_REG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="CartPly">
     <Key>
@@ -262,6 +132,10 @@
     <Property Name="PID" Type="Int32" />
     <Property Name="CODE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="SOURCE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="Fin_Mast">
     <Key>
@@ -713,47 +587,6 @@
     <Property Name="Assign" Type="Boolean" />
     <Property Name="SubMenu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityType Name="Usermast">
-    <Key>
-      <PropertyRef Name="Pid" />
-    </Key>
-    <Property Name="Pid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Code" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-    <Property Name="Name" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
-    <Property Name="Short_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="Login_Name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="Password" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
-    <Property Name="Add_1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Add_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Add_3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Add_4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Email" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="Active" Type="Boolean" />
-    <Property Name="Ac_Expire" Type="Boolean" />
-    <Property Name="Ac_Exp_Dt" Type="DateTime" Precision="3" />
-    <Property Name="Qpid" Type="Int32" />
-    <Property Name="Answer" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="Reset_Pass" Type="Boolean" />
-    <Property Name="Reset_Pass_Dt" Type="DateTime" Precision="3" />
-    <Property Name="Photo_Attach" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Name="Ug_Pid" Type="Int32" />
-    <Property Name="Circle_Pid" Type="Int32" />
-    <Property Name="Input_By" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-    <Property Name="Input_Dt" Type="DateTime" Precision="3" />
-    <Property Name="Modify_By" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-    <Property Name="Modify_Dt" Type="DateTime" Precision="3" />
-    <Property Name="User_Type" Type="Int32" />
-    <Property Name="STATE_PID" Type="Int32" />
-    <Property Name="PIN_PID" Type="Int32" />
-    <Property Name="City_Pid" Type="Int32" />
-    <Property Name="Pswd_ActiveDate" Type="DateTime" Precision="3" />
-    <Property Name="Frgt_Pass_Chk" Type="Boolean" />
-    <Property Name="Login_Date" Type="DateTime" Precision="3" />
-    <Property Name="Contact_No" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="Shiva_Login" Type="Boolean" />
-    <Property Name="Lob_Pid" Type="Int32" />
-    <Property Name="Lob_Id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-  </EntityType>
   <EntityType Name="UserRight">
     <Key>
       <PropertyRef Name="PID" />
@@ -972,7 +805,6 @@
   <EntityContainer Name="TurboEMSEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="BankHdrs" EntityType="Self.BankHdr" />
     <EntitySet Name="BuyCats" EntityType="Self.BuyCat" />
-    <EntitySet Name="Buyers" EntityType="Self.Buyer" />
     <EntitySet Name="CartPlies" EntityType="Self.CartPly" />
     <EntitySet Name="Continens" EntityType="Self.Continen" />
     <EntitySet Name="Countries" EntityType="Self.Country" />
@@ -1003,7 +835,6 @@
     <EntitySet Name="UnitMasts" EntityType="Self.UnitMast" />
     <EntitySet Name="Usergroups" EntityType="Self.Usergroup" />
     <EntitySet Name="UserGroupRights" EntityType="Self.UserGroupRight" />
-    <EntitySet Name="Usermasts" EntityType="Self.Usermast" />
     <EntitySet Name="UserRights" EntityType="Self.UserRight" />
     <EntitySet Name="VehiCats" EntityType="Self.VehiCat" />
     <EntitySet Name="VehiMasts" EntityType="Self.VehiMast" />
@@ -1060,5 +891,417 @@
       <End Role="VehiCat" EntitySet="VehiCats" />
       <End Role="VehiMast" EntitySet="VehiMasts" />
     </AssociationSet>
+    <EntitySet Name="SkuMasts" EntityType="TurboEMSModel.SkuMast" />
+    <EntitySet Name="Companies" EntityType="TurboEMSModel.Company" />
+    <EntitySet Name="Warehousemasts" EntityType="TurboEMSModel.Warehousemast" />
+    <EntitySet Name="Buyer_Contact" EntityType="TurboEMSModel.Buyer_Contact" />
+    <AssociationSet Name="FK__Warehouse__COMPA__7DCDAAA2" Association="TurboEMSModel.FK__Warehouse__COMPA__7DCDAAA2">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="Warehousemast" EntitySet="Warehousemasts" />
+    </AssociationSet>
+    <EntitySet Name="Usermasts" EntityType="TurboEMSModel.Usermast" />
+    <EntitySet Name="Buyers" EntityType="TurboEMSModel.Buyer" />
   </EntityContainer>
+  <EntityType Name="SkuMast">
+    <Key>
+      <PropertyRef Name="PID" />
+      <PropertyRef Name="ITEM_CODE" />
+      <PropertyRef Name="BUYER_CODE" />
+      <PropertyRef Name="SKU_NO" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BUY_VND" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_CODE" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="BUYER_CODE" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="SKU_NO" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ITCHSTMP" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_NAME1" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_NAME2" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_NAME3" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_NAME4" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="CNFTYP" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CURR" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="RATE" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="FOB" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="EXC_RATE" Type="Decimal" Precision="6" Scale="2" />
+    <Property Name="SALE_RATE" Type="Decimal" Precision="12" Scale="3" />
+    <Property Name="SALE_CURR" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="SALE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="INCH_CMS" Type="Boolean" />
+    <Property Name="UNIT" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ITM_LENGTH" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="ITM_BRDTH" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="ITM_HEIGHT" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="NET_WT" Type="Decimal" Precision="8" Scale="3" />
+    <Property Name="EAN_NO" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="IN_CRTNPCS" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="IN_CRTNLEN" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="IN_CRTNBRD" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="IN_CRTNHT" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="INCRNET_WT" Type="Decimal" Precision="8" Scale="3" />
+    <Property Name="INRCRT_CBM" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="IEAN_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PRCRTN_QTY" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="CRTNLENGTH" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="CRTNBRDTH" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="CRTNHEIGHT" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="CRTN_CBM" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="MCNET_WT" Type="Decimal" Precision="8" Scale="3" />
+    <Property Name="MCGROSWT" Type="Decimal" Precision="8" Scale="3" />
+    <Property Name="MEAN_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SIZE_CODE" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+    <Property Name="FINCODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TARRIF" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PACK_INS" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="LBL_INS" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="OTH_INS" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="VND_DTL1" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="VND_DTL2" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ITMLBLPATH" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="CASLBLPATH" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="BRNLBLPATH" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COMP_ADD1" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
+    <Property Name="COMP_ADD2" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
+    <Property Name="COMP_ADD3" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
+    <Property Name="COMP_ADD4" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
+    <Property Name="COMP_ADD5" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="FAX_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="E_MAIL" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="WEBSITE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SWIFT_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_SIGN" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="BANK_NAME" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BANK_ADD1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BANK_ADD2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BANK_ADD3" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BANK_ADD4" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BANK_TELEX" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DESG" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DIRECTOR" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="RES_ADD1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RES_ADD2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="OFF_ADD1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="OFF_ADD2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="IE_CODE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="RBI_CODE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="BANK_N1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BANK_N2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ACCOUNT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LDGR_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="EXP_REF" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="OTH_REF" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOC_BANK_N" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="LOC_BANKA1" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="LOC_B_ACCN" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="LOC_B_LDGR" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PRO_NO" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="PKL_NO" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="INV_NO" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="PO_NO" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="RPO_NO" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="PRO_PREFIX" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PKL_PREFIX" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PO_PREFIX" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="LOGO" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="DT_ESTB" Type="DateTime" Precision="3" />
+    <Property Name="IEC_ISSDT" Type="DateTime" Precision="3" />
+    <Property Name="IEC_ISSAUT" Type="String" MaxLength="90" FixedLength="false" Unicode="false" />
+    <Property Name="IEC_BRANCH" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="EXP_TYPE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="EXP_TYPE1" Type="Boolean" />
+    <Property Name="EXP_TYPE2" Type="Boolean" />
+    <Property Name="EXP_TYPE3" Type="Boolean" />
+    <Property Name="PAN_NO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PAN_ISSDT" Type="DateTime" Precision="3" />
+    <Property Name="PAN_AUTH" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="SSI_NO_DT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SSI_AUTH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EHTH_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EHTH_DT" Type="DateTime" Precision="3" />
+    <Property Name="EHTH_UPTO" Type="DateTime" Precision="3" />
+    <Property Name="EXP_NATURE" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="EXP_NATUR1" Type="Boolean" />
+    <Property Name="EXP_NATUR2" Type="Boolean" />
+    <Property Name="EXP_NATUR3" Type="Boolean" />
+    <Property Name="EXP_NATUR4" Type="Boolean" />
+    <Property Name="EXP_NATUR5" Type="Boolean" />
+    <Property Name="BK_NAME" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BK_ADD" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ACNT_TYPE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="BK_ACNO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TOT_SALE" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="DESIGNAT" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ANX1APLACE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="DFNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="DRESI_ADD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="DEMAIL" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="DPHONE" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="PLACE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CONT_PER" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="QUOTPREFIX" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="CACTIVE" Type="Boolean" />
+    <Property Name="SIGN_PATH" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="PISIGN" Type="Boolean" />
+    <Property Name="QUOTSTFR" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="QUOTSTTO" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="PLINE_PATH" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="FPICT_PATH" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ABT_PGTXT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="HOME_PGTXT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="WEB_ADD" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BANK_ACC" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="INITQUOTNO" Type="Decimal" Precision="7" Scale="0" />
+    <Property Name="LSPREFIX" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RSPREFIX" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="POHEAD1" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="POHEAD2" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="POHEAD3" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="POHEAD4" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="GST_ST_CD" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="GSTIN_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="GSTPRIFIX" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="GST_DEC1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GST_DEC2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GST_DEC3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GST_DEC4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GST_DEC5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GST_DEC6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GST_NDICL" Type="Int32" />
+    <Property Name="OTH_REF1" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="CIN_NUMBER" Type="String" MaxLength="21" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Warehousemasts" Relationship="TurboEMSModel.FK__Warehouse__COMPA__7DCDAAA2" FromRole="Company" ToRole="Warehousemast" />
+  </EntityType>
+  <EntityType Name="Warehousemast">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COMPANY_PID" Type="Int32" />
+    <Property Name="WAREHOUSE_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="ADD_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DT" Type="DateTime" Precision="3" />
+    <Property Name="ENTRY_DT" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Company" Relationship="TurboEMSModel.FK__Warehouse__COMPA__7DCDAAA2" FromRole="Warehousemast" ToRole="Company" />
+  </EntityType>
+  <EntityType Name="Buyer_Contact">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BUYER_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CONTACT_PERSON" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DESIGNATION" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DEPARTMENT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MOBILE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="DateTime" Precision="3" />
+    <Property Name="M_ANNIVERSARY" Type="DateTime" Precision="3" />
+    <Property Name="REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="FK__Warehouse__COMPA__7DCDAAA2">
+    <End Type="TurboEMSModel.Company" Role="Company" Multiplicity="0..1" />
+    <End Type="TurboEMSModel.Warehousemast" Role="Warehousemast" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="PID" />
+      </Principal>
+      <Dependent Role="Warehousemast">
+        <PropertyRef Name="COMPANY_PID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Usermast">
+    <Key>
+      <PropertyRef Name="Pid" />
+    </Key>
+    <Property Name="Pid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="Short_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Login_Name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="Add_1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Add_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Add_3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Add_4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="Ac_Expire" Type="Boolean" />
+    <Property Name="Ac_Exp_Dt" Type="DateTime" Precision="3" />
+    <Property Name="Qpid" Type="Int32" />
+    <Property Name="Answer" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Reset_Pass" Type="Boolean" />
+    <Property Name="Reset_Pass_Dt" Type="DateTime" Precision="3" />
+    <Property Name="Photo_Attach" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Ug_Pid" Type="Int32" />
+    <Property Name="Circle_Pid" Type="Int32" />
+    <Property Name="Input_By" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Input_Dt" Type="DateTime" Precision="3" />
+    <Property Name="Modify_By" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Modify_Dt" Type="DateTime" Precision="3" />
+    <Property Name="User_Type" Type="Int32" />
+    <Property Name="STATE_PID" Type="Int32" />
+    <Property Name="PIN_PID" Type="Int32" />
+    <Property Name="City_Pid" Type="Int32" />
+    <Property Name="Pswd_ActiveDate" Type="DateTime" Precision="3" />
+    <Property Name="Frgt_Pass_Chk" Type="Boolean" />
+    <Property Name="Login_Date" Type="DateTime" Precision="3" />
+    <Property Name="Contact_No" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Shiva_Login" Type="Boolean" />
+    <Property Name="Lob_Pid" Type="Int32" />
+    <Property Name="DOB" Type="DateTime" Precision="3" />
+    <Property Name="M_ANNIVERSARY" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Buyer">
+    <Key>
+      <PropertyRef Name="Pid" />
+    </Key>
+    <Property Name="Pid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SHORT_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BUYER_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="TALLYID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BUYER_NAME" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="SHORT_NAME" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ADD1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ADD2" Type="String" MaxLength="46" FixedLength="false" Unicode="false" />
+    <Property Name="ADD3" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ADD4" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ADD5" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="COUN_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CONT_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CURR_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="BANK_ADD1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BANK_ADD2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BANK_ADD3" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BANK_ADD4" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="PORT_DISC" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="FIN_DEST" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY3" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY4" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY5" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY6" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY7" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY8" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY9" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY10" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MOBILE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="TELEX" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FAX" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="AGNT_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="TYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CMSN" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="CNT_PRSN" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PAY_TERM1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAY_TERM2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAY_TERM3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAY_TERM4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAY_TERM5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAY_TERM6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAY_TERM7" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAY_TERM8" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RMK1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="RMK2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="RMK3" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="RMK4" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="OPEN_BAL" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="ST_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ST_NO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DEAL_ITM" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="VISITOR" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="M0411" Type="Boolean" />
+    <Property Name="VISIT_ADD1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="VISIT_ADD2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="VISIT_ADD3" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RMK5" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BANK_ACNO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="SWIFT_ACNO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="RELA_SINCE" Type="DateTime" Precision="3" />
+    <Property Name="SOURCE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CATEGORY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CAT_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="WEB_ADDR" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="PICTPATH1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PICTPATH2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PICTPATH3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PICTPATH4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PICTPATH5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PICTDESC1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PICTDESC2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PICTDESC3" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PICTDESC4" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PICTDESC5" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="BANKCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MER_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="DESP_CODE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="FREEZE" Type="Boolean" />
+    <Property Name="DISCOUNT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="FREIGHT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="INSURANCE" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="REMARKS1" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS3" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS4" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS5" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS6" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS7" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS8" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS9" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS10" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="USER_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="PRE_CARY" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="VESSEL" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="RCT_PRCRG" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PART_LDING" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PAYTERMCD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="VATRATE" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="PANNO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="TINNO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ATT_FILE1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ATT_FILE2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ATT_FILE3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ATT_FILE4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ATT_FILE5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BUY_FWRD" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="LSELECTED" Type="Boolean" />
+    <Property Name="LLSTSELD" Type="Boolean" />
+    <Property Name="CITY_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="OTHER_REF" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="CLIENT" Type="Decimal" Precision="2" Scale="1" />
+    <Property Name="PICT_PATH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATE_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="GSTPRIFIX" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="GSTIN_CAT" Type="Boolean" />
+    <Property Name="GSTIN_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="GST_REG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
 </Schema>

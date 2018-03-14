@@ -49,6 +49,7 @@ namespace TurboERP_DAL.Models
         public string Contact_No { get; set; }
         public Nullable<bool> Shiva_Login { get; set; }
         public Nullable<int> Lob_Pid { get; set; }
-        public string Lob_Id { get; set; }
+        public Nullable<System.DateTime> DOB { get; set; }
+        public Nullable<System.DateTime> M_ANNIVERSARY { get; set; }
     }
 }

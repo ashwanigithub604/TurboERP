@@ -14,7 +14,7 @@ namespace TurboERP_DAL.Models
     
     public partial class BuyCat
     {
-        public Nullable<int> PID { get; set; }
+        public int PID { get; set; }
         public string CATEGORY { get; set; }
         public string CAT_CODE { get; set; }
         public Nullable<decimal> MARK_UP { get; set; }

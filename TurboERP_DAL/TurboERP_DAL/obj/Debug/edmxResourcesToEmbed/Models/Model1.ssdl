@@ -37,7 +37,7 @@ warning 6002: The table/view 'TurboEMS.dbo.BankDtl' does not have a primary key 
     <Key>
       <PropertyRef Name="CAT_CODE" />
     </Key>
-    <Property Name="PID" Type="int" />
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CATEGORY" Type="varchar" MaxLength="20" />
     <Property Name="CAT_CODE" Type="varchar" MaxLength="2" Nullable="false" />
     <Property Name="MARK_UP" Type="numeric" Precision="6" Scale="2" />
@@ -112,11 +112,7 @@ warning 6002: The table/view 'TurboEMS.dbo.BankDtl' does not have a primary key 
     <Property Name="RELA_SINCE" Type="datetime" />
     <Property Name="SOURCE" Type="varchar" MaxLength="25" />
     <Property Name="CATEGORY" Type="varchar" MaxLength="20" />
-    <Property Name="ADD_BY" Type="varchar" MaxLength="3" />
-    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
     <Property Name="CAT_CODE" Type="varchar" MaxLength="2" />
-    <Property Name="EDIT_DT" Type="datetime" />
-    <Property Name="ENTRY_DT" Type="datetime" />
     <Property Name="WEB_ADDR" Type="varchar" MaxLength="254" />
     <Property Name="PICTPATH1" Type="varchar" MaxLength="100" />
     <Property Name="PICTPATH2" Type="varchar" MaxLength="100" />
@@ -171,6 +167,32 @@ warning 6002: The table/view 'TurboEMS.dbo.BankDtl' does not have a primary key 
     <Property Name="GSTIN_CAT" Type="bit" />
     <Property Name="GSTIN_NO" Type="varchar" MaxLength="15" />
     <Property Name="GST_REG" Type="varchar" MaxLength="1" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="10" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="10" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TurboEMS.dbo.Buyer_Contact' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Buyer_Contact">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BUYER_CODE" Type="varchar" MaxLength="4" />
+    <Property Name="CONTACT PERSON" Type="varchar" MaxLength="30" />
+    <Property Name="DESIGNATION" Type="varchar" MaxLength="30" />
+    <Property Name="DEPARTMENT" Type="varchar" MaxLength="20" />
+    <Property Name="PHONE" Type="varchar" MaxLength="10" />
+    <Property Name="MOBILE" Type="varchar" MaxLength="10" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="60" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="M_ANNIVERSARY" Type="datetime" />
+    <Property Name="REMARKS" Type="varchar(max)" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="10" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="10" />
+    <Property Name="EDIT_DATE" Type="datetime" />
   </EntityType>
   <EntityType Name="CartPly">
     <Key>
@@ -188,6 +210,125 @@ warning 6002: The table/view 'TurboEMS.dbo.BankDtl' does not have a primary key 
     <Property Name="INPUT_DATE" Type="datetime" />
     <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
     <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="varchar" MaxLength="2" />
+    <Property Name="COMPANY" Type="varchar" MaxLength="50" />
+    <Property Name="COMP_ADD1" Type="varchar" MaxLength="55" />
+    <Property Name="COMP_ADD2" Type="varchar" MaxLength="55" />
+    <Property Name="COMP_ADD3" Type="varchar" MaxLength="55" />
+    <Property Name="COMP_ADD4" Type="varchar" MaxLength="55" />
+    <Property Name="COMP_ADD5" Type="varchar" MaxLength="55" />
+    <Property Name="PHONE_NO" Type="varchar" MaxLength="30" />
+    <Property Name="FAX_NO" Type="varchar" MaxLength="30" />
+    <Property Name="E_MAIL" Type="varchar" MaxLength="35" />
+    <Property Name="WEBSITE" Type="varchar" MaxLength="30" />
+    <Property Name="SWIFT_NO" Type="varchar" MaxLength="30" />
+    <Property Name="AUTH_SIGN" Type="varchar" MaxLength="40" />
+    <Property Name="BANK_NAME" Type="varchar" MaxLength="45" />
+    <Property Name="BANK_ADD1" Type="varchar" MaxLength="45" />
+    <Property Name="BANK_ADD2" Type="varchar" MaxLength="45" />
+    <Property Name="BANK_ADD3" Type="varchar" MaxLength="45" />
+    <Property Name="BANK_ADD4" Type="varchar" MaxLength="45" />
+    <Property Name="BANK_TELEX" Type="varchar" MaxLength="30" />
+    <Property Name="DESG" Type="varchar" MaxLength="20" />
+    <Property Name="DIRECTOR" Type="varchar" MaxLength="30" />
+    <Property Name="RES_ADD1" Type="varchar" MaxLength="45" />
+    <Property Name="RES_ADD2" Type="varchar" MaxLength="45" />
+    <Property Name="OFF_ADD1" Type="varchar" MaxLength="45" />
+    <Property Name="OFF_ADD2" Type="varchar" MaxLength="45" />
+    <Property Name="IE_CODE" Type="varchar" MaxLength="30" />
+    <Property Name="RBI_CODE" Type="varchar" MaxLength="30" />
+    <Property Name="BANK_N1" Type="varchar" MaxLength="45" />
+    <Property Name="BANK_N2" Type="varchar" MaxLength="45" />
+    <Property Name="ACCOUNT" Type="varchar" MaxLength="30" />
+    <Property Name="LDGR_NO" Type="varchar" MaxLength="30" />
+    <Property Name="EXP_REF" Type="varchar" MaxLength="30" />
+    <Property Name="OTH_REF" Type="varchar" MaxLength="50" />
+    <Property Name="LOC_BANK_N" Type="varchar" MaxLength="45" />
+    <Property Name="LOC_BANKA1" Type="varchar" MaxLength="40" />
+    <Property Name="LOC_B_ACCN" Type="varchar" MaxLength="40" />
+    <Property Name="LOC_B_LDGR" Type="varchar" MaxLength="20" />
+    <Property Name="PRO_NO" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="PKL_NO" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="INV_NO" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="PO_NO" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="RPO_NO" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="PRO_PREFIX" Type="varchar" MaxLength="10" />
+    <Property Name="PKL_PREFIX" Type="varchar" MaxLength="10" />
+    <Property Name="PO_PREFIX" Type="varchar" MaxLength="5" />
+    <Property Name="LOGO" Type="varchar" MaxLength="80" />
+    <Property Name="DT_ESTB" Type="datetime" />
+    <Property Name="IEC_ISSDT" Type="datetime" />
+    <Property Name="IEC_ISSAUT" Type="varchar" MaxLength="90" />
+    <Property Name="IEC_BRANCH" Type="varchar" MaxLength="30" />
+    <Property Name="EXP_TYPE" Type="varchar" MaxLength="30" />
+    <Property Name="EXP_TYPE1" Type="bit" />
+    <Property Name="EXP_TYPE2" Type="bit" />
+    <Property Name="EXP_TYPE3" Type="bit" />
+    <Property Name="PAN_NO" Type="varchar" MaxLength="10" />
+    <Property Name="PAN_ISSDT" Type="datetime" />
+    <Property Name="PAN_AUTH" Type="varchar" MaxLength="70" />
+    <Property Name="SSI_NO_DT" Type="varchar" MaxLength="30" />
+    <Property Name="SSI_AUTH" Type="varchar" MaxLength="50" />
+    <Property Name="EHTH_NO" Type="varchar" MaxLength="20" />
+    <Property Name="EHTH_DT" Type="datetime" />
+    <Property Name="EHTH_UPTO" Type="datetime" />
+    <Property Name="EXP_NATURE" Type="varchar" MaxLength="45" />
+    <Property Name="EXP_NATUR1" Type="bit" />
+    <Property Name="EXP_NATUR2" Type="bit" />
+    <Property Name="EXP_NATUR3" Type="bit" />
+    <Property Name="EXP_NATUR4" Type="bit" />
+    <Property Name="EXP_NATUR5" Type="bit" />
+    <Property Name="BK_NAME" Type="varchar" MaxLength="45" />
+    <Property Name="BK_ADD" Type="varchar" MaxLength="45" />
+    <Property Name="ACNT_TYPE" Type="varchar" MaxLength="15" />
+    <Property Name="BK_ACNO" Type="varchar" MaxLength="10" />
+    <Property Name="TOT_SALE" Type="numeric" Precision="13" Scale="2" />
+    <Property Name="DESIGNAT" Type="varchar" MaxLength="25" />
+    <Property Name="ANX1APLACE" Type="varchar" MaxLength="10" />
+    <Property Name="DNAME" Type="varchar" MaxLength="40" />
+    <Property Name="DFNAME" Type="varchar" MaxLength="40" />
+    <Property Name="DRESI_ADD" Type="varchar" MaxLength="40" />
+    <Property Name="DEMAIL" Type="varchar" MaxLength="40" />
+    <Property Name="DPHONE" Type="varchar" MaxLength="40" />
+    <Property Name="PLACE" Type="varchar" MaxLength="30" />
+    <Property Name="CONT_PER" Type="varchar" MaxLength="30" />
+    <Property Name="QUOTPREFIX" Type="varchar" MaxLength="5" />
+    <Property Name="CACTIVE" Type="bit" />
+    <Property Name="SIGN_PATH" Type="varchar" MaxLength="80" />
+    <Property Name="PISIGN" Type="bit" />
+    <Property Name="QUOTSTFR" Type="numeric" Precision="5" Scale="0" />
+    <Property Name="QUOTSTTO" Type="numeric" Precision="5" Scale="0" />
+    <Property Name="PLINE_PATH" Type="varchar" MaxLength="150" />
+    <Property Name="FPICT_PATH" Type="varchar" MaxLength="150" />
+    <Property Name="ABT_PGTXT" Type="text" />
+    <Property Name="HOME_PGTXT" Type="text" />
+    <Property Name="WEB_ADD" Type="varchar" MaxLength="45" />
+    <Property Name="BANK_ACC" Type="varchar" MaxLength="30" />
+    <Property Name="INITQUOTNO" Type="numeric" Precision="7" Scale="0" />
+    <Property Name="LSPREFIX" Type="varchar" MaxLength="10" />
+    <Property Name="RSPREFIX" Type="varchar" MaxLength="10" />
+    <Property Name="POHEAD1" Type="varchar" MaxLength="35" />
+    <Property Name="POHEAD2" Type="varchar" MaxLength="35" />
+    <Property Name="POHEAD3" Type="varchar" MaxLength="35" />
+    <Property Name="POHEAD4" Type="varchar" MaxLength="35" />
+    <Property Name="GST_ST_CD" Type="varchar" MaxLength="2" />
+    <Property Name="GSTIN_NO" Type="varchar" MaxLength="15" />
+    <Property Name="GSTPRIFIX" Type="varchar" MaxLength="3" />
+    <Property Name="GST_DEC1" Type="varchar" MaxLength="50" />
+    <Property Name="GST_DEC2" Type="varchar" MaxLength="50" />
+    <Property Name="GST_DEC3" Type="varchar" MaxLength="50" />
+    <Property Name="GST_DEC4" Type="varchar" MaxLength="50" />
+    <Property Name="GST_DEC5" Type="varchar" MaxLength="50" />
+    <Property Name="GST_DEC6" Type="varchar" MaxLength="50" />
+    <Property Name="GST_NDICL" Type="int" />
+    <Property Name="OTH_REF1" Type="varchar" MaxLength="35" />
+    <Property Name="CIN_NUMBER" Type="varchar" MaxLength="21" />
   </EntityType>
   <EntityType Name="Continen">
     <Key>
@@ -273,6 +414,10 @@ warning 6002: The table/view 'TurboEMS.dbo.BankDtl' does not have a primary key 
     <Property Name="PID" Type="int" />
     <Property Name="CODE" Type="varchar" MaxLength="5" Nullable="false" />
     <Property Name="SOURCE" Type="varchar" MaxLength="25" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
   </EntityType>
   <EntityType Name="Fin_Mast">
     <Key>
@@ -646,6 +791,72 @@ warning 6002: The table/view 'TurboEMS.dbo.BankDtl' does not have a primary key 
     <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
     <Property Name="EDIT_DATE" Type="datetime" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TurboEMS.dbo.SkuMast' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SkuMast">
+    <Key>
+      <PropertyRef Name="PID" />
+      <PropertyRef Name="ITEM_CODE" />
+      <PropertyRef Name="BUYER_CODE" />
+      <PropertyRef Name="SKU_NO" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BUY_VND" Type="varchar" MaxLength="1" />
+    <Property Name="ITEM_CODE" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="BUYER_CODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="SKU_NO" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="ITCHSTMP" Type="varchar" MaxLength="30" />
+    <Property Name="ITEM_NAME1" Type="varchar" MaxLength="40" />
+    <Property Name="ITEM_NAME2" Type="varchar" MaxLength="40" />
+    <Property Name="ITEM_NAME3" Type="varchar" MaxLength="40" />
+    <Property Name="ITEM_NAME4" Type="varchar" MaxLength="40" />
+    <Property Name="CNFTYP" Type="varchar" MaxLength="3" />
+    <Property Name="CURR" Type="varchar" MaxLength="4" />
+    <Property Name="RATE" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="FOB" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="EXC_RATE" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="SALE_RATE" Type="numeric" Precision="12" Scale="3" />
+    <Property Name="SALE_CURR" Type="varchar" MaxLength="4" />
+    <Property Name="SALE_DATE" Type="datetime" />
+    <Property Name="INCH_CMS" Type="bit" />
+    <Property Name="UNIT" Type="varchar" MaxLength="3" />
+    <Property Name="ITM_LENGTH" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="ITM_BRDTH" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="ITM_HEIGHT" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="NET_WT" Type="numeric" Precision="8" Scale="3" />
+    <Property Name="EAN_NO" Type="varchar" MaxLength="13" />
+    <Property Name="IN_CRTNPCS" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="IN_CRTNLEN" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="IN_CRTNBRD" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="IN_CRTNHT" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="INCRNET_WT" Type="numeric" Precision="8" Scale="3" />
+    <Property Name="INRCRT_CBM" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="IEAN_NO" Type="varchar" MaxLength="15" />
+    <Property Name="PRCRTN_QTY" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="CRTNLENGTH" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="CRTNBRDTH" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="CRTNHEIGHT" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="CRTN_CBM" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="MCNET_WT" Type="numeric" Precision="8" Scale="3" />
+    <Property Name="MCGROSWT" Type="numeric" Precision="8" Scale="3" />
+    <Property Name="MEAN_NO" Type="varchar" MaxLength="15" />
+    <Property Name="SIZE_CODE" Type="varchar" MaxLength="17" />
+    <Property Name="FINCODE" Type="varchar" MaxLength="10" />
+    <Property Name="TARRIF" Type="varchar" MaxLength="15" />
+    <Property Name="PACK_INS" Type="varchar" MaxLength="40" />
+    <Property Name="LBL_INS" Type="varchar" MaxLength="40" />
+    <Property Name="OTH_INS" Type="varchar" MaxLength="40" />
+    <Property Name="VND_DTL1" Type="varchar" MaxLength="40" />
+    <Property Name="VND_DTL2" Type="varchar" MaxLength="40" />
+    <Property Name="REMARKS" Type="text" />
+    <Property Name="ITMLBLPATH" Type="varchar" MaxLength="120" />
+    <Property Name="CASLBLPATH" Type="varchar" MaxLength="120" />
+    <Property Name="BRNLBLPATH" Type="varchar" MaxLength="120" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="10" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="10" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
   <EntityType Name="State">
     <Key>
       <PropertyRef Name="STATE_CODE" />
@@ -745,7 +956,8 @@ warning 6002: The table/view 'TurboEMS.dbo.BankDtl' does not have a primary key 
     <Property Name="Contact_No" Type="varchar" MaxLength="10" />
     <Property Name="Shiva_Login" Type="bit" />
     <Property Name="Lob_Pid" Type="int" />
-    <Property Name="Lob_Id" Type="varchar" MaxLength="10" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="M_ANNIVERSARY" Type="datetime" />
   </EntityType>
   <EntityType Name="UserRights">
     <Key>
@@ -788,6 +1000,19 @@ warning 6002: The table/view 'TurboEMS.dbo.BankDtl' does not have a primary key 
     <Property Name="INPUT_DATE" Type="datetime" />
     <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
     <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Warehousemast">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COMPANY_PID" Type="int" />
+    <Property Name="WAREHOUSE_NAME" Type="varchar" MaxLength="30" />
+    <Property Name="ADDRESS" Type="varchar" MaxLength="80" />
+    <Property Name="ADD_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DT" Type="datetime" />
+    <Property Name="ENTRY_DT" Type="datetime" />
   </EntityType>
   <Association Name="FK__BankDtl__BANKCOD__318258D2">
     <End Role="BankHdr" Type="Self.BankHdr" Multiplicity="1" />
@@ -945,11 +1170,24 @@ warning 6002: The table/view 'TurboEMS.dbo.BankDtl' does not have a primary key 
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__Warehouse__COMPA__7DCDAAA2">
+    <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+    <End Role="Warehousemast" Type="Self.Warehousemast" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="PID" />
+      </Principal>
+      <Dependent Role="Warehousemast">
+        <PropertyRef Name="COMPANY_PID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="TurboEMSModelStoreContainer">
     <EntitySet Name="BankHdr" EntityType="Self.BankHdr" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BuyCat" EntityType="Self.BuyCat" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Buyer" EntityType="Self.Buyer" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CartPly" EntityType="Self.CartPly" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Continen" EntityType="Self.Continen" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CPMaster" EntityType="Self.CPMaster" Schema="dbo" store:Type="Tables" />
@@ -983,6 +1221,7 @@ warning 6002: The table/view 'TurboEMS.dbo.BankDtl' does not have a primary key 
     <EntitySet Name="UserRights" EntityType="Self.UserRights" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VehiCat" EntityType="Self.VehiCat" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VehiMast" EntityType="Self.VehiMast" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warehousemast" EntityType="Self.Warehousemast" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BankDtl" EntityType="Self.BankDtl" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [BankDtl].[PID] AS [PID], 
@@ -992,6 +1231,85 @@ warning 6002: The table/view 'TurboEMS.dbo.BankDtl' does not have a primary key 
     [BankDtl].[ROUTING] AS [ROUTING], 
     [BankDtl].[RDEL] AS [RDEL]
     FROM [dbo].[BankDtl] AS [BankDtl]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Buyer_Contact" EntityType="Self.Buyer_Contact" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Buyer_Contact].[PID] AS [PID], 
+    [Buyer_Contact].[BUYER_CODE] AS [BUYER_CODE], 
+    [Buyer_Contact].[CONTACT PERSON] AS [CONTACT PERSON], 
+    [Buyer_Contact].[DESIGNATION] AS [DESIGNATION], 
+    [Buyer_Contact].[DEPARTMENT] AS [DEPARTMENT], 
+    [Buyer_Contact].[PHONE] AS [PHONE], 
+    [Buyer_Contact].[MOBILE] AS [MOBILE], 
+    [Buyer_Contact].[EMAIL] AS [EMAIL], 
+    [Buyer_Contact].[DOB] AS [DOB], 
+    [Buyer_Contact].[M_ANNIVERSARY] AS [M_ANNIVERSARY], 
+    [Buyer_Contact].[REMARKS] AS [REMARKS], 
+    [Buyer_Contact].[INPUT_BY] AS [INPUT_BY], 
+    [Buyer_Contact].[INPUT_DATE] AS [INPUT_DATE], 
+    [Buyer_Contact].[EDIT_BY] AS [EDIT_BY], 
+    [Buyer_Contact].[EDIT_DATE] AS [EDIT_DATE]
+    FROM [dbo].[Buyer_Contact] AS [Buyer_Contact]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SkuMast" EntityType="Self.SkuMast" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SkuMast].[PID] AS [PID], 
+    [SkuMast].[BUY_VND] AS [BUY_VND], 
+    [SkuMast].[ITEM_CODE] AS [ITEM_CODE], 
+    [SkuMast].[BUYER_CODE] AS [BUYER_CODE], 
+    [SkuMast].[SKU_NO] AS [SKU_NO], 
+    [SkuMast].[ITCHSTMP] AS [ITCHSTMP], 
+    [SkuMast].[ITEM_NAME1] AS [ITEM_NAME1], 
+    [SkuMast].[ITEM_NAME2] AS [ITEM_NAME2], 
+    [SkuMast].[ITEM_NAME3] AS [ITEM_NAME3], 
+    [SkuMast].[ITEM_NAME4] AS [ITEM_NAME4], 
+    [SkuMast].[CNFTYP] AS [CNFTYP], 
+    [SkuMast].[CURR] AS [CURR], 
+    [SkuMast].[RATE] AS [RATE], 
+    [SkuMast].[FOB] AS [FOB], 
+    [SkuMast].[EXC_RATE] AS [EXC_RATE], 
+    [SkuMast].[SALE_RATE] AS [SALE_RATE], 
+    [SkuMast].[SALE_CURR] AS [SALE_CURR], 
+    [SkuMast].[SALE_DATE] AS [SALE_DATE], 
+    [SkuMast].[INCH_CMS] AS [INCH_CMS], 
+    [SkuMast].[UNIT] AS [UNIT], 
+    [SkuMast].[ITM_LENGTH] AS [ITM_LENGTH], 
+    [SkuMast].[ITM_BRDTH] AS [ITM_BRDTH], 
+    [SkuMast].[ITM_HEIGHT] AS [ITM_HEIGHT], 
+    [SkuMast].[NET_WT] AS [NET_WT], 
+    [SkuMast].[EAN_NO] AS [EAN_NO], 
+    [SkuMast].[IN_CRTNPCS] AS [IN_CRTNPCS], 
+    [SkuMast].[IN_CRTNLEN] AS [IN_CRTNLEN], 
+    [SkuMast].[IN_CRTNBRD] AS [IN_CRTNBRD], 
+    [SkuMast].[IN_CRTNHT] AS [IN_CRTNHT], 
+    [SkuMast].[INCRNET_WT] AS [INCRNET_WT], 
+    [SkuMast].[INRCRT_CBM] AS [INRCRT_CBM], 
+    [SkuMast].[IEAN_NO] AS [IEAN_NO], 
+    [SkuMast].[PRCRTN_QTY] AS [PRCRTN_QTY], 
+    [SkuMast].[CRTNLENGTH] AS [CRTNLENGTH], 
+    [SkuMast].[CRTNBRDTH] AS [CRTNBRDTH], 
+    [SkuMast].[CRTNHEIGHT] AS [CRTNHEIGHT], 
+    [SkuMast].[CRTN_CBM] AS [CRTN_CBM], 
+    [SkuMast].[MCNET_WT] AS [MCNET_WT], 
+    [SkuMast].[MCGROSWT] AS [MCGROSWT], 
+    [SkuMast].[MEAN_NO] AS [MEAN_NO], 
+    [SkuMast].[SIZE_CODE] AS [SIZE_CODE], 
+    [SkuMast].[FINCODE] AS [FINCODE], 
+    [SkuMast].[TARRIF] AS [TARRIF], 
+    [SkuMast].[PACK_INS] AS [PACK_INS], 
+    [SkuMast].[LBL_INS] AS [LBL_INS], 
+    [SkuMast].[OTH_INS] AS [OTH_INS], 
+    [SkuMast].[VND_DTL1] AS [VND_DTL1], 
+    [SkuMast].[VND_DTL2] AS [VND_DTL2], 
+    [SkuMast].[REMARKS] AS [REMARKS], 
+    [SkuMast].[ITMLBLPATH] AS [ITMLBLPATH], 
+    [SkuMast].[CASLBLPATH] AS [CASLBLPATH], 
+    [SkuMast].[BRNLBLPATH] AS [BRNLBLPATH], 
+    [SkuMast].[INPUT_BY] AS [INPUT_BY], 
+    [SkuMast].[INPUT_DATE] AS [INPUT_DATE], 
+    [SkuMast].[EDIT_BY] AS [EDIT_BY], 
+    [SkuMast].[EDIT_DATE] AS [EDIT_DATE]
+    FROM [dbo].[SkuMast] AS [SkuMast]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK__BankDtl__BANKCOD__318258D2" Association="Self.FK__BankDtl__BANKCOD__318258D2">
       <End Role="BankHdr" EntitySet="BankHdr" />
@@ -1044,6 +1362,10 @@ warning 6002: The table/view 'TurboEMS.dbo.BankDtl' does not have a primary key 
     <AssociationSet Name="FK__VehiMast__VCAT_C__19AACF41" Association="Self.FK__VehiMast__VCAT_C__19AACF41">
       <End Role="VehiCat" EntitySet="VehiCat" />
       <End Role="VehiMast" EntitySet="VehiMast" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Warehouse__COMPA__7DCDAAA2" Association="Self.FK__Warehouse__COMPA__7DCDAAA2">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="Warehousemast" EntitySet="Warehousemast" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

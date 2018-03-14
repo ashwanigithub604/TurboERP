@@ -161,9 +161,12 @@
     <Compile Include="App_DAL\Buyer.cs" />
     <Compile Include="App_DAL\CostPrice.cs" />
     <Compile Include="App_DAL\Country_Crud.cs" />
+    <Compile Include="App_DAL\CurrMastData.cs" />
     <Compile Include="App_DAL\DataAccess.cs" />
+    <Compile Include="App_DAL\ItemGrpData.cs" />
     <Compile Include="App_DAL\ManufacturingUnit.cs" />
     <Compile Include="App_DAL\Pubcls.cs" />
+    <Compile Include="App_DAL\SkuMastData.cs" />
     <Compile Include="App_DAL\UnitMaster.cs" />
     <Compile Include="App_DAL\VehCats.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -203,10 +206,13 @@
     <Compile Include="Controllers\BuyerApiController.cs" />
     <Compile Include="Controllers\CostPriceApiController.cs" />
     <Compile Include="Controllers\CountryMastApiController.cs" />
+    <Compile Include="Controllers\CurrMastApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemGrpApiController.cs" />
     <Compile Include="Controllers\ManufactUnitApiController.cs" />
     <Compile Include="Controllers\ModuleController.cs" />
     <Compile Include="Controllers\ModulesApiController.cs" />
+    <Compile Include="Controllers\SkuMastApiController.cs" />
     <Compile Include="Controllers\UnitApiController.cs" />
     <Compile Include="Controllers\UserGroupModuleApiController.cs" />
     <Compile Include="Controllers\UsergroupsApiController.cs" />
@@ -229,7 +235,13 @@
     <Compile Include="Models\Buyer.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Buyer_Contact.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\CartPly.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Continen.cs">
@@ -323,6 +335,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SessionExpireAttribute.cs" />
+    <Compile Include="Models\SkuMast.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\State.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -352,6 +367,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\VehiMast.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Warehousemast.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

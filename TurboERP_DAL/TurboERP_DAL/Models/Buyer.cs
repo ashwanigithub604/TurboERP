@@ -80,11 +80,7 @@ namespace TurboERP_DAL.Models
         public Nullable<System.DateTime> RELA_SINCE { get; set; }
         public string SOURCE { get; set; }
         public string CATEGORY { get; set; }
-        public string ADD_BY { get; set; }
-        public string EDIT_BY { get; set; }
         public string CAT_CODE { get; set; }
-        public Nullable<System.DateTime> EDIT_DT { get; set; }
-        public Nullable<System.DateTime> ENTRY_DT { get; set; }
         public string WEB_ADDR { get; set; }
         public string PICTPATH1 { get; set; }
         public string PICTPATH2 { get; set; }
@@ -139,5 +135,9 @@ namespace TurboERP_DAL.Models
         public Nullable<bool> GSTIN_CAT { get; set; }
         public string GSTIN_NO { get; set; }
         public string GST_REG { get; set; }
+        public string INPUT_BY { get; set; }
+        public Nullable<System.DateTime> INPUT_DATE { get; set; }
+        public string EDIT_BY { get; set; }
+        public Nullable<System.DateTime> EDIT_DATE { get; set; }
     }
 }

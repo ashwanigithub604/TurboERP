@@ -216,10 +216,10 @@ namespace TurboERP_DAL.App_DAL
             cmd.Parameters.Add("@RELA_SINCE", SqlDbType.DateTime).Value = buyer.RELA_SINCE;
             cmd.Parameters.Add("@SOURCE", SqlDbType.VarChar, 25).Value = buyer.SOURCE;
             cmd.Parameters.Add("@CATEGORY", SqlDbType.VarChar, 20).Value = buyer.CATEGORY;
-            cmd.Parameters.Add("@ADD_BY", SqlDbType.VarChar, 3).Value = buyer.ADD_BY;
+            cmd.Parameters.Add("@ADD_BY", SqlDbType.VarChar, 3).Value = buyer.INPUT_BY;
             cmd.Parameters.Add("@EDIT_BY", SqlDbType.VarChar, 3).Value = buyer.EDIT_BY;
             cmd.Parameters.Add("@CAT_CODE", SqlDbType.VarChar, 2).Value = buyer.CAT_CODE;
-            cmd.Parameters.Add("@ENTRY_DT", SqlDbType.DateTime).Value = buyer.ENTRY_DT;
+            cmd.Parameters.Add("@ENTRY_DT", SqlDbType.DateTime).Value = buyer.INPUT_DATE;
             cmd.Parameters.Add("@WEB_ADDR", SqlDbType.VarChar, 254).Value = buyer.WEB_ADDR;
             cmd.Parameters.Add("@PICTPATH1", SqlDbType.VarChar, 100).Value = buyer.PICTPATH1;
             cmd.Parameters.Add("@PICTPATH2", SqlDbType.VarChar, 100).Value = buyer.PICTPATH2;

@@ -17,5 +17,9 @@ namespace TurboERP_DAL.Models
         public Nullable<int> PID { get; set; }
         public string CODE { get; set; }
         public string SOURCE { get; set; }
+        public string INPUT_BY { get; set; }
+        public Nullable<System.DateTime> INPUT_DATE { get; set; }
+        public string EDIT_BY { get; set; }
+        public Nullable<System.DateTime> EDIT_DATE { get; set; }
     }
 }
