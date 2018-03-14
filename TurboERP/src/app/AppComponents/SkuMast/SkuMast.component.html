@@ -42,7 +42,7 @@
         <div class="form-group">
           <label class="col-md-3" style="text-align:right">Itching Stamp</label>
           <div class="col-md-9">
-            <input placeholder="Itching Stamp" class="form-control"  name="" type="text">
+            <input placeholder="Itching Stamp" class="form-control"  [(ngModel)]=model.ITCHSTMP name="model.ITCHSTMP" type="text">
           </div>
         </div>
         
@@ -149,34 +149,34 @@
         <div class="form-group">
           <label class="col-md-3" style="text-align:right">Exporter's Selling Price</label>
           <div class="col-md-2">
-            <select id="fob" name="FOB" class="form-control">
+            <select id="fob" class="form-control" [(ngModel)]=model.CNFTYP name="model.CNFTYP">
               <option value="1">FOB</option>
               <option value="2">C&I</option>
               <option value="3">EXW</option>
             </select>
           </div>
           <div class="col-md-3">
-            <input class="form-control" type="text">
+            <input class="form-control" [(ngModel)]=model.CURR name="model.CURR" type="text">
           </div>
           <div class="col-md-3">
-            <input class="form-control" type="text">
+            <input placeholder="Buyer FOB" class="form-control" [(ngModel)]=model.FOB name="model.FOB" type="text">
           </div>
         </div>
       
         <div class="form-group">
           <label class="col-md-3" style="text-align:right">Exchange Rate</label>
           <div class="col-md-8">
-            <input placeholder="Exchange Rate" class="form-control"  name="" type="text">
+            <input placeholder="Exchange Rate" class="form-control" [(ngModel)]=model.EXC_RATE name="model.EXC_RATE" type="text">
           </div>
         </div>
       
         <div class="form-group">
           <label class="col-md-3" style="text-align:right">Buyer's Selling Price</label>
           <div class="col-md-4">
-            <input placeholder="Buyer's Selling Price" class="form-control"  name="" type="text">
+            <input placeholder="Buyer's Selling Price" class="form-control" [(ngModel)]=model.SALE_CURR name="model.SALE_CURR" type="text">
           </div>
           <div class="col-md-4">
-            <input placeholder="Buyer's Selling Price" class="form-control"  name="" type="text">
+            <input placeholder="Buyer's Selling Price" class="form-control" [(ngModel)]=model.SALE_RATE name="model.SALE_RATE" type="text">
           </div>
         </div>
         
@@ -232,28 +232,28 @@
                   Item
                 </td>
                 <td>
-                    <input class="form-control" type="text">
+                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
                 </td>
                 <td>
-                    <input class="form-control" type="text">
+                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
                 </td>
                 <td>
-                    <input class="form-control" type="text">
+                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
                 </td>
                 <td>
-                    <input class="form-control" type="text">
+                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
                 </td>
                 <td>
                     <label>Label</label>
                 </td>
                 <td>
-                  <input class="form-control" type="text">
+                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
               </td>
               <td>
-                <input class="form-control" type="text">
+                <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
             </td>
             <td>
-              <input class="form-control" type="text">
+              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
           </td>
               </tr>
               <tr>
@@ -261,28 +261,28 @@
                   Inner Pack/Carton
                 </td>
                 <td>
-                    <input class="form-control" type="text">
+                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
                 </td>
                 <td>
-                    <input class="form-control" type="text">
+                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
                 </td>
                 <td>
-                    <input class="form-control" type="text">
+                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
                 </td>
                 <td>
-                    <input class="form-control" type="text">
+                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
                 </td>
                 <td>
                     <label>Label</label>
                 </td>
                 <td>
-                  <input class="form-control" type="text">
+                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
               </td>
               <td>
                 <label>Grs (Kgs)</label>
             </td>
             <td>
-              <input class="form-control" type="text">
+              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
           </td>
           </tr>
           <tr>
@@ -290,13 +290,13 @@
               Master Pack/Carton
             </td>
             <td>
-                <input class="form-control" type="text">
+              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
             </td>
             <td>
-                <input class="form-control" type="text">
+              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
             </td>
             <td>
-                <input class="form-control" type="text">
+              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
             </td>
             <td>
                 <input class="form-control" type="text">
@@ -305,13 +305,13 @@
                 <label>Label</label>
             </td>
             <td>
-              <input class="form-control" type="text">
+              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
           </td>
           <td>
-            <input class="form-control" type="text">
+            <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
         </td>
         <td>
-          <input class="form-control" type="text">
+          <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
       </td>
           </tr>
 
@@ -364,7 +364,8 @@
 
             <label class="col-sm-3" style="text-align:right">Vendor Details</label>
             <div class="col-sm-3">
-              <textarea cols="2" class="form-control"></textarea>                
+              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">
+              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">              
             </div>
           </div>
 
@@ -380,6 +381,10 @@
             <label class="col-sm-3" style="text-align:right">Remarks</label>
             <div class="col-sm-7">
               <textarea cols="5" class="form-control"></textarea>
+            </div>
+
+            <div class="col-md-2">
+              <input type="submit" value="Dimensions" class="btn btn-info" data-toggle="modal" data-target="#myModal" />
             </div>
             
           </div>
@@ -404,3 +409,222 @@
 </div>
 </div>
 </div>
+
+<!-- popup windows Start -->
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">OCEAN CONTAINER DIMENSIONS</h4>
+          </div>
+          <div class="modal-body">
+              <table border="1">
+                  <tr>
+                      <td style="width:120px; text-align:center">
+                          <b>HEADING</b>
+                      </td>
+                      <td colspan="2" style="width:150px; text-align:center">
+                          <b>STANDARD 20'</b>
+                      </td>
+                      <td colspan="2" style="width:150px; text-align:center">
+                          <b>STANDARD 40'</b>
+                      </td>
+                      <td colspan="2" style="width:150px; text-align:center">
+                          <b>HIGH CUBE 40'</b>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td style="padding-left:5px">
+                          <b>INSIDE LENGHT</b>
+                      </td>
+                      <td style="border:none; text-align:left; padding-left:5px">
+                          19'4"
+                      </td>
+                      <td style="border:none; text-align:right; padding-right:5px">
+                          5.89m
+                      </td>
+                      <td style="border-right:none;text-align:left; padding-left:5px">
+                          39'5"
+                      </td>
+                      <td style="border-left:none; text-align:right; padding-right:5px">
+                          12.01m
+                      </td>
+                      <td style="border:none;text-align:left; padding-left:5px">
+                          39'5"
+                      </td>
+                      <td style="border:none;text-align:right; padding-right:5px">
+                          12.01m
+                      </td>
+                  </tr>
+                  <tr>
+                      <td style="padding-left:5px">
+                          <b>INSIDE WIDTH</b>
+                      </td>
+                      <td style="border-right:none; text-align:left; padding-left:5px">
+                          7'8"
+                      </td>
+                      <td style="border-left:none; text-align:right; padding-right:5px">
+                          2.33m
+                      </td>
+                      <td style="border-right:none;text-align:left; padding-left:5px">
+                          7'8"
+                      </td>
+                      <td style="border-left:none; text-align:right; padding-right:5px">
+                          2.33m
+                      </td>
+                      <td style="border-right:none; text-align:left; padding-left:5px">
+                          7'8"
+                      </td>
+                      <td style="border-left:none;text-align:right; padding-right:5px">
+                          2.33m
+                      </td>
+                  </tr>
+                  <tr>
+                      <td style="padding-left:5px">
+                          <b>INSIDE HEIGHT</b>
+                      </td>
+                      <td style="border-right:none; text-align:left; padding-left:5px">
+                          7'10"
+                      </td>
+                      <td style="border-left:none; text-align:right; padding-right:5px">
+                          2.38m
+                      </td>
+                      <td style="border-right:none;text-align:left; padding-left:5px">
+                          7'10"
+                      </td>
+                      <td style="border-left:none; text-align:right; padding-right:5px">
+                          2.38m
+                      </td>
+                      <td style="border-right:none; text-align:left; padding-left:5px">
+                          8'10"
+                      </td>
+                      <td style="border-left:none;text-align:right; padding-right:5px">
+                          2.69m
+                      </td>
+                  </tr>
+                  <tr>
+                      <td style="padding-left:5px">
+                          <b>DOOR WIDTH</b>
+                      </td>
+                      <td style="border-right:none; text-align:left; padding-left:5px">
+                          7'8"
+                      </td>
+                      <td style="border-left:none; text-align:right; padding-right:5px">
+                          2.33m
+                      </td>
+                      <td style="border-right:none;text-align:left; padding-left:5px">
+                          7'8"
+                      </td>
+                      <td style="border-left:none; text-align:right; padding-right:5px">
+                          2.33m
+                      </td>
+                      <td style="border-right:none; text-align:left; padding-left:5px">
+                          7'8"
+                      </td>
+                      <td style="border-left:none;text-align:right; padding-right:5px">
+                          2.33m
+                      </td>
+                  </tr>
+                  <tr>
+                      <td style="padding-left:5px">
+                          <b>DOOR HEIGHT</b>
+                      </td>
+                      <td style="border-right:none; text-align:left; padding-left:5px">
+                          7'6"
+                      </td>
+                      <td style="border-left:none; text-align:right; padding-right:5px">
+                          2.28m
+                      </td>
+                      <td style="border-right:none;text-align:left; padding-left:5px">
+                          7'6"
+                      </td>
+                      <td style="border-left:none; text-align:right; padding-right:5px">
+                          2.28m
+                      </td>
+                      <td style="border-right:none; text-align:left; padding-left:5px">
+                          8'5"
+                      </td>
+                      <td style="border-left:none;text-align:right; padding-right:5px">
+                          2.56m
+                      </td>
+                  </tr>
+                  <tr>
+                      <td style="padding-left:5px">
+                          <b>CAPACITY</b>
+                      </td>
+                      <td style="border-right:none; text-align:left; padding-left:5px">
+                          1,172 ft<sup>3</sup>
+                      </td>
+                      <td style="border-left:none; text-align:right; padding-right:5px">
+                         33.18m<sup>3</sup>
+                      </td>
+                      <td style="border-right:none;text-align:left; padding-left:5px">
+                          2,390 ft<sup>3</sup>
+                      </td>
+                      <td style="border-left:none; text-align:right; padding-right:5px">
+                          67.67 m<sup>3</sup>
+                      </td>
+                      <td style="border-right:none; text-align:left; padding-left:5px">
+                          2,694 ft<sup>3</sup>
+                      </td>
+                      <td style="border-left:none;text-align:right; padding-right:5px">
+                          67.28 m<sup>3</sup>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td style="padding-left:5px">
+                          <b>TARE WEIGHT</b>
+                      </td>
+                      <td style="border-right:none; text-align:left; padding-left:5px">
+                          4,916 lb
+                      </td>
+                      <td style="border-left:none; text-align:right; padding-right:5px">
+                          2,229 kg
+                      </td>
+                      <td style="border-right:none;text-align:left; padding-left:5px">
+                          8,160 lb
+                      </td>
+                      <td style="border-left:none; text-align:right; padding-right:5px">
+                          3,701 kg
+                      </td>
+                      <td style="border-right:none; text-align:left; padding-left:5px">
+                          8,750 lb
+                      </td>
+                      <td style="border-left:none;text-align:right; padding-right:5px">
+                          3,968 kg
+                      </td>
+                  </tr>
+                  <tr>
+                      <td style="padding-left:5px">
+                          <b>MAX CARGO</b>
+                      </td>
+                      <td style="border-right:none; text-align:left; padding-left:5px">
+                          47,999 lb
+                      </td>
+                      <td style="border-left:none; text-align:right; padding-right:5px">
+                          21,727 kg
+                      </td>
+                      <td style="border-right:none;text-align:left; padding-left:5px">
+                          59,040 lb
+                      </td>
+                      <td style="border-left:none; text-align:right; padding-right:5px">
+                          26,780 kg
+                      </td>
+                      <td style="border-right:none; text-align:left; padding-left:5px">
+                          58,450 lb
+                      </td>
+                      <td style="border-left:none;text-align:right; padding-right:5px">
+                          26,512 kg
+                      </td>
+                  </tr>
+              </table>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+<!-- Popup windows End -->
