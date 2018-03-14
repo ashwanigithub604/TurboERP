@@ -17,7 +17,7 @@ import { ManufacturingUnitComponent } from '../AppComponents/ManufacturingUnit/m
 import {CurrMastComponent} from '../AppComponents/CurrMast/CurrMast.component';
 import {ItemGrpComponent} from '../AppComponents/ItemGrp/ItemGrp.component';
 import {SkuMastComponent} from '../AppComponents/SkuMast/SkuMast.component'
-
+import {WarehouseComponent} from '../AppComponents/Warehousemast/Warehouse.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
@@ -41,6 +41,10 @@ const appRoutes: Routes = [
   { path: 'SkuMast', component: GridComponent},
   { path: 'SkuMast/Add', component: SkuMastComponent},
   { path: 'SkuMast/Edit', component: SkuMastComponent},
+  { path: 'Warehouse', component: GridComponent },
+  { path: 'Warehouse/Add', component: WarehouseComponent },
+  { path: 'Warehouse/Edit', component: WarehouseComponent },
+];
   
 
 ];
@@ -64,7 +68,7 @@ const appRoutes: Routes = [
   ],
   declarations: [AppComponent, MenuComponent, HomeComponent,GridComponent,
     UnitComponent,FooterComponent, CountryMastComponent, ManufacturingUnitComponent,
-    CurrMastComponent, ItemGrpComponent, SkuMastComponent],
+    CurrMastComponent, ItemGrpComponent, SkuMastComponent,WarehouseComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
