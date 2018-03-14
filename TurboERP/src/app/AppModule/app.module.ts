@@ -13,7 +13,10 @@ import { GridComponent } from '../AppComponents/GridDetails/grid.component';
 import { UnitComponent } from '../AppComponents/UnitMaster/unit.component';
 import { FooterComponent } from '../AppComponents/Footer/footer.component';
 import { CountryMastComponent } from '../AppComponents/CountryMaster/country.component';
-import { ManufacturingUnitComponent } from '../AppComponents/ManufacturingUnit/manufacturing.component'
+import { ManufacturingUnitComponent } from '../AppComponents/ManufacturingUnit/manufacturing.component';
+import {CurrMastComponent} from '../AppComponents/CurrMast/CurrMast.component';
+import {ItemGrpComponent} from '../AppComponents/ItemGrp/ItemGrp.component';
+import {SkuMastComponent} from '../AppComponents/SkuMast/SkuMast.component'
 
 
 const appRoutes: Routes = [
@@ -29,6 +32,15 @@ const appRoutes: Routes = [
   { path: 'ManufacturingUnit', component: GridComponent },
   { path: 'ManufacturingUnit/Add', component: ManufacturingUnitComponent},
   { path: 'ManufacturingUnit/Edit', component: ManufacturingUnitComponent },
+  { path: 'Currency', component: GridComponent},
+  { path: 'Currency/Add', component: CurrMastComponent},
+  { path: 'Currency/Edit', component: CurrMastComponent},
+  { path: 'ItemGrp', component: GridComponent},
+  { path: 'ItemGrp/Add', component: ItemGrpComponent},
+  { path: 'ItemGrp/Edit', component: ItemGrpComponent},
+  { path: 'SkuMast', component: GridComponent},
+  { path: 'SkuMast/Add', component: SkuMastComponent},
+  { path: 'SkuMast/Edit', component: SkuMastComponent},
   
 
 ];
@@ -51,7 +63,8 @@ const appRoutes: Routes = [
       RouterModule
   ],
   declarations: [AppComponent, MenuComponent, HomeComponent,GridComponent,
-    UnitComponent,FooterComponent, CountryMastComponent, ManufacturingUnitComponent],
+    UnitComponent,FooterComponent, CountryMastComponent, ManufacturingUnitComponent,
+    CurrMastComponent, ItemGrpComponent, SkuMastComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
