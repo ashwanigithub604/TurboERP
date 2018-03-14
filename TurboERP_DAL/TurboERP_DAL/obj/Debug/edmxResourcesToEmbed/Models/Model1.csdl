@@ -1,0 +1,1064 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TurboEMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BankHdr">
+    <Key>
+      <PropertyRef Name="BANKCODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BANKCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SHORTNAME" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BANKNAME" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS1" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS2" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS3" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS4" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="ACCOUNTNO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="COMP" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="BankDtls" Relationship="Self.FK__BankDtl__BANKCOD__318258D2" FromRole="BankHdr" ToRole="BankDtl" />
+  </EntityType>
+  <EntityType Name="BuyCat">
+    <Key>
+      <PropertyRef Name="CAT_CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" />
+    <Property Name="CATEGORY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CAT_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MARK_UP" Type="Decimal" Precision="6" Scale="2" />
+  </EntityType>
+  <EntityType Name="Buyer">
+    <Key>
+      <PropertyRef Name="Pid" />
+    </Key>
+    <Property Name="Pid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SHORT_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BUYER_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="TALLYID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BUYER_NAME" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="SHORT_NAME" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ADD1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ADD2" Type="String" MaxLength="46" FixedLength="false" Unicode="false" />
+    <Property Name="ADD3" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ADD4" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ADD5" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="COUN_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CONT_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CURR_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="BANK_ADD1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BANK_ADD2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BANK_ADD3" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BANK_ADD4" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="PORT_DISC" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="FIN_DEST" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY3" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY4" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY5" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY6" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY7" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY8" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY9" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="NOTIFY10" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MOBILE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="TELEX" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FAX" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="AGNT_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="TYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CMSN" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="CNT_PRSN" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PAY_TERM1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAY_TERM2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAY_TERM3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAY_TERM4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAY_TERM5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAY_TERM6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAY_TERM7" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAY_TERM8" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RMK1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="RMK2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="RMK3" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="RMK4" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="OPEN_BAL" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="ST_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ST_NO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DEAL_ITM" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="VISITOR" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="M0411" Type="Boolean" />
+    <Property Name="VISIT_ADD1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="VISIT_ADD2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="VISIT_ADD3" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RMK5" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BANK_ACNO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="SWIFT_ACNO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="RELA_SINCE" Type="DateTime" Precision="3" />
+    <Property Name="SOURCE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CATEGORY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ADD_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CAT_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DT" Type="DateTime" Precision="3" />
+    <Property Name="ENTRY_DT" Type="DateTime" Precision="3" />
+    <Property Name="WEB_ADDR" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="PICTPATH1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PICTPATH2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PICTPATH3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PICTPATH4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PICTPATH5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PICTDESC1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PICTDESC2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PICTDESC3" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PICTDESC4" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PICTDESC5" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="BANKCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MER_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="DESP_CODE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="FREEZE" Type="Boolean" />
+    <Property Name="DISCOUNT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="FREIGHT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="INSURANCE" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="REMARKS1" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS3" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS4" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS5" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS6" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS7" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS8" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS9" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS10" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="USER_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="PRE_CARY" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="VESSEL" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="RCT_PRCRG" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PART_LDING" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PAYTERMCD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="VATRATE" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="PANNO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="TINNO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ATT_FILE1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ATT_FILE2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ATT_FILE3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ATT_FILE4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ATT_FILE5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BUY_FWRD" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="LSELECTED" Type="Boolean" />
+    <Property Name="LLSTSELD" Type="Boolean" />
+    <Property Name="CITY_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="OTHER_REF" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="CLIENT" Type="Decimal" Precision="2" Scale="1" />
+    <Property Name="PICT_PATH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATE_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="GSTPRIFIX" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="GSTIN_CAT" Type="Boolean" />
+    <Property Name="GSTIN_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="GST_REG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CartPly">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CRTN_PLY" Type="Int32" />
+    <Property Name="RATEBROWN" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="RATECOLOR" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="IPDEFAULT" Type="Boolean" />
+    <Property Name="MPDEFAULT" Type="Boolean" />
+    <Property Name="BOARDWIDTH" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="INCH_CMS" Type="Boolean" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Continen">
+    <Key>
+      <PropertyRef Name="CONT_CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CONT_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CONT_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="COUN_CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COUN_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="COUN_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CONT_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="THRUST" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CPMaster">
+    <Key>
+      <PropertyRef Name="CP_CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CP_CODE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NKEY" Type="Decimal" Precision="3" Scale="0" />
+    <Property Name="RATE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ItemMasters" Relationship="Self.FK__ItemMaste__CP_CO__53D770D6" FromRole="CPMaster" ToRole="ItemMaster" />
+  </EntityType>
+  <EntityType Name="CurrMast">
+    <Key>
+      <PropertyRef Name="CURR_CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CURR_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CURR_NAME" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CURR_CONV" Type="Decimal" Precision="6" Scale="2" />
+    <Property Name="EXC_RATE" Type="Decimal" Precision="6" Scale="2" />
+    <Property Name="COIN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CURR_SEP" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DECI_RQD" Type="Boolean" />
+    <Property Name="USER_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CURR_CAP" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ItemMasters" Relationship="Self.FK__ItemMaster__CURR__54CB950F" FromRole="CurrMast" ToRole="ItemMaster" />
+  </EntityType>
+  <EntityType Name="DutyMast">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" />
+    <Property Name="PURC_GRP" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DESC_1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="DESC_2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="RATE" Type="Decimal" Precision="6" Scale="2" />
+    <Property Name="HSTUS" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="HSN_SAC" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="GSPFREE" Type="Boolean" />
+    <Property Name="UPDDATE" Type="DateTime" Precision="3" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="EventMst">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" />
+    <Property Name="CODE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SOURCE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Fin_Mast">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PANTONECODE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="NEELAMCODE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="PPREFIX" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CSHADEPATH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LINKDLINK" Type="Boolean" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="GstMast">
+    <Key>
+      <PropertyRef Name="VAT_CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" />
+    <Property Name="VAT_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DESCRIPTIO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RATE" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="TAX_EXMPT" Type="Boolean" />
+    <Property Name="SALES_GST" Type="Boolean" />
+    <Property Name="CGST_RATE" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="SGST_RATE" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="UTGST_RATE" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="IGST_RATE" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="GST_TYPE" Type="Int32" />
+    <Property Name="TAX_RATE" Type="Decimal" Precision="6" Scale="2" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="IndCity">
+    <Key>
+      <PropertyRef Name="CITY_CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" />
+    <Property Name="CITY_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CITY_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="STATE_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="State" Relationship="Self.FK__INDCITY__STATE_C__0F624AF8" FromRole="IndCity" ToRole="State" />
+  </EntityType>
+  <EntityType Name="ItemGrp">
+    <Key>
+      <PropertyRef Name="GRP_CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GRP_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GRP_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="GRP_PREFIX" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="PICT_PATH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ItemMasters" Relationship="Self.FK__ItemMaste__GRP_C__50FB042B" FromRole="ItemGrp" ToRole="ItemMaster" />
+    <NavigationProperty Name="ItemSgrps" Relationship="Self.FK__ItemSgrp__GRP_CO__0B5CAFEA" FromRole="ItemGrp" ToRole="ItemSgrp" />
+  </EntityType>
+  <EntityType Name="ItemMaster">
+    <Key>
+      <PropertyRef Name="Pid" />
+    </Key>
+    <Property Name="Pid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GRP_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="SGRP_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_CODE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SAMP_CODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FINCODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_NAME1" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_NAME2" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_NAME3" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_NAME4" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="OPEN_QTY" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="CLOS_QTY" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="YTOD_RECT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="YTOD_ISSUE" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="EAN_NO" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="SIZE_CODE" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+    <Property Name="UNIT" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="NET_WT" Type="Decimal" Precision="8" Scale="3" />
+    <Property Name="INCRNET_WT" Type="Decimal" Precision="8" Scale="3" />
+    <Property Name="MCNET_WT" Type="Decimal" Precision="8" Scale="3" />
+    <Property Name="CFT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="CP_CODE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="RATE" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="SELL_PRICE" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="FOB" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="MRGN_PER" Type="Decimal" Precision="6" Scale="2" />
+    <Property Name="MIN_QTY" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="ITM_LENGTH" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="ITM_BRDTH" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="ITM_HEIGHT" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="IN_CRTNLEN" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="IN_CRTNBRD" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="IN_CRTNHT" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="IN_CRTNPCS" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="TOTINCRTN" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="CRTNLENGTH" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="CRTNBRDTH" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="CRTNHEIGHT" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="CRTN_CBM" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="INRCRT_CBM" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="PRCRTN_QTY" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="PICT_PATH" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="INCH_CMS" Type="Boolean" />
+    <Property Name="ITM_BRKUP" Type="Boolean" />
+    <Property Name="ENTRY_DT" Type="DateTime" Precision="3" />
+    <Property Name="SHP_TYP" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="CURR" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="EXC_RATE" Type="Decimal" Precision="6" Scale="2" />
+    <Property Name="MARK" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="MARK_TOPRT" Type="Boolean" />
+    <Property Name="CATEGORY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ADD_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CONT20QTY" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="CONT40QTY" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="CONT40HQTY" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="CBM20FT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="CBM40FT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="CBM40HQ" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="EDIT_DT" Type="DateTime" Precision="3" />
+    <Property Name="SAMPLE" Type="Boolean" />
+    <Property Name="COSTDATE" Type="DateTime" Precision="3" />
+    <Property Name="FACTEXPAMT" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="FACT_PER" Type="Decimal" Precision="6" Scale="2" />
+    <Property Name="OVRHD_VAL" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="SPINSQFEET" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="WTPERSQFT" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="REORD_LVL" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="MIN_LVL" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="MAX_LVL" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="CREATE_DT" Type="DateTime" Precision="3" />
+    <Property Name="VOL_WT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="CAT_CODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ENDOP_QTY" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="ENDCL_QTY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="COST_RATE" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="ITEM_DATE" Type="DateTime" Precision="3" />
+    <Property Name="INCRT_CBM" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="PKGFRTPER" Type="Decimal" Precision="3" Scale="0" />
+    <Property Name="COST_DATE" Type="DateTime" Precision="3" />
+    <Property Name="ENDYTDRCT" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="ENDYTDISS" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="PERMTRQTY" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="TREAT_SET" Type="Boolean" />
+    <Property Name="USER_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="DEL" Type="Boolean" />
+    <Property Name="LSELECTED" Type="Boolean" />
+    <Property Name="LLSTSELD" Type="Boolean" />
+    <Property Name="SEL_UNSEL" Type="Boolean" />
+    <Property Name="CONT45HQTY" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="QTY_RCVD" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="QTY_ISSUED" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="AUTOSIZECD" Type="Boolean" />
+    <Property Name="LINKDLINK" Type="Boolean" />
+    <Property Name="REFPHOTO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ALLOC_QTY" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="ASSORTITM" Type="Boolean" />
+    <Property Name="GST_CAT" Type="Boolean" />
+    <Property Name="GSTHSNSAC" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GST_DTAX" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="ALLOWSTOCK" Type="Boolean" />
+    <NavigationProperty Name="CPMaster" Relationship="Self.FK__ItemMaste__CP_CO__53D770D6" FromRole="ItemMaster" ToRole="CPMaster" />
+    <NavigationProperty Name="CurrMast" Relationship="Self.FK__ItemMaster__CURR__54CB950F" FromRole="ItemMaster" ToRole="CurrMast" />
+    <NavigationProperty Name="ItemGrp" Relationship="Self.FK__ItemMaste__GRP_C__50FB042B" FromRole="ItemMaster" ToRole="ItemGrp" />
+    <NavigationProperty Name="ItmCat" Relationship="Self.FK__ItemMaste__CAT_C__55BFB948" FromRole="ItemMaster" ToRole="ItmCat" />
+    <NavigationProperty Name="ItemSgrp" Relationship="Self.FK__ItemMaste__SGRP___51EF2864" FromRole="ItemMaster" ToRole="ItemSgrp" />
+    <NavigationProperty Name="UnitMast" Relationship="Self.FK__ItemMaster__UNIT__52E34C9D" FromRole="ItemMaster" ToRole="UnitMast" />
+  </EntityType>
+  <EntityType Name="ItemSgrp">
+    <Key>
+      <PropertyRef Name="SGRP_CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SGRP_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SGRP_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SGRP_NAME1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="GRP_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="SGRP_PREFIX" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="PICT_PATH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ItemGrp" Relationship="Self.FK__ItemSgrp__GRP_CO__0B5CAFEA" FromRole="ItemSgrp" ToRole="ItemGrp" />
+    <NavigationProperty Name="ItemMasters" Relationship="Self.FK__ItemMaste__SGRP___51EF2864" FromRole="ItemSgrp" ToRole="ItemMaster" />
+  </EntityType>
+  <EntityType Name="ItmCat">
+    <Key>
+      <PropertyRef Name="CATEGORY" />
+    </Key>
+    <Property Name="PID" Type="Int32" />
+    <Property Name="CATEGORY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ItemMasters" Relationship="Self.FK__ItemMaste__CAT_C__55BFB948" FromRole="ItmCat" ToRole="ItemMaster" />
+  </EntityType>
+  <EntityType Name="ManUnit">
+    <Key>
+      <PropertyRef Name="COMPANYUNIT" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COMPANYUNIT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MANF_NAME" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="MisPrty">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="TYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="NAME" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="SHORT_NAME" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ADD1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ADD2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ADD3" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CONTPER" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="WEB_ADD" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="MOBILE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="FAX" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="RELA" Type="DateTime" Precision="3" />
+    <Property Name="REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MISCTYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="MODEL_CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VEH_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MODEL_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MODEL_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="RDEL" Type="Boolean" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="VehiMast" Relationship="Self.FK__Model__VEH_CODE__1C873BEC" FromRole="Model" ToRole="VehiMast" />
+    <NavigationProperty Name="ModelSLs" Relationship="Self.FK__ModelSL__MODEL_C__27F8EE98" FromRole="Model" ToRole="ModelSL" />
+  </EntityType>
+  <EntityType Name="ModelSL">
+    <Key>
+      <PropertyRef Name="MODEL_SL" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VEH_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MODEL_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MODEL_SL" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Model" Relationship="Self.FK__ModelSL__MODEL_C__27F8EE98" FromRole="ModelSL" ToRole="Model" />
+    <NavigationProperty Name="VehiMast" Relationship="Self.FK__ModelSL__VEH_COD__2704CA5F" FromRole="ModelSL" ToRole="VehiMast" />
+  </EntityType>
+  <EntityType Name="Module">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Grp_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Grp_Desc" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Group_Sub_Desc" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Mod_Code" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="Mod_Name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Mod_Desc" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Menu_Desc" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Mod_Link" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="OrdKeyMain" Type="Int32" />
+    <Property Name="OrdKeyChd" Type="Int32" />
+    <Property Name="ControllerName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ActionName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Action" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Menu__Icon" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Grp_Icon" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Grp_Sub_flag" Type="Boolean" />
+    <Property Name="SubMenu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Modules31012018">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Grp_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Grp_Desc" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Mod_Code" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="Menu_Desc" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="OrdKeyMain" Type="Int32" />
+    <Property Name="OrdKeyChd" Type="Int32" />
+    <Property Name="ControllerName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ActionName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Action" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Menu__Icon" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Grp_Icon" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Package">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" />
+    <Property Name="CODE" Type="Int32" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="PartyType">
+    <Key>
+      <PropertyRef Name="Pid" />
+    </Key>
+    <Property Name="Pid" Type="Int32" Nullable="false" />
+    <Property Name="Party_Description" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PayTerm">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" />
+    <Property Name="CODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TERM1" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="TERM2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="TERM3" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="TERM4" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="TERM5" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="TERM6" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="TERM7" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="TERM8" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="TRANREM" Type="Boolean" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="PortMast">
+    <Key>
+      <PropertyRef Name="PORT_CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" />
+    <Property Name="PORT_CODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PORT_NAME" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ProcMast">
+    <Key>
+      <PropertyRef Name="PROC_CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" />
+    <Property Name="PROC_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PROC_NAME" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="MTRLTOISSUE" Type="Boolean" />
+    <Property Name="USER_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="STATE_CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="STATE_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STATE_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="UT" Type="Boolean" />
+    <NavigationProperty Name="IndCities" Relationship="Self.FK__INDCITY__STATE_C__0F624AF8" FromRole="State" ToRole="IndCity" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="UnitMast">
+    <Key>
+      <PropertyRef Name="UNIT" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UNIT" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DECI_REQ" Type="Boolean" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ItemMasters" Relationship="Self.FK__ItemMaster__UNIT__52E34C9D" FromRole="UnitMast" ToRole="ItemMaster" />
+  </EntityType>
+  <EntityType Name="Usergroup">
+    <Key>
+      <PropertyRef Name="Pid" />
+    </Key>
+    <Property Name="Pid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Usergroup_Code" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Usergrp_Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Input_By" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Input_Dt" Type="DateTime" Precision="3" />
+    <Property Name="Modify_By" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Modify_Dt" Type="DateTime" Precision="3" />
+    <Property Name="User_Role" Type="Int32" />
+  </EntityType>
+  <EntityType Name="UserGroupRight">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Usergrp_Code" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Mod_Code" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="Add_new" Type="Boolean" />
+    <Property Name="Edit" Type="Boolean" />
+    <Property Name="View" Type="Boolean" />
+    <Property Name="Delete" Type="Boolean" />
+    <Property Name="Print" Type="Boolean" />
+    <Property Name="Assign" Type="Boolean" />
+    <Property Name="SubMenu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Usermast">
+    <Key>
+      <PropertyRef Name="Pid" />
+    </Key>
+    <Property Name="Pid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="Short_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Login_Name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="Add_1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Add_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Add_3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Add_4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="Ac_Expire" Type="Boolean" />
+    <Property Name="Ac_Exp_Dt" Type="DateTime" Precision="3" />
+    <Property Name="Qpid" Type="Int32" />
+    <Property Name="Answer" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Reset_Pass" Type="Boolean" />
+    <Property Name="Reset_Pass_Dt" Type="DateTime" Precision="3" />
+    <Property Name="Photo_Attach" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Ug_Pid" Type="Int32" />
+    <Property Name="Circle_Pid" Type="Int32" />
+    <Property Name="Input_By" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Input_Dt" Type="DateTime" Precision="3" />
+    <Property Name="Modify_By" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Modify_Dt" Type="DateTime" Precision="3" />
+    <Property Name="User_Type" Type="Int32" />
+    <Property Name="STATE_PID" Type="Int32" />
+    <Property Name="PIN_PID" Type="Int32" />
+    <Property Name="City_Pid" Type="Int32" />
+    <Property Name="Pswd_ActiveDate" Type="DateTime" Precision="3" />
+    <Property Name="Frgt_Pass_Chk" Type="Boolean" />
+    <Property Name="Login_Date" Type="DateTime" Precision="3" />
+    <Property Name="Contact_No" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Shiva_Login" Type="Boolean" />
+    <Property Name="Lob_Pid" Type="Int32" />
+    <Property Name="Lob_Id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UserRight">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_Code" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Mod_Code" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="AddNew" Type="Boolean" />
+    <Property Name="Edit" Type="Boolean" />
+    <Property Name="View" Type="Boolean" />
+    <Property Name="Delete" Type="Boolean" />
+    <Property Name="Print" Type="Boolean" />
+    <Property Name="Assign" Type="Boolean" />
+    <Property Name="SubMenu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="VehiCat">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VPREFIX" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="START_NO" Type="Int32" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="VehiMasts" Relationship="Self.FK__VehiMast__VCAT_C__19AACF41" FromRole="VehiCat" ToRole="VehiMast" />
+  </EntityType>
+  <EntityType Name="VehiMast">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VCAT_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="INPUT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="INPUT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EDIT_BY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Models" Relationship="Self.FK__Model__VEH_CODE__1C873BEC" FromRole="VehiMast" ToRole="Model" />
+    <NavigationProperty Name="ModelSLs" Relationship="Self.FK__ModelSL__VEH_COD__2704CA5F" FromRole="VehiMast" ToRole="ModelSL" />
+    <NavigationProperty Name="VehiCat" Relationship="Self.FK__VehiMast__VCAT_C__19AACF41" FromRole="VehiMast" ToRole="VehiCat" />
+  </EntityType>
+  <EntityType Name="BankDtl">
+    <Key>
+      <PropertyRef Name="PID" />
+      <PropertyRef Name="BANKCODE" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BANKCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CURRCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="SWIFTNO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ROUTING" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="RDEL" Type="Boolean" />
+    <NavigationProperty Name="BankHdr" Relationship="Self.FK__BankDtl__BANKCOD__318258D2" FromRole="BankDtl" ToRole="BankHdr" />
+  </EntityType>
+  <Association Name="FK__BankDtl__BANKCOD__318258D2">
+    <End Role="BankHdr" Type="Self.BankHdr" Multiplicity="1" />
+    <End Role="BankDtl" Type="Self.BankDtl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BankHdr">
+        <PropertyRef Name="BANKCODE" />
+      </Principal>
+      <Dependent Role="BankDtl">
+        <PropertyRef Name="BANKCODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemMaste__CP_CO__53D770D6">
+    <End Role="CPMaster" Type="Self.CPMaster" Multiplicity="0..1" />
+    <End Role="ItemMaster" Type="Self.ItemMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CPMaster">
+        <PropertyRef Name="CP_CODE" />
+      </Principal>
+      <Dependent Role="ItemMaster">
+        <PropertyRef Name="CP_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemMaster__CURR__54CB950F">
+    <End Role="CurrMast" Type="Self.CurrMast" Multiplicity="0..1" />
+    <End Role="ItemMaster" Type="Self.ItemMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CurrMast">
+        <PropertyRef Name="CURR_CODE" />
+      </Principal>
+      <Dependent Role="ItemMaster">
+        <PropertyRef Name="CURR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__INDCITY__STATE_C__0F624AF8">
+    <End Role="State" Type="Self.State" Multiplicity="0..1" />
+    <End Role="IndCity" Type="Self.IndCity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="STATE_CODE" />
+      </Principal>
+      <Dependent Role="IndCity">
+        <PropertyRef Name="STATE_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemMaste__GRP_C__50FB042B">
+    <End Role="ItemGrp" Type="Self.ItemGrp" Multiplicity="0..1" />
+    <End Role="ItemMaster" Type="Self.ItemMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItemGrp">
+        <PropertyRef Name="GRP_CODE" />
+      </Principal>
+      <Dependent Role="ItemMaster">
+        <PropertyRef Name="GRP_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemSgrp__GRP_CO__0B5CAFEA">
+    <End Role="ItemGrp" Type="Self.ItemGrp" Multiplicity="0..1" />
+    <End Role="ItemSgrp" Type="Self.ItemSgrp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItemGrp">
+        <PropertyRef Name="GRP_CODE" />
+      </Principal>
+      <Dependent Role="ItemSgrp">
+        <PropertyRef Name="GRP_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemMaste__CAT_C__55BFB948">
+    <End Role="ItmCat" Type="Self.ItmCat" Multiplicity="0..1" />
+    <End Role="ItemMaster" Type="Self.ItemMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItmCat">
+        <PropertyRef Name="CATEGORY" />
+      </Principal>
+      <Dependent Role="ItemMaster">
+        <PropertyRef Name="CAT_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemMaste__SGRP___51EF2864">
+    <End Role="ItemSgrp" Type="Self.ItemSgrp" Multiplicity="0..1" />
+    <End Role="ItemMaster" Type="Self.ItemMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItemSgrp">
+        <PropertyRef Name="SGRP_CODE" />
+      </Principal>
+      <Dependent Role="ItemMaster">
+        <PropertyRef Name="SGRP_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemMaster__UNIT__52E34C9D">
+    <End Role="UnitMast" Type="Self.UnitMast" Multiplicity="0..1" />
+    <End Role="ItemMaster" Type="Self.ItemMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UnitMast">
+        <PropertyRef Name="UNIT" />
+      </Principal>
+      <Dependent Role="ItemMaster">
+        <PropertyRef Name="UNIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Model__VEH_CODE__1C873BEC">
+    <End Role="VehiMast" Type="Self.VehiMast" Multiplicity="1" />
+    <End Role="Model" Type="Self.Model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VehiMast">
+        <PropertyRef Name="CODE" />
+      </Principal>
+      <Dependent Role="Model">
+        <PropertyRef Name="VEH_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ModelSL__MODEL_C__27F8EE98">
+    <End Role="Model" Type="Self.Model" Multiplicity="1" />
+    <End Role="ModelSL" Type="Self.ModelSL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Model">
+        <PropertyRef Name="MODEL_CODE" />
+      </Principal>
+      <Dependent Role="ModelSL">
+        <PropertyRef Name="MODEL_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ModelSL__VEH_COD__2704CA5F">
+    <End Role="VehiMast" Type="Self.VehiMast" Multiplicity="1" />
+    <End Role="ModelSL" Type="Self.ModelSL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VehiMast">
+        <PropertyRef Name="CODE" />
+      </Principal>
+      <Dependent Role="ModelSL">
+        <PropertyRef Name="VEH_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__VehiMast__VCAT_C__19AACF41">
+    <End Role="VehiCat" Type="Self.VehiCat" Multiplicity="1" />
+    <End Role="VehiMast" Type="Self.VehiMast" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VehiCat">
+        <PropertyRef Name="CODE" />
+      </Principal>
+      <Dependent Role="VehiMast">
+        <PropertyRef Name="VCAT_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TurboEMSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BankHdrs" EntityType="Self.BankHdr" />
+    <EntitySet Name="BuyCats" EntityType="Self.BuyCat" />
+    <EntitySet Name="Buyers" EntityType="Self.Buyer" />
+    <EntitySet Name="CartPlies" EntityType="Self.CartPly" />
+    <EntitySet Name="Continens" EntityType="Self.Continen" />
+    <EntitySet Name="Countries" EntityType="Self.Country" />
+    <EntitySet Name="CPMasters" EntityType="Self.CPMaster" />
+    <EntitySet Name="CurrMasts" EntityType="Self.CurrMast" />
+    <EntitySet Name="DutyMasts" EntityType="Self.DutyMast" />
+    <EntitySet Name="EventMsts" EntityType="Self.EventMst" />
+    <EntitySet Name="Fin_Mast" EntityType="Self.Fin_Mast" />
+    <EntitySet Name="GstMasts" EntityType="Self.GstMast" />
+    <EntitySet Name="IndCities" EntityType="Self.IndCity" />
+    <EntitySet Name="ItemGrps" EntityType="Self.ItemGrp" />
+    <EntitySet Name="ItemMasters" EntityType="Self.ItemMaster" />
+    <EntitySet Name="ItemSgrps" EntityType="Self.ItemSgrp" />
+    <EntitySet Name="ItmCats" EntityType="Self.ItmCat" />
+    <EntitySet Name="ManUnits" EntityType="Self.ManUnit" />
+    <EntitySet Name="MisPrties" EntityType="Self.MisPrty" />
+    <EntitySet Name="Models" EntityType="Self.Model" />
+    <EntitySet Name="ModelSLs" EntityType="Self.ModelSL" />
+    <EntitySet Name="Modules" EntityType="Self.Module" />
+    <EntitySet Name="Modules31012018" EntityType="Self.Modules31012018" />
+    <EntitySet Name="Packages" EntityType="Self.Package" />
+    <EntitySet Name="PartyTypes" EntityType="Self.PartyType" />
+    <EntitySet Name="PayTerms" EntityType="Self.PayTerm" />
+    <EntitySet Name="PortMasts" EntityType="Self.PortMast" />
+    <EntitySet Name="ProcMasts" EntityType="Self.ProcMast" />
+    <EntitySet Name="States" EntityType="Self.State" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="UnitMasts" EntityType="Self.UnitMast" />
+    <EntitySet Name="Usergroups" EntityType="Self.Usergroup" />
+    <EntitySet Name="UserGroupRights" EntityType="Self.UserGroupRight" />
+    <EntitySet Name="Usermasts" EntityType="Self.Usermast" />
+    <EntitySet Name="UserRights" EntityType="Self.UserRight" />
+    <EntitySet Name="VehiCats" EntityType="Self.VehiCat" />
+    <EntitySet Name="VehiMasts" EntityType="Self.VehiMast" />
+    <EntitySet Name="BankDtls" EntityType="Self.BankDtl" />
+    <AssociationSet Name="FK__BankDtl__BANKCOD__318258D2" Association="Self.FK__BankDtl__BANKCOD__318258D2">
+      <End Role="BankHdr" EntitySet="BankHdrs" />
+      <End Role="BankDtl" EntitySet="BankDtls" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemMaste__CP_CO__53D770D6" Association="Self.FK__ItemMaste__CP_CO__53D770D6">
+      <End Role="CPMaster" EntitySet="CPMasters" />
+      <End Role="ItemMaster" EntitySet="ItemMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemMaster__CURR__54CB950F" Association="Self.FK__ItemMaster__CURR__54CB950F">
+      <End Role="CurrMast" EntitySet="CurrMasts" />
+      <End Role="ItemMaster" EntitySet="ItemMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__INDCITY__STATE_C__0F624AF8" Association="Self.FK__INDCITY__STATE_C__0F624AF8">
+      <End Role="State" EntitySet="States" />
+      <End Role="IndCity" EntitySet="IndCities" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemMaste__GRP_C__50FB042B" Association="Self.FK__ItemMaste__GRP_C__50FB042B">
+      <End Role="ItemGrp" EntitySet="ItemGrps" />
+      <End Role="ItemMaster" EntitySet="ItemMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemSgrp__GRP_CO__0B5CAFEA" Association="Self.FK__ItemSgrp__GRP_CO__0B5CAFEA">
+      <End Role="ItemGrp" EntitySet="ItemGrps" />
+      <End Role="ItemSgrp" EntitySet="ItemSgrps" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemMaste__CAT_C__55BFB948" Association="Self.FK__ItemMaste__CAT_C__55BFB948">
+      <End Role="ItmCat" EntitySet="ItmCats" />
+      <End Role="ItemMaster" EntitySet="ItemMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemMaste__SGRP___51EF2864" Association="Self.FK__ItemMaste__SGRP___51EF2864">
+      <End Role="ItemSgrp" EntitySet="ItemSgrps" />
+      <End Role="ItemMaster" EntitySet="ItemMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemMaster__UNIT__52E34C9D" Association="Self.FK__ItemMaster__UNIT__52E34C9D">
+      <End Role="UnitMast" EntitySet="UnitMasts" />
+      <End Role="ItemMaster" EntitySet="ItemMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Model__VEH_CODE__1C873BEC" Association="Self.FK__Model__VEH_CODE__1C873BEC">
+      <End Role="VehiMast" EntitySet="VehiMasts" />
+      <End Role="Model" EntitySet="Models" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ModelSL__MODEL_C__27F8EE98" Association="Self.FK__ModelSL__MODEL_C__27F8EE98">
+      <End Role="Model" EntitySet="Models" />
+      <End Role="ModelSL" EntitySet="ModelSLs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ModelSL__VEH_COD__2704CA5F" Association="Self.FK__ModelSL__VEH_COD__2704CA5F">
+      <End Role="VehiMast" EntitySet="VehiMasts" />
+      <End Role="ModelSL" EntitySet="ModelSLs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__VehiMast__VCAT_C__19AACF41" Association="Self.FK__VehiMast__VCAT_C__19AACF41">
+      <End Role="VehiCat" EntitySet="VehiCats" />
+      <End Role="VehiMast" EntitySet="VehiMasts" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

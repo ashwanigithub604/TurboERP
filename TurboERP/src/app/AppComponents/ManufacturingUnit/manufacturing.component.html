@@ -1,0 +1,60 @@
+<div class="page-content-wrapper animated fadeInRight">
+        <div class="page-content">
+          <div class="row wrapper border-bottom page-heading">
+            <div class="col-lg-12">
+              <h2> Manufacturing Unit Master</h2>
+              <ol class="breadcrumb">
+                <li>
+                  <a href="index.html">Home</a>
+                </li>
+                <li>
+                  <a>UI Features</a>
+                </li>
+                <li class="active">
+                  <strong> Manufacturing Unit Master </strong>
+                </li>
+              </ol>
+      
+            </div>
+          </div>
+      
+          <div class="wrapper-content ">
+            <div class="row"></div>
+            <!-- Horizontal Form start -->
+            <div class="col-lg-12 top20 bottom20">
+              <div class="widgets-container">
+                <h5>All form elements </h5>
+                <hr>
+                <form method="get" class="form-horizontal">
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Code</label>
+                    <div class="col-xs-3">
+                      <input placeholder="Code" class="form-control" [(ngModel)] = ModelManufactUnit.COMPANYUNIT
+                      type="text" name="ModelManufactUnit.COMPANYUNIT" required>
+                    </div>      
+                  </div>
+      
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Name</label>
+                    <div class="col-xs-3">
+                      <input placeholder="Name" class="form-control" [(ngModel)] = ModelManufactUnit.MANF_NAME
+                       type="text" name="ModelManufactUnit.MANF_NAME" required>
+                    </div>
+      
+                  </div>
+                  
+                  <div class="form-group">
+                      <div class="col-sm-4 col-sm-offset-2">
+                            <button class="btn aqua" type="button" (click)="SaveManufacturingUnit()">{{btnText}}</button>
+                        <button class="btn btn-danger" routerLink="/ManufacturingUnit" routerLinkActive="active" type="button">Cancel</button>
+                      
+                      </div>
+                    </div>
+                </form>
+      
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </div>

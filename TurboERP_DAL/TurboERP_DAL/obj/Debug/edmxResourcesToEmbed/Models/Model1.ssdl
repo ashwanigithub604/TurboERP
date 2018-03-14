@@ -1,0 +1,1049 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TurboEMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TurboEMS.dbo.BankDtl' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="BankDtl">
+    <Key>
+      <PropertyRef Name="PID" />
+      <PropertyRef Name="BANKCODE" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BANKCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="CURRCODE" Type="varchar" MaxLength="4" />
+    <Property Name="SWIFTNO" Type="varchar" MaxLength="20" />
+    <Property Name="ROUTING" Type="varchar" MaxLength="80" />
+    <Property Name="RDEL" Type="bit" />
+  </EntityType>
+  <EntityType Name="BankHdr">
+    <Key>
+      <PropertyRef Name="BANKCODE" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BANKCODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="SHORTNAME" Type="varchar" MaxLength="10" />
+    <Property Name="BANKNAME" Type="varchar" MaxLength="35" />
+    <Property Name="ADDRESS1" Type="varchar" MaxLength="35" />
+    <Property Name="ADDRESS2" Type="varchar" MaxLength="35" />
+    <Property Name="ADDRESS3" Type="varchar" MaxLength="35" />
+    <Property Name="ADDRESS4" Type="varchar" MaxLength="35" />
+    <Property Name="ACCOUNTNO" Type="varchar" MaxLength="20" />
+    <Property Name="COMP" Type="varchar" MaxLength="2" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="BuyCat">
+    <Key>
+      <PropertyRef Name="CAT_CODE" />
+    </Key>
+    <Property Name="PID" Type="int" />
+    <Property Name="CATEGORY" Type="varchar" MaxLength="20" />
+    <Property Name="CAT_CODE" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="MARK_UP" Type="numeric" Precision="6" Scale="2" />
+  </EntityType>
+  <EntityType Name="Buyer">
+    <Key>
+      <PropertyRef Name="Pid" />
+    </Key>
+    <Property Name="Pid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SHORT_ID" Type="varchar" MaxLength="10" />
+    <Property Name="BUYER_CODE" Type="varchar" MaxLength="4" />
+    <Property Name="TALLYID" Type="varchar" MaxLength="10" />
+    <Property Name="BUYER_NAME" Type="varchar" MaxLength="45" />
+    <Property Name="SHORT_NAME" Type="varchar" MaxLength="10" />
+    <Property Name="ADD1" Type="varchar" MaxLength="45" />
+    <Property Name="ADD2" Type="varchar" MaxLength="46" />
+    <Property Name="ADD3" Type="varchar" MaxLength="45" />
+    <Property Name="ADD4" Type="varchar" MaxLength="45" />
+    <Property Name="ADD5" Type="varchar" MaxLength="10" />
+    <Property Name="COUN_CODE" Type="varchar" MaxLength="4" />
+    <Property Name="CONT_CODE" Type="varchar" MaxLength="4" />
+    <Property Name="CURR_CODE" Type="varchar" MaxLength="4" />
+    <Property Name="BANK_ADD1" Type="varchar" MaxLength="45" />
+    <Property Name="BANK_ADD2" Type="varchar" MaxLength="45" />
+    <Property Name="BANK_ADD3" Type="varchar" MaxLength="45" />
+    <Property Name="BANK_ADD4" Type="varchar" MaxLength="45" />
+    <Property Name="PORT_DISC" Type="varchar" MaxLength="25" />
+    <Property Name="FIN_DEST" Type="varchar" MaxLength="25" />
+    <Property Name="NOTIFY1" Type="varchar" MaxLength="45" />
+    <Property Name="NOTIFY2" Type="varchar" MaxLength="45" />
+    <Property Name="NOTIFY3" Type="varchar" MaxLength="45" />
+    <Property Name="NOTIFY4" Type="varchar" MaxLength="45" />
+    <Property Name="NOTIFY5" Type="varchar" MaxLength="45" />
+    <Property Name="NOTIFY6" Type="varchar" MaxLength="45" />
+    <Property Name="NOTIFY7" Type="varchar" MaxLength="45" />
+    <Property Name="NOTIFY8" Type="varchar" MaxLength="45" />
+    <Property Name="NOTIFY9" Type="varchar" MaxLength="45" />
+    <Property Name="NOTIFY10" Type="varchar" MaxLength="45" />
+    <Property Name="PHONE" Type="varchar" MaxLength="30" />
+    <Property Name="MOBILE" Type="varchar" MaxLength="30" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="60" />
+    <Property Name="TELEX" Type="varchar" MaxLength="20" />
+    <Property Name="FAX" Type="varchar" MaxLength="30" />
+    <Property Name="AGNT_CODE" Type="varchar" MaxLength="4" />
+    <Property Name="TYPE" Type="varchar" MaxLength="1" />
+    <Property Name="CMSN" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="CNT_PRSN" Type="varchar" MaxLength="30" />
+    <Property Name="PAY_TERM1" Type="varchar" MaxLength="50" />
+    <Property Name="PAY_TERM2" Type="varchar" MaxLength="50" />
+    <Property Name="PAY_TERM3" Type="varchar" MaxLength="50" />
+    <Property Name="PAY_TERM4" Type="varchar" MaxLength="50" />
+    <Property Name="PAY_TERM5" Type="varchar" MaxLength="50" />
+    <Property Name="PAY_TERM6" Type="varchar" MaxLength="50" />
+    <Property Name="PAY_TERM7" Type="varchar" MaxLength="50" />
+    <Property Name="PAY_TERM8" Type="varchar" MaxLength="50" />
+    <Property Name="RMK1" Type="varchar" MaxLength="30" />
+    <Property Name="RMK2" Type="varchar" MaxLength="30" />
+    <Property Name="RMK3" Type="varchar" MaxLength="30" />
+    <Property Name="RMK4" Type="varchar" MaxLength="30" />
+    <Property Name="OPEN_BAL" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="ST_CODE" Type="varchar" MaxLength="4" />
+    <Property Name="ST_NO" Type="varchar" MaxLength="25" />
+    <Property Name="DEAL_ITM" Type="varchar" MaxLength="40" />
+    <Property Name="VISITOR" Type="varchar" MaxLength="45" />
+    <Property Name="M0411" Type="bit" />
+    <Property Name="VISIT_ADD1" Type="varchar" MaxLength="45" />
+    <Property Name="VISIT_ADD2" Type="varchar" MaxLength="45" />
+    <Property Name="VISIT_ADD3" Type="varchar" MaxLength="45" />
+    <Property Name="RMK5" Type="text" />
+    <Property Name="BANK_ACNO" Type="varchar" MaxLength="40" />
+    <Property Name="SWIFT_ACNO" Type="varchar" MaxLength="40" />
+    <Property Name="RELA_SINCE" Type="datetime" />
+    <Property Name="SOURCE" Type="varchar" MaxLength="25" />
+    <Property Name="CATEGORY" Type="varchar" MaxLength="20" />
+    <Property Name="ADD_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="CAT_CODE" Type="varchar" MaxLength="2" />
+    <Property Name="EDIT_DT" Type="datetime" />
+    <Property Name="ENTRY_DT" Type="datetime" />
+    <Property Name="WEB_ADDR" Type="varchar" MaxLength="254" />
+    <Property Name="PICTPATH1" Type="varchar" MaxLength="100" />
+    <Property Name="PICTPATH2" Type="varchar" MaxLength="100" />
+    <Property Name="PICTPATH3" Type="varchar" MaxLength="100" />
+    <Property Name="PICTPATH4" Type="varchar" MaxLength="100" />
+    <Property Name="PICTPATH5" Type="varchar" MaxLength="100" />
+    <Property Name="PICTDESC1" Type="varchar" MaxLength="30" />
+    <Property Name="PICTDESC2" Type="varchar" MaxLength="30" />
+    <Property Name="PICTDESC3" Type="varchar" MaxLength="30" />
+    <Property Name="PICTDESC4" Type="varchar" MaxLength="30" />
+    <Property Name="PICTDESC5" Type="varchar" MaxLength="30" />
+    <Property Name="BANKCODE" Type="varchar" MaxLength="4" />
+    <Property Name="MER_CODE" Type="varchar" MaxLength="4" />
+    <Property Name="DESP_CODE" Type="varchar" MaxLength="5" />
+    <Property Name="FREEZE" Type="bit" />
+    <Property Name="DISCOUNT" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="FREIGHT" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="INSURANCE" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="REMARKS1" Type="varchar" MaxLength="80" />
+    <Property Name="REMARKS2" Type="varchar" MaxLength="80" />
+    <Property Name="REMARKS3" Type="varchar" MaxLength="80" />
+    <Property Name="REMARKS4" Type="varchar" MaxLength="80" />
+    <Property Name="REMARKS5" Type="varchar" MaxLength="80" />
+    <Property Name="REMARKS6" Type="varchar" MaxLength="80" />
+    <Property Name="REMARKS7" Type="varchar" MaxLength="80" />
+    <Property Name="REMARKS8" Type="varchar" MaxLength="80" />
+    <Property Name="REMARKS9" Type="varchar" MaxLength="80" />
+    <Property Name="REMARKS10" Type="varchar" MaxLength="80" />
+    <Property Name="USER_CODE" Type="varchar" MaxLength="3" />
+    <Property Name="PRE_CARY" Type="varchar" MaxLength="30" />
+    <Property Name="VESSEL" Type="varchar" MaxLength="30" />
+    <Property Name="RCT_PRCRG" Type="varchar" MaxLength="30" />
+    <Property Name="PART_LDING" Type="varchar" MaxLength="30" />
+    <Property Name="PAYTERMCD" Type="varchar" MaxLength="10" />
+    <Property Name="VATRATE" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="PANNO" Type="varchar" MaxLength="30" />
+    <Property Name="TINNO" Type="varchar" MaxLength="30" />
+    <Property Name="ATT_FILE1" Type="varchar" MaxLength="100" />
+    <Property Name="ATT_FILE2" Type="varchar" MaxLength="100" />
+    <Property Name="ATT_FILE3" Type="varchar" MaxLength="100" />
+    <Property Name="ATT_FILE4" Type="varchar" MaxLength="100" />
+    <Property Name="ATT_FILE5" Type="varchar" MaxLength="100" />
+    <Property Name="BUY_FWRD" Type="varchar" MaxLength="4" />
+    <Property Name="LSELECTED" Type="bit" />
+    <Property Name="LLSTSELD" Type="bit" />
+    <Property Name="CITY_CODE" Type="varchar" MaxLength="4" />
+    <Property Name="OTHER_REF" Type="varchar" MaxLength="40" />
+    <Property Name="CLIENT" Type="numeric" Precision="2" Scale="1" />
+    <Property Name="PICT_PATH" Type="varchar" MaxLength="100" />
+    <Property Name="STATE_CODE" Type="varchar" MaxLength="2" />
+    <Property Name="GSTPRIFIX" Type="varchar" MaxLength="3" />
+    <Property Name="GSTIN_CAT" Type="bit" />
+    <Property Name="GSTIN_NO" Type="varchar" MaxLength="15" />
+    <Property Name="GST_REG" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="CartPly">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CRTN_PLY" Type="int" />
+    <Property Name="RATEBROWN" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="RATECOLOR" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="IPDEFAULT" Type="bit" />
+    <Property Name="MPDEFAULT" Type="bit" />
+    <Property Name="BOARDWIDTH" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="INCH_CMS" Type="bit" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Continen">
+    <Key>
+      <PropertyRef Name="CONT_CODE" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CONT_CODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="CONT_NAME" Type="varchar" MaxLength="30" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="COUN_CODE" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COUN_CODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="COUN_NAME" Type="varchar" MaxLength="30" />
+    <Property Name="CONT_CODE" Type="varchar" MaxLength="4" />
+    <Property Name="THRUST" Type="varchar" MaxLength="1" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CPMaster">
+    <Key>
+      <PropertyRef Name="CP_CODE" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CP_CODE" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="NKEY" Type="numeric" Precision="3" Scale="0" />
+    <Property Name="RATE" Type="varchar" MaxLength="1" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CurrMast">
+    <Key>
+      <PropertyRef Name="CURR_CODE" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CURR_CODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="CURR_NAME" Type="varchar" MaxLength="3" />
+    <Property Name="CURR_CONV" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="EXC_RATE" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="COIN" Type="varchar" MaxLength="10" />
+    <Property Name="CURR_SEP" Type="varchar" MaxLength="1" />
+    <Property Name="DECI_RQD" Type="bit" />
+    <Property Name="USER_CODE" Type="varchar" MaxLength="3" />
+    <Property Name="CURR_CAP" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DutyMast">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PID" Type="int" />
+    <Property Name="PURC_GRP" Type="varchar" MaxLength="4" />
+    <Property Name="CODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="DESC_1" Type="varchar" MaxLength="200" />
+    <Property Name="DESC_2" Type="varchar" MaxLength="200" />
+    <Property Name="RATE" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="HSTUS" Type="varchar" MaxLength="15" />
+    <Property Name="HSN_SAC" Type="varchar" MaxLength="15" />
+    <Property Name="GSPFREE" Type="bit" />
+    <Property Name="UPDDATE" Type="datetime" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EventMst">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PID" Type="int" />
+    <Property Name="CODE" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="SOURCE" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="Fin_Mast">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="30" />
+    <Property Name="PANTONECODE" Type="varchar" MaxLength="12" />
+    <Property Name="NEELAMCODE" Type="varchar" MaxLength="12" />
+    <Property Name="PPREFIX" Type="varchar" MaxLength="3" />
+    <Property Name="CSHADEPATH" Type="varchar" MaxLength="100" />
+    <Property Name="LINKDLINK" Type="bit" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GstMast">
+    <Key>
+      <PropertyRef Name="VAT_CODE" />
+    </Key>
+    <Property Name="PID" Type="int" />
+    <Property Name="VAT_CODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="DESCRIPTIO" Type="varchar" MaxLength="20" />
+    <Property Name="RATE" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="TAX_EXMPT" Type="bit" />
+    <Property Name="SALES_GST" Type="bit" />
+    <Property Name="CGST_RATE" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="SGST_RATE" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="UTGST_RATE" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="IGST_RATE" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="GST_TYPE" Type="int" />
+    <Property Name="TAX_RATE" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="IndCity">
+    <Key>
+      <PropertyRef Name="CITY_CODE" />
+    </Key>
+    <Property Name="PID" Type="int" />
+    <Property Name="CITY_CODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="CITY_NAME" Type="varchar" MaxLength="30" />
+    <Property Name="STATE_CODE" Type="varchar" MaxLength="2" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ItemGrp">
+    <Key>
+      <PropertyRef Name="GRP_CODE" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GRP_CODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="GRP_NAME" Type="varchar" MaxLength="30" />
+    <Property Name="GRP_PREFIX" Type="varchar" MaxLength="2" />
+    <Property Name="PICT_PATH" Type="varchar" MaxLength="100" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ItemMaster">
+    <Key>
+      <PropertyRef Name="Pid" />
+    </Key>
+    <Property Name="Pid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GRP_CODE" Type="varchar" MaxLength="4" />
+    <Property Name="SGRP_CODE" Type="varchar" MaxLength="4" />
+    <Property Name="ITEM_CODE" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="SAMP_CODE" Type="varchar" MaxLength="10" />
+    <Property Name="FINCODE" Type="varchar" MaxLength="10" />
+    <Property Name="ITEM_NAME1" Type="varchar" MaxLength="40" />
+    <Property Name="ITEM_NAME2" Type="varchar" MaxLength="40" />
+    <Property Name="ITEM_NAME3" Type="varchar" MaxLength="40" />
+    <Property Name="ITEM_NAME4" Type="varchar" MaxLength="40" />
+    <Property Name="OPEN_QTY" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="CLOS_QTY" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="YTOD_RECT" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="YTOD_ISSUE" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="EAN_NO" Type="varchar" MaxLength="13" />
+    <Property Name="SIZE_CODE" Type="varchar" MaxLength="17" />
+    <Property Name="UNIT" Type="varchar" MaxLength="3" />
+    <Property Name="NET_WT" Type="numeric" Precision="8" Scale="3" />
+    <Property Name="INCRNET_WT" Type="numeric" Precision="8" Scale="3" />
+    <Property Name="MCNET_WT" Type="numeric" Precision="8" Scale="3" />
+    <Property Name="CFT" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="CP_CODE" Type="varchar" MaxLength="1" />
+    <Property Name="RATE" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="SELL_PRICE" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="FOB" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="MRGN_PER" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="MIN_QTY" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="ITM_LENGTH" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="ITM_BRDTH" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="ITM_HEIGHT" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="IN_CRTNLEN" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="IN_CRTNBRD" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="IN_CRTNHT" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="IN_CRTNPCS" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="TOTINCRTN" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="CRTNLENGTH" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="CRTNBRDTH" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="CRTNHEIGHT" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="CRTN_CBM" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="INRCRT_CBM" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="PRCRTN_QTY" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="PICT_PATH" Type="varchar" MaxLength="250" />
+    <Property Name="INCH_CMS" Type="bit" />
+    <Property Name="ITM_BRKUP" Type="bit" />
+    <Property Name="ENTRY_DT" Type="datetime" />
+    <Property Name="SHP_TYP" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="CURR" Type="varchar" MaxLength="4" />
+    <Property Name="EXC_RATE" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="MARK" Type="varchar" MaxLength="1" />
+    <Property Name="TYPE" Type="varchar" MaxLength="1" />
+    <Property Name="MARK_TOPRT" Type="bit" />
+    <Property Name="CATEGORY" Type="varchar" MaxLength="20" />
+    <Property Name="ADD_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="CONT20QTY" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="CONT40QTY" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="CONT40HQTY" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="CBM20FT" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="CBM40FT" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="CBM40HQ" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="EDIT_DT" Type="datetime" />
+    <Property Name="SAMPLE" Type="bit" />
+    <Property Name="COSTDATE" Type="datetime" />
+    <Property Name="FACTEXPAMT" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="FACT_PER" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="OVRHD_VAL" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="SPINSQFEET" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="WTPERSQFT" Type="numeric" Precision="6" Scale="3" />
+    <Property Name="REORD_LVL" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="MIN_LVL" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="MAX_LVL" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="CREATE_DT" Type="datetime" />
+    <Property Name="VOL_WT" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="CAT_CODE" Type="varchar" MaxLength="20" />
+    <Property Name="ENDOP_QTY" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="ENDCL_QTY" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="COST_RATE" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="ITEM_DATE" Type="datetime" />
+    <Property Name="INCRT_CBM" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="PKGFRTPER" Type="numeric" Precision="3" Scale="0" />
+    <Property Name="COST_DATE" Type="datetime" />
+    <Property Name="ENDYTDRCT" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="ENDYTDISS" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="PERMTRQTY" Type="numeric" Precision="6" Scale="3" />
+    <Property Name="TREAT_SET" Type="bit" />
+    <Property Name="USER_CODE" Type="varchar" MaxLength="3" />
+    <Property Name="DEL" Type="bit" />
+    <Property Name="LSELECTED" Type="bit" />
+    <Property Name="LLSTSELD" Type="bit" />
+    <Property Name="SEL_UNSEL" Type="bit" />
+    <Property Name="CONT45HQTY" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="QTY_RCVD" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="QTY_ISSUED" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="AUTOSIZECD" Type="bit" />
+    <Property Name="LINKDLINK" Type="bit" />
+    <Property Name="REFPHOTO" Type="varchar" MaxLength="15" />
+    <Property Name="ALLOC_QTY" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="ASSORTITM" Type="bit" />
+    <Property Name="GST_CAT" Type="bit" />
+    <Property Name="GSTHSNSAC" Type="varchar" MaxLength="10" />
+    <Property Name="GST_DTAX" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="ALLOWSTOCK" Type="bit" />
+  </EntityType>
+  <EntityType Name="ItemSgrp">
+    <Key>
+      <PropertyRef Name="SGRP_CODE" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SGRP_CODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="SGRP_NAME" Type="varchar" MaxLength="30" />
+    <Property Name="SGRP_NAME1" Type="varchar" MaxLength="30" />
+    <Property Name="GRP_CODE" Type="varchar" MaxLength="4" />
+    <Property Name="SGRP_PREFIX" Type="varchar" MaxLength="2" />
+    <Property Name="PICT_PATH" Type="varchar" MaxLength="100" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ItmCat">
+    <Key>
+      <PropertyRef Name="CATEGORY" />
+    </Key>
+    <Property Name="PID" Type="int" />
+    <Property Name="CATEGORY" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ManUnit">
+    <Key>
+      <PropertyRef Name="COMPANYUNIT" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COMPANYUNIT" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MANF_NAME" Type="varchar" MaxLength="25" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MisPrty">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="varchar" MaxLength="4" />
+    <Property Name="TYPE" Type="varchar" MaxLength="1" />
+    <Property Name="NAME" Type="varchar" MaxLength="45" />
+    <Property Name="SHORT_NAME" Type="varchar" MaxLength="10" />
+    <Property Name="ADD1" Type="varchar" MaxLength="45" />
+    <Property Name="ADD2" Type="varchar" MaxLength="45" />
+    <Property Name="ADD3" Type="varchar" MaxLength="45" />
+    <Property Name="CONTPER" Type="varchar" MaxLength="45" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="35" />
+    <Property Name="WEB_ADD" Type="varchar" MaxLength="45" />
+    <Property Name="MOBILE" Type="varchar" MaxLength="30" />
+    <Property Name="PHONE" Type="varchar" MaxLength="30" />
+    <Property Name="FAX" Type="varchar" MaxLength="30" />
+    <Property Name="RELA" Type="datetime" />
+    <Property Name="REMARKS" Type="varchar(max)" />
+    <Property Name="MISCTYPE" Type="varchar" MaxLength="1" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="MODEL_CODE" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VEH_CODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MODEL_CODE" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="MODEL_NAME" Type="varchar" MaxLength="30" />
+    <Property Name="RDEL" Type="bit" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ModelSL">
+    <Key>
+      <PropertyRef Name="MODEL_SL" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VEH_CODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MODEL_CODE" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="MODEL_SL" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Modules">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Grp_Code" Type="varchar" MaxLength="10" />
+    <Property Name="Grp_Desc" Type="varchar" MaxLength="40" />
+    <Property Name="Group_Sub_Desc" Type="varchar" MaxLength="30" />
+    <Property Name="Mod_Code" Type="char" MaxLength="20" />
+    <Property Name="Mod_Name" Type="varchar" MaxLength="45" />
+    <Property Name="Mod_Desc" Type="varchar" MaxLength="150" />
+    <Property Name="Menu_Desc" Type="varchar" MaxLength="150" />
+    <Property Name="Mod_Link" Type="char" MaxLength="50" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="OrdKeyMain" Type="int" />
+    <Property Name="OrdKeyChd" Type="int" />
+    <Property Name="ControllerName" Type="varchar" MaxLength="100" />
+    <Property Name="ActionName" Type="varchar" MaxLength="100" />
+    <Property Name="Action" Type="varchar" MaxLength="30" />
+    <Property Name="Menu _Icon" Type="varchar" MaxLength="30" />
+    <Property Name="Grp_Icon" Type="varchar" MaxLength="30" />
+    <Property Name="Grp_Sub_flag" Type="bit" />
+    <Property Name="SubMenu" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Modules31012018">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Grp_Code" Type="varchar" MaxLength="10" />
+    <Property Name="Grp_Desc" Type="varchar" MaxLength="40" />
+    <Property Name="Mod_Code" Type="char" MaxLength="20" />
+    <Property Name="Menu_Desc" Type="varchar" MaxLength="150" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="OrdKeyMain" Type="int" />
+    <Property Name="OrdKeyChd" Type="int" />
+    <Property Name="ControllerName" Type="varchar" MaxLength="100" />
+    <Property Name="ActionName" Type="varchar" MaxLength="100" />
+    <Property Name="Action" Type="varchar" MaxLength="10" />
+    <Property Name="Menu _Icon" Type="varchar" MaxLength="30" />
+    <Property Name="Grp_Icon" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Package">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PID" Type="int" />
+    <Property Name="CODE" Type="int" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="15" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PartyType">
+    <Key>
+      <PropertyRef Name="Pid" />
+    </Key>
+    <Property Name="Pid" Type="int" Nullable="false" />
+    <Property Name="Party_Description" Type="varchar" MaxLength="20" />
+    <Property Name="Type" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="PayTerms">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PID" Type="int" />
+    <Property Name="CODE" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TERM1" Type="varchar" MaxLength="80" />
+    <Property Name="TERM2" Type="varchar" MaxLength="80" />
+    <Property Name="TERM3" Type="varchar" MaxLength="80" />
+    <Property Name="TERM4" Type="varchar" MaxLength="80" />
+    <Property Name="TERM5" Type="varchar" MaxLength="80" />
+    <Property Name="TERM6" Type="varchar" MaxLength="80" />
+    <Property Name="TERM7" Type="varchar" MaxLength="80" />
+    <Property Name="TERM8" Type="varchar" MaxLength="80" />
+    <Property Name="TRANREM" Type="bit" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PortMast">
+    <Key>
+      <PropertyRef Name="PORT_CODE" />
+    </Key>
+    <Property Name="PID" Type="int" />
+    <Property Name="PORT_CODE" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="PORT_NAME" Type="varchar" MaxLength="25" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ProcMast">
+    <Key>
+      <PropertyRef Name="PROC_CODE" />
+    </Key>
+    <Property Name="PID" Type="int" />
+    <Property Name="PROC_CODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="PROC_NAME" Type="varchar" MaxLength="60" />
+    <Property Name="MTRLTOISSUE" Type="bit" />
+    <Property Name="USER_CODE" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="STATE_CODE" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="STATE_CODE" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="STATE NAME" Type="varchar" MaxLength="30" />
+    <Property Name="UT" Type="bit" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="UnitMast">
+    <Key>
+      <PropertyRef Name="UNIT" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UNIT" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="DESC" Type="varchar" MaxLength="20" />
+    <Property Name="DECI_REQ" Type="bit" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Usergroup">
+    <Key>
+      <PropertyRef Name="Pid" />
+    </Key>
+    <Property Name="Pid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Usergroup_Code" Type="char" MaxLength="10" />
+    <Property Name="Usergrp_Name" Type="varchar" MaxLength="40" />
+    <Property Name="Input_By" Type="char" MaxLength="10" />
+    <Property Name="Input_Dt" Type="datetime" />
+    <Property Name="Modify_By" Type="char" MaxLength="10" />
+    <Property Name="Modify_Dt" Type="datetime" />
+    <Property Name="User_Role" Type="int" />
+  </EntityType>
+  <EntityType Name="UserGroupRights">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Usergrp_Code" Type="char" MaxLength="10" />
+    <Property Name="Mod_Code" Type="char" MaxLength="20" />
+    <Property Name="Add_new" Type="bit" />
+    <Property Name="Edit" Type="bit" />
+    <Property Name="View" Type="bit" />
+    <Property Name="Delete" Type="bit" />
+    <Property Name="Print" Type="bit" />
+    <Property Name="Assign" Type="bit" />
+    <Property Name="SubMenu" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Usermast">
+    <Key>
+      <PropertyRef Name="Pid" />
+    </Key>
+    <Property Name="Pid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="char" MaxLength="10" />
+    <Property Name="Name" Type="varchar" MaxLength="120" />
+    <Property Name="Short_Name" Type="varchar" MaxLength="30" />
+    <Property Name="Login_Name" Type="varchar" MaxLength="10" />
+    <Property Name="Password" Type="char" MaxLength="20" />
+    <Property Name="Add_1" Type="varchar" MaxLength="50" />
+    <Property Name="Add_2" Type="varchar" MaxLength="50" />
+    <Property Name="Add_3" Type="varchar" MaxLength="50" />
+    <Property Name="Add_4" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="80" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Ac_Expire" Type="bit" />
+    <Property Name="Ac_Exp_Dt" Type="datetime" />
+    <Property Name="Qpid" Type="int" />
+    <Property Name="Answer" Type="varchar" MaxLength="100" />
+    <Property Name="Reset_Pass" Type="bit" />
+    <Property Name="Reset_Pass_Dt" Type="datetime" />
+    <Property Name="Photo_Attach" Type="varchar" MaxLength="250" />
+    <Property Name="Ug_Pid" Type="int" />
+    <Property Name="Circle_Pid" Type="int" />
+    <Property Name="Input_By" Type="char" MaxLength="10" />
+    <Property Name="Input_Dt" Type="datetime" />
+    <Property Name="Modify_By" Type="char" MaxLength="10" />
+    <Property Name="Modify_Dt" Type="datetime" />
+    <Property Name="User_Type" Type="int" />
+    <Property Name="STATE_PID" Type="int" />
+    <Property Name="PIN_PID" Type="int" />
+    <Property Name="City_Pid" Type="int" />
+    <Property Name="Pswd_ActiveDate" Type="datetime" />
+    <Property Name="Frgt_Pass_Chk" Type="bit" />
+    <Property Name="Login_Date" Type="datetime" />
+    <Property Name="Contact_No" Type="varchar" MaxLength="10" />
+    <Property Name="Shiva_Login" Type="bit" />
+    <Property Name="Lob_Pid" Type="int" />
+    <Property Name="Lob_Id" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="UserRights">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User_Code" Type="char" MaxLength="10" />
+    <Property Name="Mod_Code" Type="char" MaxLength="20" />
+    <Property Name="AddNew" Type="bit" />
+    <Property Name="Edit" Type="bit" />
+    <Property Name="View" Type="bit" />
+    <Property Name="Delete" Type="bit" />
+    <Property Name="Print" Type="bit" />
+    <Property Name="Assign" Type="bit" />
+    <Property Name="SubMenu" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="VehiCat">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="50" />
+    <Property Name="VPREFIX" Type="varchar" MaxLength="2" />
+    <Property Name="START_NO" Type="int" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="VehiMast">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="50" />
+    <Property Name="VCAT_CODE" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="INPUT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="INPUT_DATE" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="3" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+  </EntityType>
+  <Association Name="FK__BankDtl__BANKCOD__318258D2">
+    <End Role="BankHdr" Type="Self.BankHdr" Multiplicity="1" />
+    <End Role="BankDtl" Type="Self.BankDtl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BankHdr">
+        <PropertyRef Name="BANKCODE" />
+      </Principal>
+      <Dependent Role="BankDtl">
+        <PropertyRef Name="BANKCODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__INDCITY__STATE_C__0F624AF8">
+    <End Role="State" Type="Self.State" Multiplicity="0..1" />
+    <End Role="IndCity" Type="Self.IndCity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="STATE_CODE" />
+      </Principal>
+      <Dependent Role="IndCity">
+        <PropertyRef Name="STATE_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemMaste__CAT_C__55BFB948">
+    <End Role="ItmCat" Type="Self.ItmCat" Multiplicity="0..1" />
+    <End Role="ItemMaster" Type="Self.ItemMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItmCat">
+        <PropertyRef Name="CATEGORY" />
+      </Principal>
+      <Dependent Role="ItemMaster">
+        <PropertyRef Name="CAT_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemMaste__CP_CO__53D770D6">
+    <End Role="CPMaster" Type="Self.CPMaster" Multiplicity="0..1" />
+    <End Role="ItemMaster" Type="Self.ItemMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CPMaster">
+        <PropertyRef Name="CP_CODE" />
+      </Principal>
+      <Dependent Role="ItemMaster">
+        <PropertyRef Name="CP_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemMaste__GRP_C__50FB042B">
+    <End Role="ItemGrp" Type="Self.ItemGrp" Multiplicity="0..1" />
+    <End Role="ItemMaster" Type="Self.ItemMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItemGrp">
+        <PropertyRef Name="GRP_CODE" />
+      </Principal>
+      <Dependent Role="ItemMaster">
+        <PropertyRef Name="GRP_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemMaste__SGRP___51EF2864">
+    <End Role="ItemSgrp" Type="Self.ItemSgrp" Multiplicity="0..1" />
+    <End Role="ItemMaster" Type="Self.ItemMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItemSgrp">
+        <PropertyRef Name="SGRP_CODE" />
+      </Principal>
+      <Dependent Role="ItemMaster">
+        <PropertyRef Name="SGRP_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemMaster__CURR__54CB950F">
+    <End Role="CurrMast" Type="Self.CurrMast" Multiplicity="0..1" />
+    <End Role="ItemMaster" Type="Self.ItemMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CurrMast">
+        <PropertyRef Name="CURR_CODE" />
+      </Principal>
+      <Dependent Role="ItemMaster">
+        <PropertyRef Name="CURR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemMaster__UNIT__52E34C9D">
+    <End Role="UnitMast" Type="Self.UnitMast" Multiplicity="0..1" />
+    <End Role="ItemMaster" Type="Self.ItemMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UnitMast">
+        <PropertyRef Name="UNIT" />
+      </Principal>
+      <Dependent Role="ItemMaster">
+        <PropertyRef Name="UNIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemSgrp__GRP_CO__0B5CAFEA">
+    <End Role="ItemGrp" Type="Self.ItemGrp" Multiplicity="0..1" />
+    <End Role="ItemSgrp" Type="Self.ItemSgrp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItemGrp">
+        <PropertyRef Name="GRP_CODE" />
+      </Principal>
+      <Dependent Role="ItemSgrp">
+        <PropertyRef Name="GRP_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Model__VEH_CODE__1C873BEC">
+    <End Role="VehiMast" Type="Self.VehiMast" Multiplicity="1" />
+    <End Role="Model" Type="Self.Model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VehiMast">
+        <PropertyRef Name="CODE" />
+      </Principal>
+      <Dependent Role="Model">
+        <PropertyRef Name="VEH_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ModelSL__MODEL_C__27F8EE98">
+    <End Role="Model" Type="Self.Model" Multiplicity="1" />
+    <End Role="ModelSL" Type="Self.ModelSL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Model">
+        <PropertyRef Name="MODEL_CODE" />
+      </Principal>
+      <Dependent Role="ModelSL">
+        <PropertyRef Name="MODEL_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ModelSL__VEH_COD__2704CA5F">
+    <End Role="VehiMast" Type="Self.VehiMast" Multiplicity="1" />
+    <End Role="ModelSL" Type="Self.ModelSL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VehiMast">
+        <PropertyRef Name="CODE" />
+      </Principal>
+      <Dependent Role="ModelSL">
+        <PropertyRef Name="VEH_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__VehiMast__VCAT_C__19AACF41">
+    <End Role="VehiCat" Type="Self.VehiCat" Multiplicity="1" />
+    <End Role="VehiMast" Type="Self.VehiMast" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VehiCat">
+        <PropertyRef Name="CODE" />
+      </Principal>
+      <Dependent Role="VehiMast">
+        <PropertyRef Name="VCAT_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TurboEMSModelStoreContainer">
+    <EntitySet Name="BankHdr" EntityType="Self.BankHdr" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BuyCat" EntityType="Self.BuyCat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Buyer" EntityType="Self.Buyer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CartPly" EntityType="Self.CartPly" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Continen" EntityType="Self.Continen" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CPMaster" EntityType="Self.CPMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CurrMast" EntityType="Self.CurrMast" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DutyMast" EntityType="Self.DutyMast" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EventMst" EntityType="Self.EventMst" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fin_Mast" EntityType="Self.Fin_Mast" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GstMast" EntityType="Self.GstMast" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IndCity" EntityType="Self.IndCity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ItemGrp" EntityType="Self.ItemGrp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ItemMaster" EntityType="Self.ItemMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ItemSgrp" EntityType="Self.ItemSgrp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ItmCat" EntityType="Self.ItmCat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ManUnit" EntityType="Self.ManUnit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MisPrty" EntityType="Self.MisPrty" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Model" EntityType="Self.Model" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModelSL" EntityType="Self.ModelSL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Modules" EntityType="Self.Modules" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Modules31012018" EntityType="Self.Modules31012018" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Package" EntityType="Self.Package" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PartyType" EntityType="Self.PartyType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PayTerms" EntityType="Self.PayTerms" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PortMast" EntityType="Self.PortMast" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProcMast" EntityType="Self.ProcMast" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UnitMast" EntityType="Self.UnitMast" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usergroup" EntityType="Self.Usergroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserGroupRights" EntityType="Self.UserGroupRights" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usermast" EntityType="Self.Usermast" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRights" EntityType="Self.UserRights" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VehiCat" EntityType="Self.VehiCat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VehiMast" EntityType="Self.VehiMast" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BankDtl" EntityType="Self.BankDtl" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [BankDtl].[PID] AS [PID], 
+    [BankDtl].[BANKCODE] AS [BANKCODE], 
+    [BankDtl].[CURRCODE] AS [CURRCODE], 
+    [BankDtl].[SWIFTNO] AS [SWIFTNO], 
+    [BankDtl].[ROUTING] AS [ROUTING], 
+    [BankDtl].[RDEL] AS [RDEL]
+    FROM [dbo].[BankDtl] AS [BankDtl]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__BankDtl__BANKCOD__318258D2" Association="Self.FK__BankDtl__BANKCOD__318258D2">
+      <End Role="BankHdr" EntitySet="BankHdr" />
+      <End Role="BankDtl" EntitySet="BankDtl" />
+    </AssociationSet>
+    <AssociationSet Name="FK__INDCITY__STATE_C__0F624AF8" Association="Self.FK__INDCITY__STATE_C__0F624AF8">
+      <End Role="State" EntitySet="State" />
+      <End Role="IndCity" EntitySet="IndCity" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemMaste__CAT_C__55BFB948" Association="Self.FK__ItemMaste__CAT_C__55BFB948">
+      <End Role="ItmCat" EntitySet="ItmCat" />
+      <End Role="ItemMaster" EntitySet="ItemMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemMaste__CP_CO__53D770D6" Association="Self.FK__ItemMaste__CP_CO__53D770D6">
+      <End Role="CPMaster" EntitySet="CPMaster" />
+      <End Role="ItemMaster" EntitySet="ItemMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemMaste__GRP_C__50FB042B" Association="Self.FK__ItemMaste__GRP_C__50FB042B">
+      <End Role="ItemGrp" EntitySet="ItemGrp" />
+      <End Role="ItemMaster" EntitySet="ItemMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemMaste__SGRP___51EF2864" Association="Self.FK__ItemMaste__SGRP___51EF2864">
+      <End Role="ItemSgrp" EntitySet="ItemSgrp" />
+      <End Role="ItemMaster" EntitySet="ItemMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemMaster__CURR__54CB950F" Association="Self.FK__ItemMaster__CURR__54CB950F">
+      <End Role="CurrMast" EntitySet="CurrMast" />
+      <End Role="ItemMaster" EntitySet="ItemMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemMaster__UNIT__52E34C9D" Association="Self.FK__ItemMaster__UNIT__52E34C9D">
+      <End Role="UnitMast" EntitySet="UnitMast" />
+      <End Role="ItemMaster" EntitySet="ItemMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemSgrp__GRP_CO__0B5CAFEA" Association="Self.FK__ItemSgrp__GRP_CO__0B5CAFEA">
+      <End Role="ItemGrp" EntitySet="ItemGrp" />
+      <End Role="ItemSgrp" EntitySet="ItemSgrp" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Model__VEH_CODE__1C873BEC" Association="Self.FK__Model__VEH_CODE__1C873BEC">
+      <End Role="VehiMast" EntitySet="VehiMast" />
+      <End Role="Model" EntitySet="Model" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ModelSL__MODEL_C__27F8EE98" Association="Self.FK__ModelSL__MODEL_C__27F8EE98">
+      <End Role="Model" EntitySet="Model" />
+      <End Role="ModelSL" EntitySet="ModelSL" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ModelSL__VEH_COD__2704CA5F" Association="Self.FK__ModelSL__VEH_COD__2704CA5F">
+      <End Role="VehiMast" EntitySet="VehiMast" />
+      <End Role="ModelSL" EntitySet="ModelSL" />
+    </AssociationSet>
+    <AssociationSet Name="FK__VehiMast__VCAT_C__19AACF41" Association="Self.FK__VehiMast__VCAT_C__19AACF41">
+      <End Role="VehiCat" EntitySet="VehiCat" />
+      <End Role="VehiMast" EntitySet="VehiMast" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

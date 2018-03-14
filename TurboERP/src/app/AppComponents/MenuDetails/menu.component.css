@@ -1,0 +1,37 @@
+
+
+
+
+
+
+
+
+.page-sidebar-menu ul :not(collapsed) .arrow:before,
+.page-sidebar-menu :not(collapsed) .arrow:before {
+   
+    content: "\f078";
+   
+}
+
+
+
+
+
+
+
+.page-sidebar-menu ul .sub-menu li:before,
+.page-sidebar-menu li .sub-menu li:before {
+   
+    content: "\f105";
+   
+}
+
+    
+
+      
+
+           
+
+        
+
+

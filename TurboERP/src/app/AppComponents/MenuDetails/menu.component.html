@@ -1,0 +1,30 @@
+
+      
+        <ul class="page-sidebar-menu  page-header-fixed ">
+            <li class="nav-item" *ngFor="let menu of Menus">
+                <a class="nav-link nav-toggle" href="javascript:;"> 
+                    <i class="fa fa-sitemap"></i> 
+                    <span class="title"><b>{{menu.Grp_Desc}}</b></span> 
+                    <span class="arrow" style="top:unset !important;"></span>
+                 </a>
+                <ul class="sub-menu">
+                    <li class="nav-item" *ngFor="let module of menu.Modules"> 
+                        <a class="nav-link nav-toggle" routerLink={{module.ControllerName}} routerLinkActive="active">
+                            <span>{{module.Menu_Desc}}</span> 
+                            <span class="arrow" *ngIf="module.SubModuleList.length>0"></span>
+                         </a>
+                        <ul class="sub-menu">
+                    
+                                    <li class="nav-item" *ngFor="let submodule of module.SubModuleList"> 
+                                        <a class="nav-link"  routerLink={{submodule.ControllerName}} routerLinkActive="active">
+                                            <span>{{submodule.SubMenu}}</span>                                              
+                                        </a> 
+                                    </li>
+                                
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+   
+

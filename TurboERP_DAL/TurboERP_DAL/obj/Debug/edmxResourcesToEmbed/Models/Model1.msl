@@ -1,0 +1,829 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TurboEMSModelStoreContainer" CdmEntityContainer="TurboEMSEntities">
+    <EntitySetMapping Name="BankHdrs">
+      <EntityTypeMapping TypeName="TurboEMSModel.BankHdr">
+        <MappingFragment StoreEntitySet="BankHdr">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="BANKCODE" ColumnName="BANKCODE" />
+          <ScalarProperty Name="SHORTNAME" ColumnName="SHORTNAME" />
+          <ScalarProperty Name="BANKNAME" ColumnName="BANKNAME" />
+          <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+          <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+          <ScalarProperty Name="ADDRESS3" ColumnName="ADDRESS3" />
+          <ScalarProperty Name="ADDRESS4" ColumnName="ADDRESS4" />
+          <ScalarProperty Name="ACCOUNTNO" ColumnName="ACCOUNTNO" />
+          <ScalarProperty Name="COMP" ColumnName="COMP" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BuyCats">
+      <EntityTypeMapping TypeName="TurboEMSModel.BuyCat">
+        <MappingFragment StoreEntitySet="BuyCat">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
+          <ScalarProperty Name="CAT_CODE" ColumnName="CAT_CODE" />
+          <ScalarProperty Name="MARK_UP" ColumnName="MARK_UP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Buyers">
+      <EntityTypeMapping TypeName="TurboEMSModel.Buyer">
+        <MappingFragment StoreEntitySet="Buyer">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="SHORT_ID" ColumnName="SHORT_ID" />
+          <ScalarProperty Name="BUYER_CODE" ColumnName="BUYER_CODE" />
+          <ScalarProperty Name="TALLYID" ColumnName="TALLYID" />
+          <ScalarProperty Name="BUYER_NAME" ColumnName="BUYER_NAME" />
+          <ScalarProperty Name="SHORT_NAME" ColumnName="SHORT_NAME" />
+          <ScalarProperty Name="ADD1" ColumnName="ADD1" />
+          <ScalarProperty Name="ADD2" ColumnName="ADD2" />
+          <ScalarProperty Name="ADD3" ColumnName="ADD3" />
+          <ScalarProperty Name="ADD4" ColumnName="ADD4" />
+          <ScalarProperty Name="ADD5" ColumnName="ADD5" />
+          <ScalarProperty Name="COUN_CODE" ColumnName="COUN_CODE" />
+          <ScalarProperty Name="CONT_CODE" ColumnName="CONT_CODE" />
+          <ScalarProperty Name="CURR_CODE" ColumnName="CURR_CODE" />
+          <ScalarProperty Name="BANK_ADD1" ColumnName="BANK_ADD1" />
+          <ScalarProperty Name="BANK_ADD2" ColumnName="BANK_ADD2" />
+          <ScalarProperty Name="BANK_ADD3" ColumnName="BANK_ADD3" />
+          <ScalarProperty Name="BANK_ADD4" ColumnName="BANK_ADD4" />
+          <ScalarProperty Name="PORT_DISC" ColumnName="PORT_DISC" />
+          <ScalarProperty Name="FIN_DEST" ColumnName="FIN_DEST" />
+          <ScalarProperty Name="NOTIFY1" ColumnName="NOTIFY1" />
+          <ScalarProperty Name="NOTIFY2" ColumnName="NOTIFY2" />
+          <ScalarProperty Name="NOTIFY3" ColumnName="NOTIFY3" />
+          <ScalarProperty Name="NOTIFY4" ColumnName="NOTIFY4" />
+          <ScalarProperty Name="NOTIFY5" ColumnName="NOTIFY5" />
+          <ScalarProperty Name="NOTIFY6" ColumnName="NOTIFY6" />
+          <ScalarProperty Name="NOTIFY7" ColumnName="NOTIFY7" />
+          <ScalarProperty Name="NOTIFY8" ColumnName="NOTIFY8" />
+          <ScalarProperty Name="NOTIFY9" ColumnName="NOTIFY9" />
+          <ScalarProperty Name="NOTIFY10" ColumnName="NOTIFY10" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="MOBILE" ColumnName="MOBILE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="TELEX" ColumnName="TELEX" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="AGNT_CODE" ColumnName="AGNT_CODE" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="CMSN" ColumnName="CMSN" />
+          <ScalarProperty Name="CNT_PRSN" ColumnName="CNT_PRSN" />
+          <ScalarProperty Name="PAY_TERM1" ColumnName="PAY_TERM1" />
+          <ScalarProperty Name="PAY_TERM2" ColumnName="PAY_TERM2" />
+          <ScalarProperty Name="PAY_TERM3" ColumnName="PAY_TERM3" />
+          <ScalarProperty Name="PAY_TERM4" ColumnName="PAY_TERM4" />
+          <ScalarProperty Name="PAY_TERM5" ColumnName="PAY_TERM5" />
+          <ScalarProperty Name="PAY_TERM6" ColumnName="PAY_TERM6" />
+          <ScalarProperty Name="PAY_TERM7" ColumnName="PAY_TERM7" />
+          <ScalarProperty Name="PAY_TERM8" ColumnName="PAY_TERM8" />
+          <ScalarProperty Name="RMK1" ColumnName="RMK1" />
+          <ScalarProperty Name="RMK2" ColumnName="RMK2" />
+          <ScalarProperty Name="RMK3" ColumnName="RMK3" />
+          <ScalarProperty Name="RMK4" ColumnName="RMK4" />
+          <ScalarProperty Name="OPEN_BAL" ColumnName="OPEN_BAL" />
+          <ScalarProperty Name="ST_CODE" ColumnName="ST_CODE" />
+          <ScalarProperty Name="ST_NO" ColumnName="ST_NO" />
+          <ScalarProperty Name="DEAL_ITM" ColumnName="DEAL_ITM" />
+          <ScalarProperty Name="VISITOR" ColumnName="VISITOR" />
+          <ScalarProperty Name="M0411" ColumnName="M0411" />
+          <ScalarProperty Name="VISIT_ADD1" ColumnName="VISIT_ADD1" />
+          <ScalarProperty Name="VISIT_ADD2" ColumnName="VISIT_ADD2" />
+          <ScalarProperty Name="VISIT_ADD3" ColumnName="VISIT_ADD3" />
+          <ScalarProperty Name="RMK5" ColumnName="RMK5" />
+          <ScalarProperty Name="BANK_ACNO" ColumnName="BANK_ACNO" />
+          <ScalarProperty Name="SWIFT_ACNO" ColumnName="SWIFT_ACNO" />
+          <ScalarProperty Name="RELA_SINCE" ColumnName="RELA_SINCE" />
+          <ScalarProperty Name="SOURCE" ColumnName="SOURCE" />
+          <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
+          <ScalarProperty Name="ADD_BY" ColumnName="ADD_BY" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="CAT_CODE" ColumnName="CAT_CODE" />
+          <ScalarProperty Name="EDIT_DT" ColumnName="EDIT_DT" />
+          <ScalarProperty Name="ENTRY_DT" ColumnName="ENTRY_DT" />
+          <ScalarProperty Name="WEB_ADDR" ColumnName="WEB_ADDR" />
+          <ScalarProperty Name="PICTPATH1" ColumnName="PICTPATH1" />
+          <ScalarProperty Name="PICTPATH2" ColumnName="PICTPATH2" />
+          <ScalarProperty Name="PICTPATH3" ColumnName="PICTPATH3" />
+          <ScalarProperty Name="PICTPATH4" ColumnName="PICTPATH4" />
+          <ScalarProperty Name="PICTPATH5" ColumnName="PICTPATH5" />
+          <ScalarProperty Name="PICTDESC1" ColumnName="PICTDESC1" />
+          <ScalarProperty Name="PICTDESC2" ColumnName="PICTDESC2" />
+          <ScalarProperty Name="PICTDESC3" ColumnName="PICTDESC3" />
+          <ScalarProperty Name="PICTDESC4" ColumnName="PICTDESC4" />
+          <ScalarProperty Name="PICTDESC5" ColumnName="PICTDESC5" />
+          <ScalarProperty Name="BANKCODE" ColumnName="BANKCODE" />
+          <ScalarProperty Name="MER_CODE" ColumnName="MER_CODE" />
+          <ScalarProperty Name="DESP_CODE" ColumnName="DESP_CODE" />
+          <ScalarProperty Name="FREEZE" ColumnName="FREEZE" />
+          <ScalarProperty Name="DISCOUNT" ColumnName="DISCOUNT" />
+          <ScalarProperty Name="FREIGHT" ColumnName="FREIGHT" />
+          <ScalarProperty Name="INSURANCE" ColumnName="INSURANCE" />
+          <ScalarProperty Name="REMARKS1" ColumnName="REMARKS1" />
+          <ScalarProperty Name="REMARKS2" ColumnName="REMARKS2" />
+          <ScalarProperty Name="REMARKS3" ColumnName="REMARKS3" />
+          <ScalarProperty Name="REMARKS4" ColumnName="REMARKS4" />
+          <ScalarProperty Name="REMARKS5" ColumnName="REMARKS5" />
+          <ScalarProperty Name="REMARKS6" ColumnName="REMARKS6" />
+          <ScalarProperty Name="REMARKS7" ColumnName="REMARKS7" />
+          <ScalarProperty Name="REMARKS8" ColumnName="REMARKS8" />
+          <ScalarProperty Name="REMARKS9" ColumnName="REMARKS9" />
+          <ScalarProperty Name="REMARKS10" ColumnName="REMARKS10" />
+          <ScalarProperty Name="USER_CODE" ColumnName="USER_CODE" />
+          <ScalarProperty Name="PRE_CARY" ColumnName="PRE_CARY" />
+          <ScalarProperty Name="VESSEL" ColumnName="VESSEL" />
+          <ScalarProperty Name="RCT_PRCRG" ColumnName="RCT_PRCRG" />
+          <ScalarProperty Name="PART_LDING" ColumnName="PART_LDING" />
+          <ScalarProperty Name="PAYTERMCD" ColumnName="PAYTERMCD" />
+          <ScalarProperty Name="VATRATE" ColumnName="VATRATE" />
+          <ScalarProperty Name="PANNO" ColumnName="PANNO" />
+          <ScalarProperty Name="TINNO" ColumnName="TINNO" />
+          <ScalarProperty Name="ATT_FILE1" ColumnName="ATT_FILE1" />
+          <ScalarProperty Name="ATT_FILE2" ColumnName="ATT_FILE2" />
+          <ScalarProperty Name="ATT_FILE3" ColumnName="ATT_FILE3" />
+          <ScalarProperty Name="ATT_FILE4" ColumnName="ATT_FILE4" />
+          <ScalarProperty Name="ATT_FILE5" ColumnName="ATT_FILE5" />
+          <ScalarProperty Name="BUY_FWRD" ColumnName="BUY_FWRD" />
+          <ScalarProperty Name="LSELECTED" ColumnName="LSELECTED" />
+          <ScalarProperty Name="LLSTSELD" ColumnName="LLSTSELD" />
+          <ScalarProperty Name="CITY_CODE" ColumnName="CITY_CODE" />
+          <ScalarProperty Name="OTHER_REF" ColumnName="OTHER_REF" />
+          <ScalarProperty Name="CLIENT" ColumnName="CLIENT" />
+          <ScalarProperty Name="PICT_PATH" ColumnName="PICT_PATH" />
+          <ScalarProperty Name="STATE_CODE" ColumnName="STATE_CODE" />
+          <ScalarProperty Name="GSTPRIFIX" ColumnName="GSTPRIFIX" />
+          <ScalarProperty Name="GSTIN_CAT" ColumnName="GSTIN_CAT" />
+          <ScalarProperty Name="GSTIN_NO" ColumnName="GSTIN_NO" />
+          <ScalarProperty Name="GST_REG" ColumnName="GST_REG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CartPlies">
+      <EntityTypeMapping TypeName="TurboEMSModel.CartPly">
+        <MappingFragment StoreEntitySet="CartPly">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="CRTN_PLY" ColumnName="CRTN_PLY" />
+          <ScalarProperty Name="RATEBROWN" ColumnName="RATEBROWN" />
+          <ScalarProperty Name="RATECOLOR" ColumnName="RATECOLOR" />
+          <ScalarProperty Name="IPDEFAULT" ColumnName="IPDEFAULT" />
+          <ScalarProperty Name="MPDEFAULT" ColumnName="MPDEFAULT" />
+          <ScalarProperty Name="BOARDWIDTH" ColumnName="BOARDWIDTH" />
+          <ScalarProperty Name="INCH_CMS" ColumnName="INCH_CMS" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Continens">
+      <EntityTypeMapping TypeName="TurboEMSModel.Continen">
+        <MappingFragment StoreEntitySet="Continen">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="CONT_CODE" ColumnName="CONT_CODE" />
+          <ScalarProperty Name="CONT_NAME" ColumnName="CONT_NAME" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="TurboEMSModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="COUN_CODE" ColumnName="COUN_CODE" />
+          <ScalarProperty Name="COUN_NAME" ColumnName="COUN_NAME" />
+          <ScalarProperty Name="CONT_CODE" ColumnName="CONT_CODE" />
+          <ScalarProperty Name="THRUST" ColumnName="THRUST" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CPMasters">
+      <EntityTypeMapping TypeName="TurboEMSModel.CPMaster">
+        <MappingFragment StoreEntitySet="CPMaster">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="CP_CODE" ColumnName="CP_CODE" />
+          <ScalarProperty Name="NKEY" ColumnName="NKEY" />
+          <ScalarProperty Name="RATE" ColumnName="RATE" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CurrMasts">
+      <EntityTypeMapping TypeName="TurboEMSModel.CurrMast">
+        <MappingFragment StoreEntitySet="CurrMast">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="CURR_CODE" ColumnName="CURR_CODE" />
+          <ScalarProperty Name="CURR_NAME" ColumnName="CURR_NAME" />
+          <ScalarProperty Name="CURR_CONV" ColumnName="CURR_CONV" />
+          <ScalarProperty Name="EXC_RATE" ColumnName="EXC_RATE" />
+          <ScalarProperty Name="COIN" ColumnName="COIN" />
+          <ScalarProperty Name="CURR_SEP" ColumnName="CURR_SEP" />
+          <ScalarProperty Name="DECI_RQD" ColumnName="DECI_RQD" />
+          <ScalarProperty Name="USER_CODE" ColumnName="USER_CODE" />
+          <ScalarProperty Name="CURR_CAP" ColumnName="CURR_CAP" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DutyMasts">
+      <EntityTypeMapping TypeName="TurboEMSModel.DutyMast">
+        <MappingFragment StoreEntitySet="DutyMast">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="PURC_GRP" ColumnName="PURC_GRP" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC_1" ColumnName="DESC_1" />
+          <ScalarProperty Name="DESC_2" ColumnName="DESC_2" />
+          <ScalarProperty Name="RATE" ColumnName="RATE" />
+          <ScalarProperty Name="HSTUS" ColumnName="HSTUS" />
+          <ScalarProperty Name="HSN_SAC" ColumnName="HSN_SAC" />
+          <ScalarProperty Name="GSPFREE" ColumnName="GSPFREE" />
+          <ScalarProperty Name="UPDDATE" ColumnName="UPDDATE" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventMsts">
+      <EntityTypeMapping TypeName="TurboEMSModel.EventMst">
+        <MappingFragment StoreEntitySet="EventMst">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="SOURCE" ColumnName="SOURCE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fin_Mast">
+      <EntityTypeMapping TypeName="TurboEMSModel.Fin_Mast">
+        <MappingFragment StoreEntitySet="Fin_Mast">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="PANTONECODE" ColumnName="PANTONECODE" />
+          <ScalarProperty Name="NEELAMCODE" ColumnName="NEELAMCODE" />
+          <ScalarProperty Name="PPREFIX" ColumnName="PPREFIX" />
+          <ScalarProperty Name="CSHADEPATH" ColumnName="CSHADEPATH" />
+          <ScalarProperty Name="LINKDLINK" ColumnName="LINKDLINK" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GstMasts">
+      <EntityTypeMapping TypeName="TurboEMSModel.GstMast">
+        <MappingFragment StoreEntitySet="GstMast">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="VAT_CODE" ColumnName="VAT_CODE" />
+          <ScalarProperty Name="DESCRIPTIO" ColumnName="DESCRIPTIO" />
+          <ScalarProperty Name="RATE" ColumnName="RATE" />
+          <ScalarProperty Name="TAX_EXMPT" ColumnName="TAX_EXMPT" />
+          <ScalarProperty Name="SALES_GST" ColumnName="SALES_GST" />
+          <ScalarProperty Name="CGST_RATE" ColumnName="CGST_RATE" />
+          <ScalarProperty Name="SGST_RATE" ColumnName="SGST_RATE" />
+          <ScalarProperty Name="UTGST_RATE" ColumnName="UTGST_RATE" />
+          <ScalarProperty Name="IGST_RATE" ColumnName="IGST_RATE" />
+          <ScalarProperty Name="GST_TYPE" ColumnName="GST_TYPE" />
+          <ScalarProperty Name="TAX_RATE" ColumnName="TAX_RATE" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IndCities">
+      <EntityTypeMapping TypeName="TurboEMSModel.IndCity">
+        <MappingFragment StoreEntitySet="IndCity">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="CITY_CODE" ColumnName="CITY_CODE" />
+          <ScalarProperty Name="CITY_NAME" ColumnName="CITY_NAME" />
+          <ScalarProperty Name="STATE_CODE" ColumnName="STATE_CODE" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemGrps">
+      <EntityTypeMapping TypeName="TurboEMSModel.ItemGrp">
+        <MappingFragment StoreEntitySet="ItemGrp">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="GRP_CODE" ColumnName="GRP_CODE" />
+          <ScalarProperty Name="GRP_NAME" ColumnName="GRP_NAME" />
+          <ScalarProperty Name="GRP_PREFIX" ColumnName="GRP_PREFIX" />
+          <ScalarProperty Name="PICT_PATH" ColumnName="PICT_PATH" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemMasters">
+      <EntityTypeMapping TypeName="TurboEMSModel.ItemMaster">
+        <MappingFragment StoreEntitySet="ItemMaster">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="GRP_CODE" ColumnName="GRP_CODE" />
+          <ScalarProperty Name="SGRP_CODE" ColumnName="SGRP_CODE" />
+          <ScalarProperty Name="ITEM_CODE" ColumnName="ITEM_CODE" />
+          <ScalarProperty Name="SAMP_CODE" ColumnName="SAMP_CODE" />
+          <ScalarProperty Name="FINCODE" ColumnName="FINCODE" />
+          <ScalarProperty Name="ITEM_NAME1" ColumnName="ITEM_NAME1" />
+          <ScalarProperty Name="ITEM_NAME2" ColumnName="ITEM_NAME2" />
+          <ScalarProperty Name="ITEM_NAME3" ColumnName="ITEM_NAME3" />
+          <ScalarProperty Name="ITEM_NAME4" ColumnName="ITEM_NAME4" />
+          <ScalarProperty Name="OPEN_QTY" ColumnName="OPEN_QTY" />
+          <ScalarProperty Name="CLOS_QTY" ColumnName="CLOS_QTY" />
+          <ScalarProperty Name="YTOD_RECT" ColumnName="YTOD_RECT" />
+          <ScalarProperty Name="YTOD_ISSUE" ColumnName="YTOD_ISSUE" />
+          <ScalarProperty Name="EAN_NO" ColumnName="EAN_NO" />
+          <ScalarProperty Name="SIZE_CODE" ColumnName="SIZE_CODE" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="NET_WT" ColumnName="NET_WT" />
+          <ScalarProperty Name="INCRNET_WT" ColumnName="INCRNET_WT" />
+          <ScalarProperty Name="MCNET_WT" ColumnName="MCNET_WT" />
+          <ScalarProperty Name="CFT" ColumnName="CFT" />
+          <ScalarProperty Name="CP_CODE" ColumnName="CP_CODE" />
+          <ScalarProperty Name="RATE" ColumnName="RATE" />
+          <ScalarProperty Name="SELL_PRICE" ColumnName="SELL_PRICE" />
+          <ScalarProperty Name="FOB" ColumnName="FOB" />
+          <ScalarProperty Name="MRGN_PER" ColumnName="MRGN_PER" />
+          <ScalarProperty Name="MIN_QTY" ColumnName="MIN_QTY" />
+          <ScalarProperty Name="ITM_LENGTH" ColumnName="ITM_LENGTH" />
+          <ScalarProperty Name="ITM_BRDTH" ColumnName="ITM_BRDTH" />
+          <ScalarProperty Name="ITM_HEIGHT" ColumnName="ITM_HEIGHT" />
+          <ScalarProperty Name="IN_CRTNLEN" ColumnName="IN_CRTNLEN" />
+          <ScalarProperty Name="IN_CRTNBRD" ColumnName="IN_CRTNBRD" />
+          <ScalarProperty Name="IN_CRTNHT" ColumnName="IN_CRTNHT" />
+          <ScalarProperty Name="IN_CRTNPCS" ColumnName="IN_CRTNPCS" />
+          <ScalarProperty Name="TOTINCRTN" ColumnName="TOTINCRTN" />
+          <ScalarProperty Name="CRTNLENGTH" ColumnName="CRTNLENGTH" />
+          <ScalarProperty Name="CRTNBRDTH" ColumnName="CRTNBRDTH" />
+          <ScalarProperty Name="CRTNHEIGHT" ColumnName="CRTNHEIGHT" />
+          <ScalarProperty Name="CRTN_CBM" ColumnName="CRTN_CBM" />
+          <ScalarProperty Name="INRCRT_CBM" ColumnName="INRCRT_CBM" />
+          <ScalarProperty Name="PRCRTN_QTY" ColumnName="PRCRTN_QTY" />
+          <ScalarProperty Name="PICT_PATH" ColumnName="PICT_PATH" />
+          <ScalarProperty Name="INCH_CMS" ColumnName="INCH_CMS" />
+          <ScalarProperty Name="ITM_BRKUP" ColumnName="ITM_BRKUP" />
+          <ScalarProperty Name="ENTRY_DT" ColumnName="ENTRY_DT" />
+          <ScalarProperty Name="SHP_TYP" ColumnName="SHP_TYP" />
+          <ScalarProperty Name="CURR" ColumnName="CURR" />
+          <ScalarProperty Name="EXC_RATE" ColumnName="EXC_RATE" />
+          <ScalarProperty Name="MARK" ColumnName="MARK" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="MARK_TOPRT" ColumnName="MARK_TOPRT" />
+          <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
+          <ScalarProperty Name="ADD_BY" ColumnName="ADD_BY" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="CONT20QTY" ColumnName="CONT20QTY" />
+          <ScalarProperty Name="CONT40QTY" ColumnName="CONT40QTY" />
+          <ScalarProperty Name="CONT40HQTY" ColumnName="CONT40HQTY" />
+          <ScalarProperty Name="CBM20FT" ColumnName="CBM20FT" />
+          <ScalarProperty Name="CBM40FT" ColumnName="CBM40FT" />
+          <ScalarProperty Name="CBM40HQ" ColumnName="CBM40HQ" />
+          <ScalarProperty Name="EDIT_DT" ColumnName="EDIT_DT" />
+          <ScalarProperty Name="SAMPLE" ColumnName="SAMPLE" />
+          <ScalarProperty Name="COSTDATE" ColumnName="COSTDATE" />
+          <ScalarProperty Name="FACTEXPAMT" ColumnName="FACTEXPAMT" />
+          <ScalarProperty Name="FACT_PER" ColumnName="FACT_PER" />
+          <ScalarProperty Name="OVRHD_VAL" ColumnName="OVRHD_VAL" />
+          <ScalarProperty Name="SPINSQFEET" ColumnName="SPINSQFEET" />
+          <ScalarProperty Name="WTPERSQFT" ColumnName="WTPERSQFT" />
+          <ScalarProperty Name="REORD_LVL" ColumnName="REORD_LVL" />
+          <ScalarProperty Name="MIN_LVL" ColumnName="MIN_LVL" />
+          <ScalarProperty Name="MAX_LVL" ColumnName="MAX_LVL" />
+          <ScalarProperty Name="CREATE_DT" ColumnName="CREATE_DT" />
+          <ScalarProperty Name="VOL_WT" ColumnName="VOL_WT" />
+          <ScalarProperty Name="CAT_CODE" ColumnName="CAT_CODE" />
+          <ScalarProperty Name="ENDOP_QTY" ColumnName="ENDOP_QTY" />
+          <ScalarProperty Name="ENDCL_QTY" ColumnName="ENDCL_QTY" />
+          <ScalarProperty Name="COST_RATE" ColumnName="COST_RATE" />
+          <ScalarProperty Name="ITEM_DATE" ColumnName="ITEM_DATE" />
+          <ScalarProperty Name="INCRT_CBM" ColumnName="INCRT_CBM" />
+          <ScalarProperty Name="PKGFRTPER" ColumnName="PKGFRTPER" />
+          <ScalarProperty Name="COST_DATE" ColumnName="COST_DATE" />
+          <ScalarProperty Name="ENDYTDRCT" ColumnName="ENDYTDRCT" />
+          <ScalarProperty Name="ENDYTDISS" ColumnName="ENDYTDISS" />
+          <ScalarProperty Name="PERMTRQTY" ColumnName="PERMTRQTY" />
+          <ScalarProperty Name="TREAT_SET" ColumnName="TREAT_SET" />
+          <ScalarProperty Name="USER_CODE" ColumnName="USER_CODE" />
+          <ScalarProperty Name="DEL" ColumnName="DEL" />
+          <ScalarProperty Name="LSELECTED" ColumnName="LSELECTED" />
+          <ScalarProperty Name="LLSTSELD" ColumnName="LLSTSELD" />
+          <ScalarProperty Name="SEL_UNSEL" ColumnName="SEL_UNSEL" />
+          <ScalarProperty Name="CONT45HQTY" ColumnName="CONT45HQTY" />
+          <ScalarProperty Name="QTY_RCVD" ColumnName="QTY_RCVD" />
+          <ScalarProperty Name="QTY_ISSUED" ColumnName="QTY_ISSUED" />
+          <ScalarProperty Name="AUTOSIZECD" ColumnName="AUTOSIZECD" />
+          <ScalarProperty Name="LINKDLINK" ColumnName="LINKDLINK" />
+          <ScalarProperty Name="REFPHOTO" ColumnName="REFPHOTO" />
+          <ScalarProperty Name="ALLOC_QTY" ColumnName="ALLOC_QTY" />
+          <ScalarProperty Name="ASSORTITM" ColumnName="ASSORTITM" />
+          <ScalarProperty Name="GST_CAT" ColumnName="GST_CAT" />
+          <ScalarProperty Name="GSTHSNSAC" ColumnName="GSTHSNSAC" />
+          <ScalarProperty Name="GST_DTAX" ColumnName="GST_DTAX" />
+          <ScalarProperty Name="ALLOWSTOCK" ColumnName="ALLOWSTOCK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemSgrps">
+      <EntityTypeMapping TypeName="TurboEMSModel.ItemSgrp">
+        <MappingFragment StoreEntitySet="ItemSgrp">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="SGRP_CODE" ColumnName="SGRP_CODE" />
+          <ScalarProperty Name="SGRP_NAME" ColumnName="SGRP_NAME" />
+          <ScalarProperty Name="SGRP_NAME1" ColumnName="SGRP_NAME1" />
+          <ScalarProperty Name="GRP_CODE" ColumnName="GRP_CODE" />
+          <ScalarProperty Name="SGRP_PREFIX" ColumnName="SGRP_PREFIX" />
+          <ScalarProperty Name="PICT_PATH" ColumnName="PICT_PATH" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItmCats">
+      <EntityTypeMapping TypeName="TurboEMSModel.ItmCat">
+        <MappingFragment StoreEntitySet="ItmCat">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ManUnits">
+      <EntityTypeMapping TypeName="TurboEMSModel.ManUnit">
+        <MappingFragment StoreEntitySet="ManUnit">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="COMPANYUNIT" ColumnName="COMPANYUNIT" />
+          <ScalarProperty Name="MANF_NAME" ColumnName="MANF_NAME" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MisPrties">
+      <EntityTypeMapping TypeName="TurboEMSModel.MisPrty">
+        <MappingFragment StoreEntitySet="MisPrty">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="SHORT_NAME" ColumnName="SHORT_NAME" />
+          <ScalarProperty Name="ADD1" ColumnName="ADD1" />
+          <ScalarProperty Name="ADD2" ColumnName="ADD2" />
+          <ScalarProperty Name="ADD3" ColumnName="ADD3" />
+          <ScalarProperty Name="CONTPER" ColumnName="CONTPER" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="WEB_ADD" ColumnName="WEB_ADD" />
+          <ScalarProperty Name="MOBILE" ColumnName="MOBILE" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="RELA" ColumnName="RELA" />
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+          <ScalarProperty Name="MISCTYPE" ColumnName="MISCTYPE" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Models">
+      <EntityTypeMapping TypeName="TurboEMSModel.Model">
+        <MappingFragment StoreEntitySet="Model">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="VEH_CODE" ColumnName="VEH_CODE" />
+          <ScalarProperty Name="MODEL_CODE" ColumnName="MODEL_CODE" />
+          <ScalarProperty Name="MODEL_NAME" ColumnName="MODEL_NAME" />
+          <ScalarProperty Name="RDEL" ColumnName="RDEL" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModelSLs">
+      <EntityTypeMapping TypeName="TurboEMSModel.ModelSL">
+        <MappingFragment StoreEntitySet="ModelSL">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="VEH_CODE" ColumnName="VEH_CODE" />
+          <ScalarProperty Name="MODEL_CODE" ColumnName="MODEL_CODE" />
+          <ScalarProperty Name="MODEL_SL" ColumnName="MODEL_SL" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modules">
+      <EntityTypeMapping TypeName="TurboEMSModel.Module">
+        <MappingFragment StoreEntitySet="Modules">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="Grp_Code" ColumnName="Grp_Code" />
+          <ScalarProperty Name="Grp_Desc" ColumnName="Grp_Desc" />
+          <ScalarProperty Name="Group_Sub_Desc" ColumnName="Group_Sub_Desc" />
+          <ScalarProperty Name="Mod_Code" ColumnName="Mod_Code" />
+          <ScalarProperty Name="Mod_Name" ColumnName="Mod_Name" />
+          <ScalarProperty Name="Mod_Desc" ColumnName="Mod_Desc" />
+          <ScalarProperty Name="Menu_Desc" ColumnName="Menu_Desc" />
+          <ScalarProperty Name="Mod_Link" ColumnName="Mod_Link" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="OrdKeyMain" ColumnName="OrdKeyMain" />
+          <ScalarProperty Name="OrdKeyChd" ColumnName="OrdKeyChd" />
+          <ScalarProperty Name="ControllerName" ColumnName="ControllerName" />
+          <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Menu__Icon" ColumnName="Menu _Icon" />
+          <ScalarProperty Name="Grp_Icon" ColumnName="Grp_Icon" />
+          <ScalarProperty Name="Grp_Sub_flag" ColumnName="Grp_Sub_flag" />
+          <ScalarProperty Name="SubMenu" ColumnName="SubMenu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modules31012018">
+      <EntityTypeMapping TypeName="TurboEMSModel.Modules31012018">
+        <MappingFragment StoreEntitySet="Modules31012018">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="Grp_Code" ColumnName="Grp_Code" />
+          <ScalarProperty Name="Grp_Desc" ColumnName="Grp_Desc" />
+          <ScalarProperty Name="Mod_Code" ColumnName="Mod_Code" />
+          <ScalarProperty Name="Menu_Desc" ColumnName="Menu_Desc" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="OrdKeyMain" ColumnName="OrdKeyMain" />
+          <ScalarProperty Name="OrdKeyChd" ColumnName="OrdKeyChd" />
+          <ScalarProperty Name="ControllerName" ColumnName="ControllerName" />
+          <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Menu__Icon" ColumnName="Menu _Icon" />
+          <ScalarProperty Name="Grp_Icon" ColumnName="Grp_Icon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Packages">
+      <EntityTypeMapping TypeName="TurboEMSModel.Package">
+        <MappingFragment StoreEntitySet="Package">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PartyTypes">
+      <EntityTypeMapping TypeName="TurboEMSModel.PartyType">
+        <MappingFragment StoreEntitySet="PartyType">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="Party_Description" ColumnName="Party_Description" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PayTerms">
+      <EntityTypeMapping TypeName="TurboEMSModel.PayTerm">
+        <MappingFragment StoreEntitySet="PayTerms">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="TERM1" ColumnName="TERM1" />
+          <ScalarProperty Name="TERM2" ColumnName="TERM2" />
+          <ScalarProperty Name="TERM3" ColumnName="TERM3" />
+          <ScalarProperty Name="TERM4" ColumnName="TERM4" />
+          <ScalarProperty Name="TERM5" ColumnName="TERM5" />
+          <ScalarProperty Name="TERM6" ColumnName="TERM6" />
+          <ScalarProperty Name="TERM7" ColumnName="TERM7" />
+          <ScalarProperty Name="TERM8" ColumnName="TERM8" />
+          <ScalarProperty Name="TRANREM" ColumnName="TRANREM" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PortMasts">
+      <EntityTypeMapping TypeName="TurboEMSModel.PortMast">
+        <MappingFragment StoreEntitySet="PortMast">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="PORT_CODE" ColumnName="PORT_CODE" />
+          <ScalarProperty Name="PORT_NAME" ColumnName="PORT_NAME" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcMasts">
+      <EntityTypeMapping TypeName="TurboEMSModel.ProcMast">
+        <MappingFragment StoreEntitySet="ProcMast">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="PROC_CODE" ColumnName="PROC_CODE" />
+          <ScalarProperty Name="PROC_NAME" ColumnName="PROC_NAME" />
+          <ScalarProperty Name="MTRLTOISSUE" ColumnName="MTRLTOISSUE" />
+          <ScalarProperty Name="USER_CODE" ColumnName="USER_CODE" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="TurboEMSModel.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="STATE_CODE" ColumnName="STATE_CODE" />
+          <ScalarProperty Name="STATE_NAME" ColumnName="STATE NAME" />
+          <ScalarProperty Name="UT" ColumnName="UT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TurboEMSModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UnitMasts">
+      <EntityTypeMapping TypeName="TurboEMSModel.UnitMast">
+        <MappingFragment StoreEntitySet="UnitMast">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="DECI_REQ" ColumnName="DECI_REQ" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usergroups">
+      <EntityTypeMapping TypeName="TurboEMSModel.Usergroup">
+        <MappingFragment StoreEntitySet="Usergroup">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="Usergroup_Code" ColumnName="Usergroup_Code" />
+          <ScalarProperty Name="Usergrp_Name" ColumnName="Usergrp_Name" />
+          <ScalarProperty Name="Input_By" ColumnName="Input_By" />
+          <ScalarProperty Name="Input_Dt" ColumnName="Input_Dt" />
+          <ScalarProperty Name="Modify_By" ColumnName="Modify_By" />
+          <ScalarProperty Name="Modify_Dt" ColumnName="Modify_Dt" />
+          <ScalarProperty Name="User_Role" ColumnName="User_Role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserGroupRights">
+      <EntityTypeMapping TypeName="TurboEMSModel.UserGroupRight">
+        <MappingFragment StoreEntitySet="UserGroupRights">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="Usergrp_Code" ColumnName="Usergrp_Code" />
+          <ScalarProperty Name="Mod_Code" ColumnName="Mod_Code" />
+          <ScalarProperty Name="Add_new" ColumnName="Add_new" />
+          <ScalarProperty Name="Edit" ColumnName="Edit" />
+          <ScalarProperty Name="View" ColumnName="View" />
+          <ScalarProperty Name="Delete" ColumnName="Delete" />
+          <ScalarProperty Name="Print" ColumnName="Print" />
+          <ScalarProperty Name="Assign" ColumnName="Assign" />
+          <ScalarProperty Name="SubMenu" ColumnName="SubMenu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usermasts">
+      <EntityTypeMapping TypeName="TurboEMSModel.Usermast">
+        <MappingFragment StoreEntitySet="Usermast">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Short_Name" ColumnName="Short_Name" />
+          <ScalarProperty Name="Login_Name" ColumnName="Login_Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Add_1" ColumnName="Add_1" />
+          <ScalarProperty Name="Add_2" ColumnName="Add_2" />
+          <ScalarProperty Name="Add_3" ColumnName="Add_3" />
+          <ScalarProperty Name="Add_4" ColumnName="Add_4" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Ac_Expire" ColumnName="Ac_Expire" />
+          <ScalarProperty Name="Ac_Exp_Dt" ColumnName="Ac_Exp_Dt" />
+          <ScalarProperty Name="Qpid" ColumnName="Qpid" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="Reset_Pass" ColumnName="Reset_Pass" />
+          <ScalarProperty Name="Reset_Pass_Dt" ColumnName="Reset_Pass_Dt" />
+          <ScalarProperty Name="Photo_Attach" ColumnName="Photo_Attach" />
+          <ScalarProperty Name="Ug_Pid" ColumnName="Ug_Pid" />
+          <ScalarProperty Name="Circle_Pid" ColumnName="Circle_Pid" />
+          <ScalarProperty Name="Input_By" ColumnName="Input_By" />
+          <ScalarProperty Name="Input_Dt" ColumnName="Input_Dt" />
+          <ScalarProperty Name="Modify_By" ColumnName="Modify_By" />
+          <ScalarProperty Name="Modify_Dt" ColumnName="Modify_Dt" />
+          <ScalarProperty Name="User_Type" ColumnName="User_Type" />
+          <ScalarProperty Name="STATE_PID" ColumnName="STATE_PID" />
+          <ScalarProperty Name="PIN_PID" ColumnName="PIN_PID" />
+          <ScalarProperty Name="City_Pid" ColumnName="City_Pid" />
+          <ScalarProperty Name="Pswd_ActiveDate" ColumnName="Pswd_ActiveDate" />
+          <ScalarProperty Name="Frgt_Pass_Chk" ColumnName="Frgt_Pass_Chk" />
+          <ScalarProperty Name="Login_Date" ColumnName="Login_Date" />
+          <ScalarProperty Name="Contact_No" ColumnName="Contact_No" />
+          <ScalarProperty Name="Shiva_Login" ColumnName="Shiva_Login" />
+          <ScalarProperty Name="Lob_Pid" ColumnName="Lob_Pid" />
+          <ScalarProperty Name="Lob_Id" ColumnName="Lob_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRights">
+      <EntityTypeMapping TypeName="TurboEMSModel.UserRight">
+        <MappingFragment StoreEntitySet="UserRights">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Mod_Code" ColumnName="Mod_Code" />
+          <ScalarProperty Name="AddNew" ColumnName="AddNew" />
+          <ScalarProperty Name="Edit" ColumnName="Edit" />
+          <ScalarProperty Name="View" ColumnName="View" />
+          <ScalarProperty Name="Delete" ColumnName="Delete" />
+          <ScalarProperty Name="Print" ColumnName="Print" />
+          <ScalarProperty Name="Assign" ColumnName="Assign" />
+          <ScalarProperty Name="SubMenu" ColumnName="SubMenu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VehiCats">
+      <EntityTypeMapping TypeName="TurboEMSModel.VehiCat">
+        <MappingFragment StoreEntitySet="VehiCat">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="VPREFIX" ColumnName="VPREFIX" />
+          <ScalarProperty Name="START_NO" ColumnName="START_NO" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VehiMasts">
+      <EntityTypeMapping TypeName="TurboEMSModel.VehiMast">
+        <MappingFragment StoreEntitySet="VehiMast">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="VCAT_CODE" ColumnName="VCAT_CODE" />
+          <ScalarProperty Name="INPUT_BY" ColumnName="INPUT_BY" />
+          <ScalarProperty Name="INPUT_DATE" ColumnName="INPUT_DATE" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BankDtls">
+      <EntityTypeMapping TypeName="TurboEMSModel.BankDtl">
+        <MappingFragment StoreEntitySet="BankDtl">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="BANKCODE" ColumnName="BANKCODE" />
+          <ScalarProperty Name="CURRCODE" ColumnName="CURRCODE" />
+          <ScalarProperty Name="SWIFTNO" ColumnName="SWIFTNO" />
+          <ScalarProperty Name="ROUTING" ColumnName="ROUTING" />
+          <ScalarProperty Name="RDEL" ColumnName="RDEL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
