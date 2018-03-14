@@ -169,6 +169,7 @@
     <Compile Include="App_DAL\SkuMastData.cs" />
     <Compile Include="App_DAL\UnitMaster.cs" />
     <Compile Include="App_DAL\VehCats.cs" />
+    <Compile Include="App_DAL\WareHouse.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -220,6 +221,7 @@
     <Compile Include="Controllers\UserModuleApiController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\VehicleCatApiController.cs" />
+    <Compile Include="Controllers\WarehouseAPIController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
