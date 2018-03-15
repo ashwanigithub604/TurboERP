@@ -10,7 +10,7 @@ declare var require: any;
 export class GridComponent implements OnInit {
     private GetUrl: any;
     show:boolean=false;
-    constructor(private _AppService: AppService,private _route: ActivatedRoute) {
+    constructor(private _AppService: AppService,private _route: ActivatedRoute,private router:Router) {
         this._route.url.subscribe((url:any) =>{this.GetUrl=url[0].path;});    
     };
 
@@ -51,6 +51,9 @@ export class GridComponent implements OnInit {
             },
 
             error => this.msg = <any>error);
+    };
+    getHome(): void {
+        this.router.navigate(['/Home']);
     };
     
    
