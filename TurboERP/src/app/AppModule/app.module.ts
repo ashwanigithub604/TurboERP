@@ -47,8 +47,6 @@ const appRoutes: Routes = [
 ];
   
 
-];
-
 @NgModule({
   imports:
   [BrowserModule,Ng2PaginationModule,Ng2SearchPipeModule,
