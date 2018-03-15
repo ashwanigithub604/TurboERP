@@ -53,7 +53,7 @@ export class CountryMastComponent {
 
 
     SaveCountry() {
-        this.ModelCountry.CONT_CODE=this.selectedvalue;
+        this.ModelCountry.CONT_CODE=this.selectedvalue; 
         if (this.PID != 0) {
             this._AppService.put("http://localhost:52148/api/CountryMastApi/PutCountry", this.ModelCountry)
                 .subscribe(
