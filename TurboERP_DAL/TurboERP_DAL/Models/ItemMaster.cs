@@ -62,10 +62,7 @@ namespace TurboERP_DAL.Models
         public Nullable<decimal> SHP_TYP { get; set; }
         public string CURR { get; set; }
         public Nullable<decimal> EXC_RATE { get; set; }
-        public string MARK { get; set; }
         public string TYPE { get; set; }
-        public Nullable<bool> MARK_TOPRT { get; set; }
-        public string CATEGORY { get; set; }
         public string ADD_BY { get; set; }
         public string EDIT_BY { get; set; }
         public Nullable<decimal> CONT20QTY { get; set; }
@@ -75,13 +72,10 @@ namespace TurboERP_DAL.Models
         public Nullable<decimal> CBM40FT { get; set; }
         public Nullable<decimal> CBM40HQ { get; set; }
         public Nullable<System.DateTime> EDIT_DT { get; set; }
-        public Nullable<bool> SAMPLE { get; set; }
         public Nullable<System.DateTime> COSTDATE { get; set; }
         public Nullable<decimal> FACTEXPAMT { get; set; }
         public Nullable<decimal> FACT_PER { get; set; }
         public Nullable<decimal> OVRHD_VAL { get; set; }
-        public Nullable<decimal> SPINSQFEET { get; set; }
-        public Nullable<decimal> WTPERSQFT { get; set; }
         public Nullable<decimal> REORD_LVL { get; set; }
         public Nullable<decimal> MIN_LVL { get; set; }
         public Nullable<decimal> MAX_LVL { get; set; }
@@ -93,22 +87,15 @@ namespace TurboERP_DAL.Models
         public Nullable<decimal> COST_RATE { get; set; }
         public Nullable<System.DateTime> ITEM_DATE { get; set; }
         public Nullable<decimal> INCRT_CBM { get; set; }
-        public Nullable<decimal> PKGFRTPER { get; set; }
         public Nullable<System.DateTime> COST_DATE { get; set; }
         public Nullable<decimal> ENDYTDRCT { get; set; }
         public Nullable<decimal> ENDYTDISS { get; set; }
         public Nullable<decimal> PERMTRQTY { get; set; }
         public Nullable<bool> TREAT_SET { get; set; }
-        public string USER_CODE { get; set; }
-        public Nullable<bool> DEL { get; set; }
-        public Nullable<bool> LSELECTED { get; set; }
-        public Nullable<bool> LLSTSELD { get; set; }
-        public Nullable<bool> SEL_UNSEL { get; set; }
         public Nullable<decimal> CONT45HQTY { get; set; }
         public Nullable<decimal> QTY_RCVD { get; set; }
         public Nullable<decimal> QTY_ISSUED { get; set; }
         public Nullable<bool> AUTOSIZECD { get; set; }
-        public Nullable<bool> LINKDLINK { get; set; }
         public string REFPHOTO { get; set; }
         public Nullable<decimal> ALLOC_QTY { get; set; }
         public Nullable<bool> ASSORTITM { get; set; }

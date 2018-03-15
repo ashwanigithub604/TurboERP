@@ -15,7 +15,6 @@ namespace TurboERP_DAL.Models
     public partial class Buyer
     {
         public int Pid { get; set; }
-        public string SHORT_ID { get; set; }
         public string BUYER_CODE { get; set; }
         public string TALLYID { get; set; }
         public string BUYER_NAME { get; set; }
@@ -26,7 +25,6 @@ namespace TurboERP_DAL.Models
         public string ADD4 { get; set; }
         public string ADD5 { get; set; }
         public string COUN_CODE { get; set; }
-        public string CONT_CODE { get; set; }
         public string CURR_CODE { get; set; }
         public string BANK_ADD1 { get; set; }
         public string BANK_ADD2 { get; set; }
@@ -47,7 +45,6 @@ namespace TurboERP_DAL.Models
         public string PHONE { get; set; }
         public string MOBILE { get; set; }
         public string EMAIL { get; set; }
-        public string TELEX { get; set; }
         public string FAX { get; set; }
         public string AGNT_CODE { get; set; }
         public string TYPE { get; set; }
@@ -61,16 +58,9 @@ namespace TurboERP_DAL.Models
         public string PAY_TERM6 { get; set; }
         public string PAY_TERM7 { get; set; }
         public string PAY_TERM8 { get; set; }
-        public string RMK1 { get; set; }
-        public string RMK2 { get; set; }
-        public string RMK3 { get; set; }
-        public string RMK4 { get; set; }
         public Nullable<decimal> OPEN_BAL { get; set; }
-        public string ST_CODE { get; set; }
-        public string ST_NO { get; set; }
         public string DEAL_ITM { get; set; }
         public string VISITOR { get; set; }
-        public Nullable<bool> M0411 { get; set; }
         public string VISIT_ADD1 { get; set; }
         public string VISIT_ADD2 { get; set; }
         public string VISIT_ADD3 { get; set; }
@@ -79,57 +69,15 @@ namespace TurboERP_DAL.Models
         public string SWIFT_ACNO { get; set; }
         public Nullable<System.DateTime> RELA_SINCE { get; set; }
         public string SOURCE { get; set; }
-        public string CATEGORY { get; set; }
         public string CAT_CODE { get; set; }
         public string WEB_ADDR { get; set; }
-        public string PICTPATH1 { get; set; }
-        public string PICTPATH2 { get; set; }
-        public string PICTPATH3 { get; set; }
-        public string PICTPATH4 { get; set; }
-        public string PICTPATH5 { get; set; }
-        public string PICTDESC1 { get; set; }
-        public string PICTDESC2 { get; set; }
-        public string PICTDESC3 { get; set; }
-        public string PICTDESC4 { get; set; }
-        public string PICTDESC5 { get; set; }
         public string BANKCODE { get; set; }
         public string MER_CODE { get; set; }
-        public string DESP_CODE { get; set; }
         public Nullable<bool> FREEZE { get; set; }
-        public Nullable<decimal> DISCOUNT { get; set; }
-        public Nullable<decimal> FREIGHT { get; set; }
-        public Nullable<decimal> INSURANCE { get; set; }
-        public string REMARKS1 { get; set; }
-        public string REMARKS2 { get; set; }
-        public string REMARKS3 { get; set; }
-        public string REMARKS4 { get; set; }
-        public string REMARKS5 { get; set; }
-        public string REMARKS6 { get; set; }
-        public string REMARKS7 { get; set; }
-        public string REMARKS8 { get; set; }
-        public string REMARKS9 { get; set; }
-        public string REMARKS10 { get; set; }
-        public string USER_CODE { get; set; }
-        public string PRE_CARY { get; set; }
-        public string VESSEL { get; set; }
-        public string RCT_PRCRG { get; set; }
-        public string PART_LDING { get; set; }
-        public string PAYTERMCD { get; set; }
-        public Nullable<decimal> VATRATE { get; set; }
         public string PANNO { get; set; }
-        public string TINNO { get; set; }
-        public string ATT_FILE1 { get; set; }
-        public string ATT_FILE2 { get; set; }
-        public string ATT_FILE3 { get; set; }
-        public string ATT_FILE4 { get; set; }
-        public string ATT_FILE5 { get; set; }
         public string BUY_FWRD { get; set; }
-        public Nullable<bool> LSELECTED { get; set; }
-        public Nullable<bool> LLSTSELD { get; set; }
         public string CITY_CODE { get; set; }
         public string OTHER_REF { get; set; }
-        public Nullable<decimal> CLIENT { get; set; }
-        public string PICT_PATH { get; set; }
         public string STATE_CODE { get; set; }
         public string GSTPRIFIX { get; set; }
         public Nullable<bool> GSTIN_CAT { get; set; }

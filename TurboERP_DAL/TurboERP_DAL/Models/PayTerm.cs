@@ -14,7 +14,7 @@ namespace TurboERP_DAL.Models
     
     public partial class PayTerm
     {
-        public Nullable<int> PID { get; set; }
+        public int PID { get; set; }
         public string CODE { get; set; }
         public string TERM1 { get; set; }
         public string TERM2 { get; set; }

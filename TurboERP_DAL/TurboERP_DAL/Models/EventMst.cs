@@ -14,7 +14,7 @@ namespace TurboERP_DAL.Models
     
     public partial class EventMst
     {
-        public Nullable<int> PID { get; set; }
+        public int PID { get; set; }
         public string CODE { get; set; }
         public string SOURCE { get; set; }
         public string INPUT_BY { get; set; }

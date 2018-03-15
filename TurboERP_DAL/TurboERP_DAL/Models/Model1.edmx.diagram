@@ -4,63 +4,63 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d9015c98c8534fbca232c5ece78d9506" Name="Diagram1" ZoomLevel="92">
+      <Diagram DiagramId="5b4282dc0a3a441cbd7f02acf7798fc3" Name="Diagram1">
         <EntityTypeShape EntityType="TurboEMSModel.BankHdr" Width="1.5" PointX="7.75" PointY="6" IsExpanded="true" />
         <EntityTypeShape EntityType="TurboEMSModel.BuyCat" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.CartPly" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.Buyer" Width="1.5" PointX="14.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.CartPly" Width="1.5" PointX="9.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.Company" Width="1.5" PointX="7.75" PointY="12" IsExpanded="true" />
         <EntityTypeShape EntityType="TurboEMSModel.Continen" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.Country" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.CPMaster" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.CurrMast" Width="1.5" PointX="3" PointY="18.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.DutyMast" Width="1.5" PointX="14.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.EventMst" Width="1.5" PointX="7.75" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.Fin_Mast" Width="1.5" PointX="9.75" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.GstMast" Width="1.5" PointX="14.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.IndCity" Width="1.5" PointX="10" PointY="11" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.ItemGrp" Width="1.5" PointX="0.75" PointY="13.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.ItemMaster" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.ItemSgrp" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.ItmCat" Width="1.5" PointX="3" PointY="23.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.ManUnit" Width="1.5" PointX="14.75" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.MisPrty" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.Country" Width="1.5" PointX="11.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.CPMaster" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.CurrMast" Width="1.5" PointX="3" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.DutyMast" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.EventMst" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.Fin_Mast" Width="1.5" PointX="16.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.GstMast" Width="1.5" PointX="16.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.IndCity" Width="1.5" PointX="12" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.ItemGrp" Width="1.5" PointX="0.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.ItemMaster" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.ItemSgrp" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.ItmCat" Width="1.5" PointX="3" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.ManUnit" Width="1.5" PointX="16.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.MisPrty" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TurboEMSModel.Model" Width="1.5" PointX="12.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="TurboEMSModel.ModelSL" Width="1.5" PointX="14.5" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.Module" Width="1.5" PointX="16.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.Modules31012018" Width="1.5" PointX="16.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.Package" Width="1.5" PointX="16.75" PointY="17.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.PartyType" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.PayTerm" Width="1.5" PointX="18.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.PortMast" Width="1.5" PointX="18.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.ProcMast" Width="1.5" PointX="18.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.State" Width="1.5" PointX="7.75" PointY="11.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.sysdiagram" Width="1.5" PointX="18.75" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.UnitMast" Width="1.5" PointX="3" PointY="26.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.Usergroup" Width="1.5" PointX="7.75" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.UserGroupRight" Width="1.5" PointX="9.75" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TurboEMSModel.UserRight" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.Module" Width="1.5" PointX="18.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.Modules31012018" Width="1.5" PointX="18.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.Package" Width="1.5" PointX="11.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.PartyType" Width="1.5" PointX="18.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.PayTerm" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.PortMast" Width="1.5" PointX="20.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.ProcMast" Width="1.5" PointX="20.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.State" Width="1.5" PointX="9.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.sysdiagram" Width="1.5" PointX="20.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.UnitMast" Width="1.5" PointX="3" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.Usergroup" Width="1.5" PointX="20.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.UserGroupRight" Width="1.5" PointX="16.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.Usermast" Width="1.5" PointX="18.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.UserRight" Width="1.5" PointX="20.75" PointY="20.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TurboEMSModel.VehiCat" Width="1.5" PointX="7.75" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="TurboEMSModel.VehiMast" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.Warehousemast" Width="1.5" PointX="10" PointY="22.125" IsExpanded="true" />
         <EntityTypeShape EntityType="TurboEMSModel.BankDtl" Width="1.5" PointX="10" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.Buyer_Contact" Width="1.5" PointX="13.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboEMSModel.SkuMast" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="TurboEMSModel.FK__BankDtl__BANKCOD__318258D2" ManuallyRouted="false" />
+        <AssociationConnector Association="TurboEMSModel.FK__Warehouse__COMPA__7DCDAAA2" ManuallyRouted="false" />
         <AssociationConnector Association="TurboEMSModel.FK__ItemMaste__CP_CO__53D770D6" ManuallyRouted="false" />
         <AssociationConnector Association="TurboEMSModel.FK__ItemMaster__CURR__54CB950F" ManuallyRouted="false" />
         <AssociationConnector Association="TurboEMSModel.FK__INDCITY__STATE_C__0F624AF8" ManuallyRouted="false" />
         <AssociationConnector Association="TurboEMSModel.FK__ItemMaste__GRP_C__50FB042B" ManuallyRouted="false" />
         <AssociationConnector Association="TurboEMSModel.FK__ItemSgrp__GRP_CO__0B5CAFEA" ManuallyRouted="false" />
-        <AssociationConnector Association="TurboEMSModel.FK__ItemMaste__CAT_C__55BFB948" ManuallyRouted="false" />
+        <AssociationConnector Association="TurboEMSModel.FK__ItemMaste__CAT_C__23F3538A" ManuallyRouted="false" />
         <AssociationConnector Association="TurboEMSModel.FK__ItemMaste__SGRP___51EF2864" ManuallyRouted="false" />
         <AssociationConnector Association="TurboEMSModel.FK__ItemMaster__UNIT__52E34C9D" ManuallyRouted="false" />
         <AssociationConnector Association="TurboEMSModel.FK__Model__VEH_CODE__1C873BEC" ManuallyRouted="false" />
         <AssociationConnector Association="TurboEMSModel.FK__ModelSL__MODEL_C__27F8EE98" ManuallyRouted="false" />
         <AssociationConnector Association="TurboEMSModel.FK__ModelSL__VEH_COD__2704CA5F" ManuallyRouted="false" />
         <AssociationConnector Association="TurboEMSModel.FK__VehiMast__VCAT_C__19AACF41" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="TurboEMSModel.SkuMast" Width="1.5" PointX="21.375" PointY="4.75" />
-        <EntityTypeShape EntityType="TurboEMSModel.Company" Width="1.5" PointX="21.375" PointY="19" />
-        <EntityTypeShape EntityType="TurboEMSModel.Warehousemast" Width="1.5" PointX="23.625" PointY="29.125" />
-        <EntityTypeShape EntityType="TurboEMSModel.Buyer_Contact" Width="1.5" PointX="15.375" PointY="21.75" />
-        <AssociationConnector Association="TurboEMSModel.FK__Warehouse__COMPA__7DCDAAA2" />
-        <EntityTypeShape EntityType="TurboEMSModel.Usermast" Width="1.5" PointX="17.375" PointY="21.75" />
-        <EntityTypeShape EntityType="TurboEMSModel.Buyer" Width="1.5" PointX="12.375" PointY="19.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

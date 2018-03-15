@@ -20,7 +20,7 @@ namespace TurboERP_DAL.Models
             this.ItemMasters = new HashSet<ItemMaster>();
         }
     
-        public Nullable<int> PID { get; set; }
+        public int PID { get; set; }
         public string CATEGORY { get; set; }
         public string INPUT_BY { get; set; }
         public Nullable<System.DateTime> INPUT_DATE { get; set; }
