@@ -1,0 +1,38 @@
+
+
+.manage_select{
+	margin: 0px;
+	height: 30px !important;
+}
+/* .btn_bg{
+	float: left;
+	width: 100%;
+	border-top: 1px solid #ccc;
+	padding-top: 20px;
+} */
+.form-control {
+    height: 25px;
+    }
+
+    .text_aliment {
+        text-align: right;
+	}
+	
+	input{
+		text-transform:uppercase
+	}
+	::-webkit-input-placeholder { /* WebKit browsers */
+		text-transform: none;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		text-transform: none;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+		text-transform: none;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10+ */
+		text-transform: none;
+	}
+	::placeholder { /* Recent browsers */
+		text-transform: none;
+	}

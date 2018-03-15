@@ -1,0 +1,57 @@
+<div class="page-content-wrapper animated fadeInRight">
+    <div class="page-content" >
+      <div class="row wrapper border-bottom page-heading">
+        <div class="col-lg-12">
+          <h2> <a (click)="getCostPrice()" routerLinkActive="active" style="cursor: context-menu;">Cost Price</a> <span style="font-size:14px">/<b>{{GetUrl}}</b></span></h2>
+          <!-- <ol class="breadcrumb">
+          
+            <li class="active"> <strong>{{GetUrl}}</strong> </li>
+          </ol> -->
+        </div>
+      </div>
+      
+      <div class="wrapper-content ">
+        <div class="row">
+<!-- Horizontal Form start -->
+<div class="col-lg-12 top20 bottom20">
+<div class="widgets-container">
+   <form #myForm="ngForm" class="form-horizontal m-t-xs" (ngSubmit)="SaveCPMaster(myForm.submitted)">
+  <div class="form-group">
+    <label for="model.CP_CODE" class="col-sm-2 control-label text_aliment">Cost Price Code</label>
+    <div class="col-sm-4">
+        <input placeholder="Cost Price Code" pattern="[A-Za-z]{1}"  class="form-control" type="text" [(ngModel)]=model.CP_CODE name="model.CP_CODE" #CP_CODE="ngModel" required maxlength="1" [disabled]="costPriceDisabled"> 
+        <div *ngIf="CP_CODE.errors && (CP_CODE.dirty || CP_CODE.touched)">
+          <div style="color:red" [hidden]="!CP_CODE.hasError('required')">Cost Price Code is required</div>
+          <div style="color: red" [hidden]="!CP_CODE.hasError('pattern')">Cost Price Code should be only character</div>
+        </div>
+
+      </div>
+    <!-- <div class="col-xs-3"><show-errors [control]="CP_CODE"></show-errors></div> -->
+  </div>
+  
+   <div class="form-group">
+      <label for="model.RATE" class="col-sm-2 control-label text_aliment">Value</label>
+      <div class="col-sm-4">
+          <input placeholder="Value" class="form-control" pattern="[0-9.]{1}" [(ngModel)]=model.RATE name="model.RATE" #RATE="ngModel" type="text" required maxlength="1">
+          <div *ngIf="RATE.errors && (RATE.dirty || RATE.touched)">
+            <div style="color:red" [hidden]="!RATE.hasError('required')">Rate is required</div>
+            <div style="color: red" [hidden]="!RATE.hasError('pattern')">Rate should be between 0-9 and '.' only</div>
+          </div>
+    </div>
+    </div>
+
+<div class="form-group">
+  <div class="col-sm-4 col-sm-offset-2">
+        <button class="btn aqua" type="submit" [disabled]="myForm.invalid || myForm.pending">{{btnText}}</button>
+    <button class="btn btn-danger" routerLink="/CostPrice" routerLinkActive="active" type="button">Cancel</button>
+  
+  </div>
+</div>
+</form>
+</div>
+</div>
+  <!--Horizontal Form End -->
+  </div>
+  </div>
+  </div>
+  </div>
