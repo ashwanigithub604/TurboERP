@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Http } from '@angular/http'
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable'
-import { CountryMasterModel, ContinentModel } from './Country.model'
+import { CountryMasterModel, ContinentModel } from './country.model'
 import { AppService } from '../../AppServices/app.service';
 
 
