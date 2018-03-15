@@ -327,10 +327,6 @@ E:\Working_Piyush\Turbo_ERP_Angular_MVC\TurboERP\TurboERP_DAL\TurboERP_DAL\obj\D
 E:\Working_Piyush\Turbo_ERP_Angular_MVC\TurboERP\TurboERP_DAL\TurboERP_DAL\obj\Debug\TurboERP_DAL.csproj.CoreCompileInputs.cache
 E:\Working_Piyush\Turbo_ERP_Angular_MVC\TurboERP\TurboERP_DAL\TurboERP_DAL\obj\Debug\TurboERP_DAL.dll
 E:\Working_Piyush\Turbo_ERP_Angular_MVC\TurboERP\TurboERP_DAL\TurboERP_DAL\obj\Debug\TurboERP_DAL.pdb
-E:\Git\TurboERP\TurboERP_DAL\TurboERP_DAL\obj\Debug\TurboERP_DAL.csprojResolveAssemblyReference.cache
-E:\Git\TurboERP\TurboERP_DAL\TurboERP_DAL\obj\Debug\TurboERP_DAL.csproj.CoreCompileInputs.cache
-E:\Git\TurboERP\TurboERP_DAL\TurboERP_DAL\obj\Debug\TurboERP_DAL.dll
-E:\Git\TurboERP\TurboERP_DAL\TurboERP_DAL\obj\Debug\TurboERP_DAL.pdb
 E:\Git\TurboERP\TurboERP_DAL\TurboERP_DAL\bin\ApplicationInsights.config
 E:\Git\TurboERP\TurboERP_DAL\TurboERP_DAL\bin\TurboERP_DAL.dll.config
 E:\Git\TurboERP\TurboERP_DAL\TurboERP_DAL\bin\TurboERP_DAL.dll
@@ -382,4 +378,8 @@ E:\Git\TurboERP\TurboERP_DAL\TurboERP_DAL\bin\Microsoft.AI.DependencyCollector.x
 E:\Git\TurboERP\TurboERP_DAL\TurboERP_DAL\bin\Microsoft.AI.ServerTelemetryChannel.xml
 E:\Git\TurboERP\TurboERP_DAL\TurboERP_DAL\bin\Microsoft.AI.WindowsServer.xml
 E:\Git\TurboERP\TurboERP_DAL\TurboERP_DAL\bin\Microsoft.AI.Web.xml
+E:\Git\TurboERP\TurboERP_DAL\TurboERP_DAL\obj\Debug\TurboERP_DAL.csprojResolveAssemblyReference.cache
+E:\Git\TurboERP\TurboERP_DAL\TurboERP_DAL\obj\Debug\TurboERP_DAL.csproj.CoreCompileInputs.cache
 E:\Git\TurboERP\TurboERP_DAL\TurboERP_DAL\obj\Debug\TurboERP_DAL.csproj.CopyComplete
+E:\Git\TurboERP\TurboERP_DAL\TurboERP_DAL\obj\Debug\TurboERP_DAL.dll
+E:\Git\TurboERP\TurboERP_DAL\TurboERP_DAL\obj\Debug\TurboERP_DAL.pdb
