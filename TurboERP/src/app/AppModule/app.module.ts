@@ -16,8 +16,13 @@ import { CountryMastComponent } from '../AppComponents/CountryMaster/country.com
 import { ManufacturingUnitComponent } from '../AppComponents/ManufacturingUnit/manufacturing.component';
 import {CurrMastComponent} from '../AppComponents/CurrMast/CurrMast.component';
 import {ItemGrpComponent} from '../AppComponents/ItemGrp/ItemGrp.component';
-import {SkuMastComponent} from '../AppComponents/SkuMast/SkuMast.component'
+import {SkuMastComponent} from '../AppComponents/SkuMast/SkuMast.component';
 import {WarehouseComponent} from '../AppComponents/Warehousemast/Warehouse.component';
+import { CartPlycomponent } from '../AppComponents/CartonPly/CartPly.component'
+import { MiscParty } from '../AppComponents/MiscParty/MiscParty.component';
+import { SalesCoordinator } from '../AppComponents/SalesCoOrdinator/SalesCo.component';
+import{Couriercomponent} from '../AppComponents/Courier/Courier.component';
+
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
@@ -44,10 +49,22 @@ const appRoutes: Routes = [
   { path: 'Warehouse', component: GridComponent },
   { path: 'Warehouse/Add', component: WarehouseComponent },
   { path: 'Warehouse/Edit', component: WarehouseComponent },
+  { path: 'CartonPly', component: GridComponent },
+  { path: 'CartonPly/Edit', component: CartPlycomponent },
+  { path: 'CartonPly/Add', component: CartPlycomponent },
+  { path: 'MiscParty', component: GridComponent },
+  { path: 'MiscParty/Edit', component: MiscParty },
+  { path: 'MiscParty/Add', component: MiscParty },
+  { path: 'SalesCo', component: GridComponent },
+  { path: 'SalesCo/Edit', component: SalesCoordinator },
+  { path: 'SalesCo/Add', component: SalesCoordinator },
+  { path: 'Courier', component: GridComponent },
+  { path: 'Courier/Edit', component: SalesCoordinator },
+  { path: 'Courier/Add', component: SalesCoordinator },
 ];
   
 
-];
+
 
 @NgModule({
   imports:
@@ -68,7 +85,8 @@ const appRoutes: Routes = [
   ],
   declarations: [AppComponent, MenuComponent, HomeComponent,GridComponent,
     UnitComponent,FooterComponent, CountryMastComponent, ManufacturingUnitComponent,
-    CurrMastComponent, ItemGrpComponent, SkuMastComponent,WarehouseComponent],
+    CurrMastComponent, ItemGrpComponent, SkuMastComponent,WarehouseComponent, CartPlycomponent, MiscParty,
+     SalesCoordinator,Couriercomponent],
   providers: [],
   bootstrap: [AppComponent]
 })

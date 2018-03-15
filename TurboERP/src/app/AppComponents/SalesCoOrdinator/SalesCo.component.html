@@ -1,0 +1,140 @@
+<div class="page-content-wrapper animated fadeInRight">
+  <div class="page-content">
+    <div class="row wrapper border-bottom page-heading">
+      <div class="col-lg-12">
+        <h2> Form Stuff </h2>
+        <ol class="breadcrumb">
+          <li> <a href="index.html">Home</a> </li>
+          <li> <a>UI Features</a> </li>
+          <li class="active"> <strong> Form Stuff </strong> </li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="wrapper-content ">
+      <div class="row">
+        <!-- Horizontal Form start -->
+        <div class="col-lg-12 top20 bottom20">
+          <div class="widgets-container">
+            <h5>All form elements </h5>
+            <hr>
+            <form class="form-horizontal" (ngSubmit)="onSubmit(SalesCoForm.valid)" #SalesCoForm="ngForm" novalidate>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label text_aliment">Name</label>
+                <div class="col-sm-4">
+                  <input class="form-control form_height" type="text" [(ngModel)]="model.NAME" name="model.NAME" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label text_aliment">Short Name</label>
+                <div class="col-sm-4">
+                  <input class="form-control form_height" type="text" [(ngModel)]="model.SHORT_NAME" name="model.SHORT_NAME" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label text_aliment">Address</label>
+                <div class="col-sm-4">
+                  <input class="form-control form_height" type="text" [(ngModel)]="model.ADD1" name="model.ADD1" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label text_aliment" style="visibility:hidden;">Address</label>
+                <div class="col-sm-4">
+                  <input class="form-control form_height" type="text" [(ngModel)]="model.ADD2" name="model.ADD2">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label text_aliment" style="visibility:hidden;">Address</label>
+                <div class="col-sm-4">
+                  <input class="form-control form_height" type="text" [(ngModel)]="model.ADD3" name="model.ADD3">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label text_aliment">Contact Pearson</label>
+                <div class="col-sm-4">
+                  <input class="form-control form_height" type="text" [(ngModel)]="model.CONTPER" name="model.CONTPER" required>
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label text_aliment">E-mail</label>
+                <div class="col-sm-4">
+                  <input class="form-control form_height" type="text" [(ngModel)]="model.EMAIL" name="model.EMAIL" required>
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label text_aliment">URL</label>
+                <div class="col-sm-4">
+                  <input class="form-control form_height" type="text" [(ngModel)]="model.WEB_ADD" name="model.WEB_ADD" required>
+                </div>
+              </div>
+
+
+             <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label text_aliment">Mobile</label>
+                <div class="col-sm-4">
+                  <input class="form-control form_height" type="text" [(ngModel)]="model.MOBILE" name="model.MOBILE" required id="mobilenumber"
+                    pattern="[0-9]*" minlength=10 maxlength=10 #mobile="ngModel">
+                  <div *ngIf="mobile.errors && (mobile.dirty ||mobile.touched)">
+                    <div style="color: red" [hidden]="!mobile.hasError('minlength')">Mobile should be 10digit</div>
+                    <div style="color:red" [hidden]="!mobile.hasError('required')">Mobile is required</div>
+                    <div style="color: red" [hidden]="!mobile.hasError('pattern')">Mobile number should be only numbers</div>
+                  </div>
+                </div>
+              </div>
+              
+
+
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label text_aliment">Phone</label>
+                <div class="col-sm-4">
+                  <input class="form-control form_height" type="text" [(ngModel)]="model.PHONE" name="model.PHONE" required>
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label text_aliment">Fax</label>
+                <div class="col-sm-4">
+                  <input class="form-control form_height" type="text" [(ngModel)]="model.FAX" name="model.FAX" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-md-2 control-label text_aliment">Relation Since</label>
+                <div class="col-md-4">
+                  <input class="form-control form_height" type="date" [ngModel] ="model.RELA | date:'yyyy-MM-dd'" name="model.RELA" (ngModelChange)="model.RELA = $event">
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label text_aliment">Remarks</label>
+                <div class="col-sm-4">
+                  <textarea class="form-control form_width " rows="5" id="comment" [(ngModel)]="model.REMARKS" name="model.REMARKS"></textarea>
+
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button class="btn aqua" type="submit" [disabled]="SalesCoForm.invalid || SalesCoForm.pending">{{btnText}}</button>
+                  <button class="btn btn-danger" routerLink="/SalesCo" routerLinkActive="active" type="button">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--Horizontal Form End -->
+      </div>
+    </div>
+  </div>
+</div>
