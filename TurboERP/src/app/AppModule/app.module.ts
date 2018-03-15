@@ -20,9 +20,15 @@ import { UnitComponent } from '../AppComponents/UnitMaster/unit.component';
 import { CostPriceComponent } from '../AppComponents/CPMaster/costprice.component';
 import { BuyerComponent } from '../AppComponents/BuyerMaster/buyer.component';
 import { FooterComponent } from '../AppComponents/Footer/footer.component';
-import {ShowErrorsComponent} from '../AppComponents/CustomValidations/validation.component';
-import {CountryMastComponent} from '../AppComponents/CountryMaster/country.component';
-import { FormWizardModule } from 'angular2-wizard';
+
+import { CountryMastComponent } from '../AppComponents/CountryMaster/country.component';
+
+
+import { CartPlycomponent } from '../AppComponents/CartonPly/CartPly.component'
+import { MiscParty } from '../AppComponents/MiscParty/MiscParty.component';
+import { SalesCoordinator } from '../AppComponents/SalesCoOrdinator/SalesCo.component';
+import{Couriercomponent} from '../AppComponents/Courier/Courier.component';
+
 
 
 const appRoutes: Routes = [
@@ -55,8 +61,23 @@ const appRoutes: Routes = [
   { path: 'Buyer', component: GridComponent},
   { path: 'Buyer/Add', component: BuyerComponent},
   { path: 'Buyer/Edit', component: BuyerComponent},
+  { path: 'CartonPly', component: GridComponent },
+  { path: 'CartonPly/Edit', component: CartPlycomponent },
+  { path: 'CartonPly/Add', component: CartPlycomponent },
+  { path: 'MiscParty', component: GridComponent },
+  { path: 'MiscParty/Edit', component: MiscParty },
+  { path: 'MiscParty/Add', component: MiscParty },
+  { path: 'SalesCo', component: GridComponent },
+  { path: 'SalesCo/Edit', component: SalesCoordinator },
+  { path: 'SalesCo/Add', component: SalesCoordinator },
+  { path: 'Courier', component: GridComponent },
+  { path: 'Courier/Edit', component: SalesCoordinator },
+  { path: 'Courier/Add', component: SalesCoordinator },
+
 ];
   
+
+
 
 @NgModule({
   imports:
@@ -77,7 +98,8 @@ const appRoutes: Routes = [
   ],
   declarations: [AppComponent, MenuComponent, HomeComponent,GridComponent,
     UnitComponent,FooterComponent, CountryMastComponent, ManufacturingUnitComponent,
-    CurrMastComponent, ItemGrpComponent, SkuMastComponent,WarehouseComponent],
+    CurrMastComponent, ItemGrpComponent, SkuMastComponent,WarehouseComponent, CartPlycomponent, MiscParty,
+     SalesCoordinator,Couriercomponent],
   providers: [],
   bootstrap: [AppComponent]
 })
