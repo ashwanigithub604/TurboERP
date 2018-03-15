@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
-import { Ng2PaginationModule } from 'ng2-pagination';
 import { ManufacturingUnitComponent } from '../AppComponents/ManufacturingUnit/manufacturing.component';
 import {CurrMastComponent} from '../AppComponents/CurrMast/CurrMast.component';
 import {ItemGrpComponent} from '../AppComponents/ItemGrp/ItemGrp.component';
@@ -77,7 +76,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports:
-  [BrowserModule,Ng2PaginationModule,Ng2SearchPipeModule,FormWizardModule,
+  [BrowserModule,NgxPaginationModule,Ng2SearchPipeModule,FormWizardModule,
       FormsModule,
       RouterModule.forRoot(
           appRoutes,
