@@ -7,9 +7,6 @@ import { AppService } from '../AppServices/app.service';
   styleUrls: ['./app.component.css'],
   providers: [AppService],
 })
-// export class AppComponent {
-//   title = 'app';
-// }
 
 export class AppComponent  {
 
