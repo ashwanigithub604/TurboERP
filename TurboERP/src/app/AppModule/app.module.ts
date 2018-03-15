@@ -96,7 +96,7 @@ const appRoutes: Routes = [
   exports: [
       RouterModule
   ],
-  declarations: [AppComponent, MenuComponent, HomeComponent,GridComponent,
+  declarations: [AppComponent, MenuComponent, HomeComponent,GridComponent,CostPriceComponent,
     UnitComponent,FooterComponent, CountryMastComponent, ManufacturingUnitComponent,
     CurrMastComponent, ItemGrpComponent, SkuMastComponent,WarehouseComponent, CartPlycomponent, MiscParty,
      SalesCoordinator,Couriercomponent],
