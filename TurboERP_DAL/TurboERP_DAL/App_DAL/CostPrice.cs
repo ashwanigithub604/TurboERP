@@ -28,19 +28,25 @@ namespace TurboERP_DAL.App_DAL
             {
                 cmd.Parameters.Add("@CP_CODE", SqlDbType.VarChar, 1).Value = costPrice.CP_CODE;
                 cmd.Parameters.Add("@RATE", SqlDbType.VarChar, 1).Value = costPrice.RATE;
-                cmd.Parameters.AddWithValue("@Action ", "INSERT");
+                cmd.Parameters.AddWithValue("@Action ", "INST");
                 conn.Open();
                 result = cmd.ExecuteNonQuery().ToString();
                 return result;
             }
-            catch (Exception ex)
+            catch (SqlException sqlException)
             {
-                return result = "";
+                if (sqlException.Number == 2601 || sqlException.Number == 2627)
+                {
+                    result = "Either Code or Value is duplicate.";
+                }
+         
+                return result ;
             }
             finally
             {
                 conn.Close();
             }
+
         }
 
 
@@ -53,14 +59,18 @@ namespace TurboERP_DAL.App_DAL
                 conn.Open();
                 cmd.Parameters.Add("@RATE", SqlDbType.VarChar, 1).Value = costPrice.RATE;
                 cmd.Parameters.AddWithValue("@Pid", costPrice.PID);
-                cmd.Parameters.AddWithValue("@Action", "UPDATE");
+                cmd.Parameters.AddWithValue("@Action", "UPDT");
 
                 int res = cmd.ExecuteNonQuery();
                 return result;
             }
-            catch (Exception ex)
+            catch (SqlException sqlException)
             {
-                return result = "";
+                if (sqlException.Number == 2601 || sqlException.Number == 2627)
+                {
+                    result = "Value is duplicate.";
+                }
+                return result;
             }
             finally
             {
@@ -76,7 +86,7 @@ namespace TurboERP_DAL.App_DAL
             try
             {
                 cmd.Parameters.AddWithValue("@Pid", pid);
-                cmd.Parameters.AddWithValue("@Action", "DELETE");
+                cmd.Parameters.AddWithValue("@Action", "DELT");
                 conn.Open();
                 result = cmd.ExecuteNonQuery();
                 return result;
@@ -99,7 +109,7 @@ namespace TurboERP_DAL.App_DAL
            // List<CPMaster> costPriceList = null;
             try
             {
-                cmd.Parameters.AddWithValue("@Action", "SELECT");
+                cmd.Parameters.AddWithValue("@Action", "GRID");
                 conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 dt = new DataTable();
@@ -127,7 +137,7 @@ namespace TurboERP_DAL.App_DAL
             try
             {
                 cmd.Parameters.AddWithValue("@Pid", pid);
-                cmd.Parameters.AddWithValue("@Action", "SELECT");
+                cmd.Parameters.AddWithValue("@Action", "SHOW");
                 conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 dt = new DataTable();

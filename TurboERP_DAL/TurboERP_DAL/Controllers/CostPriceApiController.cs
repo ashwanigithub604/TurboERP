@@ -12,6 +12,8 @@ namespace TurboERP_DAL.Controllers
 {
     public class CostPriceApiController : ApiController
     {
+
+        [Route("CostPrice")]
         public HttpResponseMessage GetCostPrices()
         {
             var costPrices = new CostPrice().CostPrice_GetAll();
@@ -23,9 +25,9 @@ namespace TurboERP_DAL.Controllers
         }
 
         // GET: api/GetCostPrice/2
-        public CPMaster GetCostPrice(int? id)
+        public CPMaster GetCostPrice(int? Pid)
         {
-            var costPrice = new CostPrice().CostPrice_GetById(id);
+            var costPrice = new CostPrice().CostPrice_GetById(Pid);
             return costPrice;
         }
 

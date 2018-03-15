@@ -20,7 +20,7 @@ namespace TurboERP_DAL.Controllers
            
         }
         // GET: api/GetBuyers/
-        [Route("BuyersDetails")]
+        [Route("Buyer")]
         public HttpResponseMessage GetBuyers()
         {
             var buyers = new Buyer_Crud().Buyer_GetAll();
@@ -33,9 +33,9 @@ namespace TurboERP_DAL.Controllers
         }
 
         // GET: api/GetBuyer/2
-        public Buyer GetBuyer(int? id)
+        public Buyer GetBuyer(int? Pid)
         {
-            var buyer = new Buyer_Crud().Buyer_GetById(id);
+            var buyer = new Buyer_Crud().Buyer_GetById(Pid);
             return buyer;
         }
 

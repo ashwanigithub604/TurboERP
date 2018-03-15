@@ -29,14 +29,18 @@ namespace TurboERP_DAL.App_DAL
                 cmd.Parameters.Add("@UNIT", SqlDbType.VarChar, 3).Value = unit.UNIT;
                 cmd.Parameters.Add("@DESC", SqlDbType.VarChar, 20).Value = unit.DESC;
                 cmd.Parameters.Add("@DECI_REQ", SqlDbType.Bit).Value = unit.DECI_REQ;
-                cmd.Parameters.AddWithValue("@Action ", "INSERT");
+                cmd.Parameters.AddWithValue("@Action ", "INST");
                 conn.Open();
                 result = cmd.ExecuteNonQuery().ToString();
                 return result;
             }
-            catch (Exception ex)
+            catch (SqlException sqlException)
             {
-                return result = "";
+                if (sqlException.Number == 2601 || sqlException.Number == 2627)
+                {
+                    result = "Code is duplicate.";
+                }
+                return result;
             }
             finally
             {
@@ -56,7 +60,7 @@ namespace TurboERP_DAL.App_DAL
                 cmd.Parameters.Add("@DESC", SqlDbType.VarChar, 20).Value = unit.DESC;
                 cmd.Parameters.Add("@DECI_REQ", SqlDbType.Bit).Value = unit.DECI_REQ;
                 cmd.Parameters.AddWithValue("@Pid", unit.PID);
-                cmd.Parameters.AddWithValue("@Action", "UPDATE");
+                cmd.Parameters.AddWithValue("@Action", "UPDT");
 
                 result = cmd.ExecuteNonQuery().ToString();
                 return result;
@@ -79,7 +83,7 @@ namespace TurboERP_DAL.App_DAL
             try
             {
                 cmd.Parameters.AddWithValue("@Pid", pid);
-                cmd.Parameters.AddWithValue("@Action", "DELETE");
+                cmd.Parameters.AddWithValue("@Action", "DELT");
                 conn.Open();
                 result = cmd.ExecuteNonQuery();
                 return result;
@@ -102,7 +106,7 @@ namespace TurboERP_DAL.App_DAL
             //List<UnitMast> unitList = null;
             try
             {
-                cmd.Parameters.AddWithValue("@Action", "SELECT");
+                cmd.Parameters.AddWithValue("@Action", "GRID");
                 conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 dt = new DataTable();
@@ -130,7 +134,7 @@ namespace TurboERP_DAL.App_DAL
             try
             {
                 cmd.Parameters.AddWithValue("@Pid", pid);
-                cmd.Parameters.AddWithValue("@Action", "SELECT");
+                cmd.Parameters.AddWithValue("@Action", "SHOW");
                 conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 dt = new DataTable();
