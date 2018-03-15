@@ -1,0 +1,40 @@
+/* .text_aliment{
+	margin-top: 0px;
+	padding-top:3px !important;
+
+}
+.manage_select{
+	margin: 0px;
+	width: 120px;
+}
+.form_height{
+	height: 25px!important;
+	width: 50%;
+}
+.form_width{
+	width: 50%;
+}
+
+
+@media (max-width:640px){
+	.form_height{
+	height: auto!important;
+	width: auto;
+}
+.form_width{
+	width: auto;
+}
+} */
+manage_select{
+	margin: 0px;
+	height: 30px !important;
+}
+.btn_bg{
+	float: left;
+	width: 100%;
+	border-top: 1px solid #ccc;
+	padding-top: 20px;
+}
+.form-control {
+    height: 25px;
+    }

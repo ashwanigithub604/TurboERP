@@ -37,5 +37,8 @@ export class AppService {
         console.error(error);
         return Observable.throw(error.json().error || 'Server error');
     }
+    getProdUrl(): string { 
+        return "http://localhost:52148"; 
+     }  
 
 }

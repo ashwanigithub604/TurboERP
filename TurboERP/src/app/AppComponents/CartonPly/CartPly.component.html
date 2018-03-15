@@ -1,0 +1,108 @@
+<div class="page-content-wrapper animated fadeInRight">
+  <div class="page-content">
+    <div class="row wrapper border-bottom page-heading">
+      <div class="col-lg-12">
+        <h2> Form Stuff </h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a>UI Features</a>
+          </li>
+          <li class="active">
+            <strong> Form Stuff </strong>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="wrapper-content">
+      <div class="row">
+        <!-- Horizontal Form start -->
+        <div class="col-lg-12 top20 bottom20">
+          <div class="widgets-container">
+            <h5>All form elements </h5>
+            <hr>
+            <!-- <form class="form-horizontal" (ngSubmit)="onSubmit(CartonPlyForm.valid)" #CartonPlyForm="ngForm" novalidate> -->
+            <form #myForm="ngForm" class="form-horizontal m-t-xs" (ngSubmit)="onSubmit(myForm.submitted)">
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Carton Ply</label>
+                <div class="col-xs-2">
+                  <input placeholder="Code" class="form-control" type="text"  pattern="[0-9]*" [(ngModel)]=model.CRTN_PLY name="model.CRTN_PLY"
+                     maxlength="2" required #CRTN_PLY="ngModel">
+                  <span *ngIf="isDuplicate" style="color:red">AlreadyExit</span>
+                    <div [hidden]="CRTN_PLY.valid || CRTN_PLY.pristine" class="alert alert-danger">
+                      <div [hidden]="!CRTN_PLY.hasError('maxlength')">CartonPly should be maximun 2 digit</div>
+                      <div [hidden]="!CRTN_PLY.hasError('required')">CartonPly is required</div>
+                  <div [hidden]="!CRTN_PLY.hasError('pattern')">CartonPly  should be only numbers</div>
+                    </div>
+                </div>
+                  <!--<div [hidden]="CRTN_PLY.valid || CRTN_PLY.pristine" class="alert alert-danger">
+                  <div [hidden]="!CRTN_PLY.hasError('maxlength')">CartonPly should be maximun 2 digit</div>
+                  <div [hidden]="!CRTN_PLY.hasError('required')">CartonPly is required</div>
+                  <div [hidden]="!CRTN_PLY.hasError('pattern')">CartonPly  should be only numbers</div>
+                </div>-->
+               
+                <!--<div class="col-sm-3" *ngIf="CRTN_PLY.invalid && (CRTN_PLY.dirty || CRTN_PLY.touched)">
+                  <span *ngIf="CRTN_PLY.errors.required" style="color:red">CartonPly is required.</span>
+                </div>-->
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Board Thickness</label>
+                <div class="col-xs-2">
+
+                  <input placeholder="Code" class="form-control" type="text" [(ngModel)]=model.BOARDWIDTH name="model.BOARDWIDTH" required
+                    #BOARDWIDTH=ngModel>
+                </div>
+                <div *ngIf="BOARDWIDTH.invalid && (BOARDWIDTH.dirty || BOARDWIDTH.touched)">
+                  <span *ngIf="BOARDWIDTH.errors.required" style="color:red"> 
+                      Board Thickness is required.</span>
+                </div>
+                <!--<div class="col-sm-4">
+                    <show-errors [control]="BOARDWIDTH"></show-errors>
+                  </div>-->
+                <!--<div *ngIf="title.errors && (title.dirty || title.touched)" class="alert alert-danger">
+                <div [hidden]="!title.errors.required">
+                Book title is required!
+        </div>-->
+
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Rate Brown Rs.</label>
+                <div class="col-xs-3">
+                  <input placeholder="Code" class="form-control" type="text" [(ngModel)]=model.RATEBROWN name="model.RATEBROWN" required #RATEBROWN=ngModel>
+                </div>
+                <div *ngIf="RATEBROWN.invalid && (RATEBROWN.dirty || RATEBROWN.touched)">
+                  <span *ngIf="RATEBROWN.errors.required" style="color:red"> 
+                      Rate Brown is required.</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Rate Color Rs.</label>
+                <div class="col-xs-3">
+                  <input placeholder="Code" class="form-control" type="text" [(ngModel)]=model.RATECOLOR name="model.RATECOLOR" required #RATECOLOR=ngModel>
+                </div>
+                <div *ngIf="RATECOLOR.invalid && (RATECOLOR.dirty || RATECOLOR.touched)">
+                  <span *ngIf="RATECOLOR.errors.required" style="color:red"> 
+                      Rate Color is required.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-2">
+                  <!-- <button class="btn aqua" type="submit">Save</button> -->
+                  <button class="btn aqua" type="submit" [disabled]="myForm.invalid || myForm.pending">{{btnText}}</button>
+                  <button class="btn btn-danger" routerLink="/CartonPly" routerLinkActive="active" type="button">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--Horizontal Form End -->
+      </div>
+    </div>
+  </div>
+</div>
