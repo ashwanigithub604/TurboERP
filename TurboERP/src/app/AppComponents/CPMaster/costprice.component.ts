@@ -9,8 +9,8 @@ import { CPMaster } from '../../AppComponents/CPMaster/costprice.model';
 })
 export class CostPriceComponent  {
     @ViewChild('myForm')
-    private myForm: NgForm;
-    private GetUrl: any;
+     myForm: NgForm;
+     GetUrl: any;
     PID: number;
     model=new CPMaster(); 
     msg: string;

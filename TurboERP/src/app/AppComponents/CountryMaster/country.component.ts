@@ -11,12 +11,13 @@ import { AppService } from '../../AppServices/app.service';
 })
 
 export class CountryMastComponent {
-    private GetUrl: any;
+    GetUrl: any;
     PID: number;
     msg: string;
     btnText: string = "Save";
     ModelCountry = new CountryMasterModel();
     ModelContinent: ContinentModel[];
+    selectedvalue:string;
 
     constructor(private _AppService: AppService, private route: ActivatedRoute, private router: Router, private http: Http
     ) { };

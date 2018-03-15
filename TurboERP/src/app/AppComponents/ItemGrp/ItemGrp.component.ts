@@ -11,7 +11,7 @@ import { AppService } from '../../AppServices/app.service';
 })
 
 export class ItemGrpComponent  {
-    private GetUrl: any;
+     GetUrl: any;
     PID: number;
     model=new ItemGrpModel();
     Editeddata:ItemGrpModel[]; 

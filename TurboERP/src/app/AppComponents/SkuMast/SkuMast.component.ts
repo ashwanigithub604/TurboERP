@@ -10,7 +10,7 @@ import {SkuMastModel} from './SkuMast.Model'
 })
 
 export class SkuMastComponent  {
-    private GetUrl: any;
+     GetUrl: any;
     PID: number;
     model=new SkuMastModel();
     Editeddata:SkuMastModel[]; 

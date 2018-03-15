@@ -22,6 +22,7 @@ export class BuyerMast {
         NOTIFY2   : string
         NOTIFY3   : string
         NOTIFY4   : string
+        PANNO:string
         NOTIFY5   : string
         NOTIFY6   : string
         NOTIFY7   : string

@@ -11,7 +11,7 @@ import {CurrMastModel} from './CurrMast.Model'
 })
 
 export class CurrMastComponent  {
-    private GetUrl: any;
+    GetUrl: any;
     PID: number;
     model=new CurrMastModel();
     Editeddata:CurrMastModel[]; 

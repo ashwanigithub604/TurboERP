@@ -12,8 +12,8 @@ import { UnitMast } from '../../AppComponents/UnitMaster/unit.model';
 })
 export class UnitComponent  {
     @ViewChild('myForm')
-    private myForm: NgForm;
-    private GetUrl: any;
+    myForm: NgForm;
+    GetUrl: any;
     PID: number;
     model=new UnitMast(); 
     msg: string;
