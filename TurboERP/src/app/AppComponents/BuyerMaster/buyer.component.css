@@ -1,0 +1,40 @@
+
+
+.manage_select{
+	margin: 0px;
+    height: 30px !important;
+}
+._margin-left{
+    margin-left: -55px;
+}
+.btn_bg{
+	float: left;
+	width: 100%;
+	border-top: 1px solid #ccc;
+	padding-top: 20px;
+}
+.form-control {
+    height: 25px;
+    }
+
+    .text_aliment {
+        text-align: right;
+    }
+
+    .form_width{
+        height: 60px;
+    }
+    select{
+        padding: 3px 12px;
+    }
+    .mar_btm{
+        margin-bottom: 0px;
+    }
+
+    .tabs-container .nav-tabs > li.active > a, .tabs-container .nav-tabs > li.active > a:hover, .tabs-container .nav-tabs > li.active > a:focus {
+        border: 1px solid #e7eaec;
+        border-bottom-color: transparent;
+        background-color: #49b6d6;
+    }
+
+    
