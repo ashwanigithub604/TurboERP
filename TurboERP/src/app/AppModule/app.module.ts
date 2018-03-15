@@ -5,19 +5,25 @@ import { FormsModule }   from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { Ng2PaginationModule } from 'ng2-pagination';
+import { ManufacturingUnitComponent } from '../AppComponents/ManufacturingUnit/manufacturing.component';
+import {CurrMastComponent} from '../AppComponents/CurrMast/CurrMast.component';
+import {ItemGrpComponent} from '../AppComponents/ItemGrp/ItemGrp.component';
+import {SkuMastComponent} from '../AppComponents/SkuMast/SkuMast.component'
+import {WarehouseComponent} from '../AppComponents/Warehousemast/Warehouse.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AppComponent }  from '../AppComponents/app.component';
 import { MenuComponent } from '../AppComponents/MenuDetails/menu.component';
 import { HomeComponent } from '../AppComponents/Home/home.component';
 import { GridComponent } from '../AppComponents/GridDetails/grid.component';
 import { UnitComponent } from '../AppComponents/UnitMaster/unit.component';
+import { CostPriceComponent } from '../AppComponents/CPMaster/costprice.component';
+import { BuyerComponent } from '../AppComponents/BuyerMaster/buyer.component';
 import { FooterComponent } from '../AppComponents/Footer/footer.component';
-import { CountryMastComponent } from '../AppComponents/CountryMaster/country.component';
-import { ManufacturingUnitComponent } from '../AppComponents/ManufacturingUnit/manufacturing.component';
-import {CurrMastComponent} from '../AppComponents/CurrMast/CurrMast.component';
-import {ItemGrpComponent} from '../AppComponents/ItemGrp/ItemGrp.component';
-import {SkuMastComponent} from '../AppComponents/SkuMast/SkuMast.component'
-import {WarehouseComponent} from '../AppComponents/Warehousemast/Warehouse.component';
+import {ShowErrorsComponent} from '../AppComponents/CustomValidations/validation.component';
+import {CountryMastComponent} from '../AppComponents/CountryMaster/country.component';
+import { FormWizardModule } from 'angular2-wizard';
+
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
@@ -25,7 +31,6 @@ const appRoutes: Routes = [
   { path: 'Unit', component: GridComponent},
   { path: 'Unit/Edit', component: UnitComponent},
   { path: 'Unit/Add', component: UnitComponent},
-  { path: 'UnitDetails', component: UnitComponent },
   { path: 'CountryMast', component: GridComponent },
   { path: 'CountryMast/Add', component: CountryMastComponent},
   { path: 'CountryMast/Edit', component: CountryMastComponent },
@@ -44,6 +49,12 @@ const appRoutes: Routes = [
   { path: 'Warehouse', component: GridComponent },
   { path: 'Warehouse/Add', component: WarehouseComponent },
   { path: 'Warehouse/Edit', component: WarehouseComponent },
+  { path: 'CostPrice', component: GridComponent},
+  { path: 'CostPrice/Add', component: CostPriceComponent},
+  { path: 'CostPrice/Edit', component: CostPriceComponent},
+  { path: 'Buyer', component: GridComponent},
+  { path: 'Buyer/Add', component: BuyerComponent},
+  { path: 'Buyer/Edit', component: BuyerComponent},
 ];
   
 
