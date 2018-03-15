@@ -1,4 +1,3 @@
-
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
@@ -20,15 +19,12 @@ import { UnitComponent } from '../AppComponents/UnitMaster/unit.component';
 import { CostPriceComponent } from '../AppComponents/CPMaster/costprice.component';
 import { BuyerComponent } from '../AppComponents/BuyerMaster/buyer.component';
 import { FooterComponent } from '../AppComponents/Footer/footer.component';
-
 import { CountryMastComponent } from '../AppComponents/CountryMaster/country.component';
-
-
 import { CartPlycomponent } from '../AppComponents/CartonPly/CartPly.component'
 import { MiscParty } from '../AppComponents/MiscParty/MiscParty.component';
 import { SalesCoordinator } from '../AppComponents/SalesCoOrdinator/SalesCo.component';
 import{Couriercomponent} from '../AppComponents/Courier/Courier.component';
-
+import { FormWizardModule } from 'angular2-wizard';
 
 
 const appRoutes: Routes = [
@@ -81,7 +77,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports:
-  [BrowserModule,Ng2PaginationModule,Ng2SearchPipeModule,
+  [BrowserModule,Ng2PaginationModule,Ng2SearchPipeModule,FormWizardModule,
       FormsModule,
       RouterModule.forRoot(
           appRoutes,
