@@ -17,8 +17,11 @@ export class CountryMastComponent {
     btnText: string = "Save";
     ModelCountry = new CountryMasterModel();
     ModelContinent: ContinentModel[];
+<<<<<<< HEAD
     selectedvalue:string;
 
+=======
+>>>>>>> 03929133d4bdf22aa1968358caee84aa14d73a77
     constructor(private _AppService: AppService, private route: ActivatedRoute, private router: Router, private http: Http
     ) { };
 
