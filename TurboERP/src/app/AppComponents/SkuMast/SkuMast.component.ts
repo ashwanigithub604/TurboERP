@@ -5,7 +5,7 @@ import { Http } from '@angular/http';
 import {SkuMastModel} from './SkuMast.Model'
 
 @Component({
-    selector:"SkuMast",
+    selector:"SkuMastBuyer",
     templateUrl:'SkuMast.component.html'
 })
 
@@ -35,11 +35,12 @@ export class SkuMastComponent  {
     }
     LoadSkuMast(PID): void {
      
-        this._AppService.get("http://localhost:52148/api/SkuMastApi/GetSkuMast?PID="+PID)
+        this._AppService.get(this._AppService.getProdUrl()+"/api/SkuMastApi/GetSkuMast?PID="+PID)
         .subscribe(result => {
             let responsedata=JSON.stringify(result)
             this.Editeddata=JSON.parse(responsedata)
             this.model=this.Editeddata[0];
+            console.log(result);
         //    this.model=result;
         //     console.log("Edit");
         },
@@ -50,26 +51,26 @@ export class SkuMastComponent  {
    SaveSkuMast() {
     console.log(this.model)
     if(this.PID!=0){
-       this.http.put("http://localhost:52148/api/SkuMastApi/PutSkuMast", this.model)
+       this.http.put(this._AppService.getProdUrl()+"/api/SkuMastApi/PutSkuMast", this.model)
         .subscribe(
             res => {
                 let responsedata=JSON.stringify(res)
                 let data=JSON.parse(responsedata)
                 console.log(data)
                 if(data.status==200){
-                    this.router.navigate(['/SkuMast']);
+                    this.router.navigate(['/SkuMastBuyer']);
                 }
                 
             }
         );
     }
     else{
-        this._AppService.post("http://localhost:52148/api/SkuMastApi/PostSkuMast", this.model)
+        this._AppService.post(this._AppService.getProdUrl()+"/api/SkuMastApi/PostSkuMast", this.model)
         .subscribe(
             res => {
                 console.log(res)
                 if(res!=""){
-                    this.router.navigate(['/SkuMast']);
+                    this.router.navigate(['/SkuMastBuyer']);
                 }
             }
         );

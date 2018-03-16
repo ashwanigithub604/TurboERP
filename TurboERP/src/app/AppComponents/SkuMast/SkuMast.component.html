@@ -1,630 +1,639 @@
 <div class="page-content-wrapper animated fadeInRight">
-  <div class="page-content" >
-    <div class="row wrapper border-bottom page-heading">
-      <div class="col-lg-12">
-        <h2> <a href="/SkuMast" routerLinkActive="active" style="cursor: context-menu;">SkuMast</a> <span style="font-size:14px">/<b>{{GetUrl}}</b></span></h2>
-        
-      </div>
-    </div>
-    
-  <div class="wrapper-content ">
-<!-- Horizontal Form start -->
-<div class="col-lg-12 top20 bottom20">
-     <div class="widgets-container">
-<!-- <h5>All form elements </h5>
-<hr> -->
-<form #myForm="ngForm" class="form-horizontal">
-<div class="row">
-  <div class="col-sm-9">
-    <div class="form-group">
-        <label class="col-sm-3 control-label">Buyer</label>
-        <div class="col-sm-3">
-          <input placeholder="Code" class="form-control" type="text" [(ngModel)]=model.BUYER_CODE name="model.BUYER_CODE" #field="ngModel" required> 
-        </div>
-          <label class="col-sm-6 control-label" style="text-align:left">INTERNATIONAL CASA</label>
-        </div>
-        
-        <div class="form-group">
-        <label class="col-sm-3 control-label">Exporter Item Code</label>
-        <div class="col-sm-3">
-          <input placeholder="Exporter Item Code" class="form-control" [(ngModel)]=model.ITEM_CODE name="model.ITEM_CODE" type="text">
-        </div>
-        <label class="col-sm-6 control-label" style="text-align:left">ALMIRAH WITH IRON GRILL</label>
-        </div>
-        
-        <div class="form-group">
-              <label class="col-sm-3" style="text-align:right">Buyer SKU No.</label>
-              <div class="col-sm-9">
-                <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">
-              </div>
-        </div>
-        
-        <div class="form-group">
-          <label class="col-md-3" style="text-align:right">Itching Stamp</label>
-          <div class="col-md-9">
-            <input placeholder="Itching Stamp" class="form-control"  [(ngModel)]=model.ITCHSTMP name="model.ITCHSTMP" type="text">
-          </div>
-        </div>
-        
-        <div class="form-group">
-          <label class="col-md-3" style="text-align:right">Item Name</label>
-          <div class="col-md-9">
-            <input placeholder="Item Name1" class="form-control" [(ngModel)]=model.ITEM_NAME1 name="model.ITEM_NAME1" type="text">
-            <input placeholder="Item Name2" class="form-control" [(ngModel)]=model.ITEM_NAME2 name="model.ITEM_NAME2" type="text">
-            <input placeholder="Item Name3" class="form-control" [(ngModel)]=model.ITEM_NAME3 name="model.ITEM_NAME3" type="text">
-            <input placeholder="Item Name4" class="form-control" [(ngModel)]=model.ITEM_NAME4 name="model.ITEM_NAME4" type="text">
-          </div>
-        </div>
-
-      </div>
-      <!--For Image Only Start-->
-      <div class="col-md-3">
-        <div class="row">
-          <div class="col-md-6">
-            <table border="1">
-              <tr style="background:black; color:white; text-align:center ">
-                  <td>Item Photo</td>
-              </tr>
-              <tr>
-                <td>
-                    <img src="assets\images\SkuMast\Almerah.png" alt="Item Image" style="height:100px; width:100px">
-                </td>
-              </tr>
-            </table>
-          </div>
-
-          <div class="col-md-6">
-              <table border="1">
-                  <tr style="background:black; color:white; text-align:center ">
-                      <td>Item Label</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">
-                        <img src="assets\images\SkuMast\Almerah.png" alt="Item Image" style="height:70px; width:70px">
-                    </td>
-                  </tr>
-                  <tr>
-                      <td style="text-align:center; padding-left:10px; height:25px">
-                          <input id="upload" type="file" style="display:none" />
-                          <a href="" id="upload_link" title="Upload">
-                              <span class="fa fa-upload"></span>
-                          </a>&nbsp;
-                          
-                          <a href="" id="upload_link" title="Delete">
-                              <span class="fa fa-remove"></span>
-                          </a>
-                      </td>
-                  </tr>
-
-                  <tr style="background:black; color:white; text-align:center ">
-                      <td>Case Label</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">
-                        <img src="assets\images\SkuMast\Almerah.png" alt="Item Image" style="height:70px; width:70px">
-                    </td>
-                  </tr>
-                  <tr>
-                      <td style="text-align:center; padding-left:10px; height:25px">
-                          <input id="upload" type="file" style="display:none" />
-                          <a href="" id="upload_link" title="Upload">
-                              <span class="fa fa-upload"></span>
-                          </a>&nbsp;
-                          
-                          <a href="" id="upload_link" title="Delete">
-                              <span class="fa fa-remove"></span>
-                          </a>
-                      </td>
-                  </tr>
-
-                  <tr style="background:black; color:white; text-align:center ">
-                      <td>Brand Label</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">
-                        <img src="assets\images\SkuMast\Almerah.png" alt="Item Image" style="height:70px; width:70px">
-                    </td>
-                  </tr>
-                  <tr>
-                      <td style="text-align:center; padding-left:10px; height:25px">
-                          <input id="upload" type="file" style="display:none" />
-                          <a href="" id="upload_link" title="Upload">
-                              <span class="fa fa-upload" ></span>
-                          </a>&nbsp;
-                          
-                          <a href="" id="upload_link" title="Delete">
-                              <span class="fa fa-remove"></span>
-                          </a>
-                      </td>
-                  </tr>
-                </table>
-          </div>
-
+    <div class="page-content" >
+      <div class="row wrapper border-bottom page-heading">
+        <div class="col-lg-12">
+          <h2> <a href="/SkuMast" routerLinkActive="active" style="cursor: context-menu;">SkuMast</a> <span style="font-size:14px">/<b>{{GetUrl}}</b></span></h2>
+          
         </div>
       </div>
-      <!--For Image Only End-->
-      </div>
-
-      <div class="row">
-        <div class="form-group">
-          <label class="col-md-3" style="text-align:right">Exporter's Selling Price</label>
-          <div class="col-md-2">
-            <select id="fob" class="form-control" [(ngModel)]=model.CNFTYP name="model.CNFTYP">
-              <option value="1">FOB</option>
-              <option value="2">C&I</option>
-              <option value="3">EXW</option>
-            </select>
-          </div>
-          <div class="col-md-3">
-            <input class="form-control" [(ngModel)]=model.CURR name="model.CURR" type="text">
-          </div>
-          <div class="col-md-3">
-            <input placeholder="Buyer FOB" class="form-control" [(ngModel)]=model.FOB name="model.FOB" type="text">
-          </div>
-        </div>
       
-        <div class="form-group">
-          <label class="col-md-3" style="text-align:right">Exchange Rate</label>
-          <div class="col-md-8">
-            <input placeholder="Exchange Rate" class="form-control" [(ngModel)]=model.EXC_RATE name="model.EXC_RATE" type="text">
+    <div class="wrapper-content ">
+  <!-- Horizontal Form start -->
+  <div class="col-lg-12 top20 bottom20">
+       <div class="widgets-container">
+  <!-- <h5>All form elements </h5>
+  <hr> -->
+  <form #myForm="ngForm" class="form-horizontal">
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="form-group">
+          <label class="col-sm-3 control-label">Buyer</label>
+          <div class="col-sm-3">
+            <input placeholder="Code" class="form-control" type="text" [(ngModel)]=model.BUYER_CODE name="model.BUYER_CODE" #field="ngModel" required> 
           </div>
-        </div>
-      
-        <div class="form-group">
-          <label class="col-md-3" style="text-align:right">Buyer's Selling Price</label>
-          <div class="col-md-4">
-            <input placeholder="Buyer's Selling Price" class="form-control" [(ngModel)]=model.SALE_CURR name="model.SALE_CURR" type="text">
+            <label class="col-sm-6 control-label" style="text-align:left">INTERNATIONAL CASA</label>
           </div>
-          <div class="col-md-4">
-            <input placeholder="Buyer's Selling Price" class="form-control" [(ngModel)]=model.SALE_RATE name="model.SALE_RATE" type="text">
-          </div>
-        </div>
-        
-        <div class="form-group">
-          <label class="col-md-3" style="text-align:right">Date</label>
-          <div class="col-md-8">
-            <input placeholder="Date" class="form-control" [(ngModel)]=model.SALE_DATE name="model.SALE_DATE" type="text">
-          </div>
-        </div>
-        
-        </div>
-
-        <div class="row" style="padding-right: 10px">
+          
           <div class="form-group">
-          <div class="col-md-12">
-            <table border="1">
-              <tr>
-                <td style="width: 100px; text-align: right">
-                    <label class="radio-inline">
-                      <input type="radio" value="cms" name="radio">
-                      Inch
-                    </label>
-                    <label class="radio-inline">
-                      <input type="radio" value="cms" name="radio">
-                      Cms
-                    </label>
-                </td>
-                <td style="width: 25px">
-                  Unit/Qty.
-                </td>
-                <td style="width: 25px">
-                  Lenght
-                </td>
-                <td style="width: 25px">
-                  Breadth
-                </td>
-                <td style="width: 25px">
-                  Height
-                </td>
-                <td style="width: 25px">
-                  CBM
-                </td>
-                <td style="width: 25px">
-                  Weight(Kgs)
-                </td>
-                <td style="width: 25px"></td>
-                <td style="width: 100px">
-                  Buyer EAN/UPC/Barcode No.
-                </td>
-              </tr>
-              <tr>
-                <td style="text-align: right">
-                  Item
+          <label class="col-sm-3 control-label">Exporter Item Code</label>
+          <div class="col-sm-3">
+            <input placeholder="Exporter Item Code" class="form-control" [(ngModel)]=model.ITEM_CODE name="model.ITEM_CODE" type="text">
+          </div>
+          <label class="col-sm-6 control-label" style="text-align:left">ALMIRAH WITH IRON GRILL</label>
+          </div>
+          
+          <div class="form-group">
+                <label class="col-sm-3" style="text-align:right">Buyer SKU No.</label>
+                <div class="col-sm-9">
+                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">
+                </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-md-3" style="text-align:right">Itching Stamp</label>
+            <div class="col-md-9">
+              <input placeholder="Itching Stamp" class="form-control"  [(ngModel)]=model.ITCHSTMP name="model.ITCHSTMP" type="text">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-md-3" style="text-align:right">Item Name</label>
+            <div class="col-md-9">
+              <input placeholder="Item Name1" class="form-control" [(ngModel)]=model.ITEM_NAME1 name="model.ITEM_NAME1" type="text">
+              <input placeholder="Item Name2" class="form-control" [(ngModel)]=model.ITEM_NAME2 name="model.ITEM_NAME2" type="text">
+              <input placeholder="Item Name3" class="form-control" [(ngModel)]=model.ITEM_NAME3 name="model.ITEM_NAME3" type="text">
+              <input placeholder="Item Name4" class="form-control" [(ngModel)]=model.ITEM_NAME4 name="model.ITEM_NAME4" type="text">
+            </div>
+          </div>
+  
+        </div>
+        <!--For Image Only Start-->
+        <div class="col-md-3">
+          <div class="row">
+            <div class="col-md-6">
+              <table border="1">
+                <tr style="background:black; color:white; text-align:center ">
+                    <td>Item Photo</td>
+                </tr>
+                <tr>
+                  <td>
+                      <img src="assets\images\SkuMast\Almerah.png" alt="Item Image" style="height:100px; width:100px">
+                  </td>
+                </tr>
+              </table>
+            </div>
+  
+            <div class="col-md-6">
+                <table border="1">
+                    <tr style="background:black; color:white; text-align:center ">
+                        <td>Item Label</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">
+                          <img src="assets\images\SkuMast\Almerah.png" alt="Item Image" style="height:70px; width:70px">
+                      </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; padding-left:10px; height:25px">
+                            <input id="upload" type="file" style="display:none" />
+                            <a href="" id="upload_link" title="Upload">
+                                <span class="fa fa-upload"></span>
+                            </a>&nbsp;
+                            
+                            <a href="" id="upload_link" title="Delete">
+                                <span class="fa fa-remove"></span>
+                            </a>
+                        </td>
+                    </tr>
+  
+                    <tr style="background:black; color:white; text-align:center ">
+                        <td>Case Label</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">
+                          <img src="assets\images\SkuMast\Almerah.png" alt="Item Image" style="height:70px; width:70px">
+                      </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; padding-left:10px; height:25px">
+                            <input id="upload" type="file" style="display:none" />
+                            <a href="" id="upload_link" title="Upload">
+                                <span class="fa fa-upload"></span>
+                            </a>&nbsp;
+                            
+                            <a href="" id="upload_link" title="Delete">
+                                <span class="fa fa-remove"></span>
+                            </a>
+                        </td>
+                    </tr>
+  
+                    <tr style="background:black; color:white; text-align:center ">
+                        <td>Brand Label</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">
+                          <img src="assets\images\SkuMast\Almerah.png" alt="Item Image" style="height:70px; width:70px">
+                      </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; padding-left:10px; height:25px">
+                            <input id="upload" type="file" style="display:none" />
+                            <a href="" id="upload_link" title="Upload">
+                                <span class="fa fa-upload" ></span>
+                            </a>&nbsp;
+                            
+                            <a href="" id="upload_link" title="Delete">
+                                <span class="fa fa-remove"></span>
+                            </a>
+                        </td>
+                    </tr>
+                  </table>
+            </div>
+  
+          </div>
+        </div>
+        <!--For Image Only End-->
+        </div>
+  
+        <div class="row">
+          <div class="form-group">
+            <label for="CNFTYP" class="col-md-3" style="text-align:right">Exporter's Selling Price</label>
+            <div class="col-md-2">
+              <select id="CNFTYP" class="form-control" [(ngModel)]=model.CNFTYP name="model.CNFTYP">
+                <option value="FOB">FOB</option>
+                <option value="CIF">CIF</option>
+                <option value="CNF">CNF</option>
+                <option value="C&I">C&I</option>
+                <option value="EXW">EXW</option>
+                <option value="DDP">DDP</option>
+                <option value="FCA">FCA</option>
+                <option value="DDU">DDU</option>
+                <option value="FCR">FCR</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <input class="form-control" [(ngModel)]=model.CURR name="model.CURR" type="text">
+            </div>
+            <div class="col-md-3">
+              <input placeholder="Buyer FOB" class="form-control" [(ngModel)]=model.FOB name="model.FOB" type="text">
+            </div>
+          </div>
+        
+          <div class="form-group">
+            <label class="col-md-3" style="text-align:right">Exchange Rate</label>
+            <div class="col-md-8">
+              <input placeholder="Exchange Rate" class="form-control" [(ngModel)]=model.EXC_RATE name="model.EXC_RATE" type="text">
+            </div>
+          </div>
+        
+          <div class="form-group">
+            <label class="col-md-3" style="text-align:right">Buyer's Selling Price</label>
+            <div class="col-md-4">
+              <input placeholder="Buyer's Selling Price" class="form-control" [(ngModel)]=model.SALE_CURR name="model.SALE_CURR" type="text">
+            </div>
+            <div class="col-md-4">
+              <input placeholder="Buyer's Selling Price" class="form-control" [(ngModel)]=model.SALE_RATE name="model.SALE_RATE" type="text">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-md-3" style="text-align:right">Date</label>
+            <div class="col-md-8">
+              <input placeholder="Date" class="form-control" [(ngModel)]=model.SALE_DATE name="model.SALE_DATE" type="text">
+            </div>
+          </div>
+          
+          </div>
+  
+          <div class="row" style="padding-right: 10px">
+            <div class="form-group">
+            <div class="col-md-12">
+              <table class="table table-bordered table-striped table-condensed table-hover index-tbl tablecontent" style="width:95%;margin-left:20px">
+                <tr>
+                  <td style="width: 100px; text-align: right">
+                      <label class="radio-inline">
+                        <input type="radio" value="1" name="INCH_CMS" [(ngModel)]=model.INCH_CMS>
+                        Inch
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" value="2" name="INCH_CMS" [(ngModel)]=model.INCH_CMS>
+                        Cms
+                      </label>
+                  </td>
+                  <td style="width: 25px">
+                    Unit/Qty.
+                  </td>
+                  <td style="width: 25px">
+                    Lenght
+                  </td>
+                  <td style="width: 25px">
+                    Breadth
+                  </td>
+                  <td style="width: 25px">
+                    Height
+                  </td>
+                  <td style="width: 25px">
+                    CBM
+                  </td>
+                  <td style="width: 25px">
+                    Weight(Kgs)
+                  </td>
+                  <td style="width: 25px"></td>
+                  <td style="width: 100px">
+                    Buyer EAN/UPC/Barcode No.
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align: right">
+                    Item
+                  </td>
+                  <td>
+                    <input placeholder="Unit" class="form-control" [(ngModel)]=model.UNIT name="model.UNIT" type="text">                
+                  </td>
+                  <td>
+                    <input placeholder="Item Lenght" class="form-control" [(ngModel)]=model.ITM_LENGTH name="model.ITM_LENGTH" type="text">                
+                  </td>
+                  <td>
+                    <input placeholder="Item Breadth" class="form-control" [(ngModel)]=model.ITM_BRDTH name="model.ITM_BRDTH" type="text">                
+                  </td>
+                  <td>
+                    <input placeholder="Item Height" class="form-control" [(ngModel)]=model.ITM_HEIGHT name="model.ITM_HEIGHT" type="text">                
+                  </td>
+                  <td>
+                      <!-- <label>Calculate</label> -->
+                      <input class="form-control" [(ngModel)]=model.calculate name="model.calculate" type="text">
+                  </td>
+                  <td>
+                    <input placeholder="Net Weight" class="form-control" [(ngModel)]=model.NET_WT name="model.NET_WT" type="text">                
                 </td>
                 <td>
-                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-                </td>
-                <td>
-                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-                </td>
-                <td>
-                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-                </td>
-                <td>
-                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-                </td>
-                <td>
-                    <label>Label</label>
-                </td>
-                <td>
-                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
+                  <!-- <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                 -->
               </td>
               <td>
-                <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
+                <input placeholder="Ean No." class="form-control" [(ngModel)]=model.EAN_NO name="model.EAN_NO" type="text">                
             </td>
-            <td>
-              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-          </td>
-              </tr>
-              <tr>
-                <td style="text-align: right">
-                  Inner Pack/Carton
+                </tr>
+                <tr>
+                  <td style="text-align: right">
+                    Inner Pack/Carton
+                  </td>
+                  <td>
+                    <input placeholder="Inner Crtn Pcs" class="form-control" [(ngModel)]=model.IN_CRTNPCS name="model.IN_CRTNPCS" type="text">                
+                  </td>
+                  <td>
+                    <input placeholder="Inner Crtn Len" class="form-control" [(ngModel)]=model.IN_CRTNLEN name="model.IN_CRTNLEN" type="text">                
+                  </td>
+                  <td>
+                    <input placeholder="Inner Crtn Brd" class="form-control" [(ngModel)]=model.IN_CRT   NBRD name="model.IN_CRTNBRD" type="text">                
+                  </td>
+                  <td>
+                    <input placeholder="Inner Crtn Ht." class="form-control" [(ngModel)]=model.IN_CRTNHT name="model.IN_CRTNHT" type="text">                
+                  </td>
+                  <td>
+                      <!-- <label>Label</label> -->
+                      <input placeholder="Inner Crtn Cbm" class="form-control" [(ngModel)]=model.INRCRT_CBM name="model.INRCRT_CBM" type="text">
+                  </td>
+                  <td>
+                    <input placeholder="Inner Crtn Wt" class="form-control" [(ngModel)]=model.INCRNET_WT name="model.INCRNET_WT" type="text">                
                 </td>
                 <td>
-                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-                </td>
-                <td>
-                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-                </td>
-                <td>
-                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-                </td>
-                <td>
-                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-                </td>
-                <td>
-                    <label>Label</label>
-                </td>
-                <td>
-                  <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
+                  <label>Grs (Kgs)</label>
               </td>
               <td>
-                <label>Grs (Kgs)</label>
+                <input placeholder="Iean No." class="form-control" [(ngModel)]=model.IEAN_NO name="model.IEAN_NO" type="text">                
+            </td>
+            </tr>
+            <tr>
+              <td style="text-align: right">
+                Master Pack/Carton
+              </td>
+              <td>
+                <input placeholder="PRCRTN QTY" class="form-control" [(ngModel)]=model.PRCRTN_QTY name="model.PRCRTN_QTY" type="text">                
+              </td>
+              <td>
+                <input placeholder="Crtn Lenght" class="form-control" [(ngModel)]=model.CRTNLENGTH name="model.CRTNLENGTH" type="text">                
+              </td>
+              <td>
+                <input placeholder="Crtn Brdth" class="form-control" [(ngModel)]=model.CRTNBRDTH name="model.CRTNBRDTH" type="text">                
+              </td>
+              <td>
+                <input placeholder="Crtn Height" class="form-control" [(ngModel)]=model.CRTNHEIGHT name="model.CRTNHEIGHT" type="text">                
+              </td>
+              <td>
+                  <!-- <label>Label</label> -->
+                  <input placeholder="Crtn CBM" class="form-control" [(ngModel)]=model.CRTN_CBM name="model.CRTN_CBM" type="text"> 
+              </td>
+              <td>
+                <input placeholder="MC Net Wt" class="form-control" [(ngModel)]=model.MCNET_WT name="model.MCNET_WT" type="text">                
             </td>
             <td>
-              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-          </td>
-          </tr>
-          <tr>
-            <td style="text-align: right">
-              Master Pack/Carton
-            </td>
-            <td>
-              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-            </td>
-            <td>
-              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-            </td>
-            <td>
-              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-            </td>
-            <td>
-                <input class="form-control" type="text">
-            </td>
-            <td>
-                <label>Label</label>
-            </td>
-            <td>
-              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
+              <input placeholder="MC Gros Wt" class="form-control" [(ngModel)]=model.MCGROSWT name="model.MCGROSWT" type="text">                
           </td>
           <td>
-            <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
+            <input placeholder="MC EAN No" class="form-control" [(ngModel)]=model.MEAN_NO name="model.MEAN_NO" type="text">                
         </td>
-        <td>
-          <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-      </td>
-          </tr>
-
-            </table>
-          </div>
-        </div>
-        </div>
-        <div class="row" style="padding-right: 10px">
-          <div class="form-group">
-            <label class="col-sm-3" style="text-align:right">Item Size</label>
-            <div class="col-sm-3">
-              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-            </div>
-
-            <label class="col-sm-3" style="text-align:right">Packing Instruction</label>
-            <div class="col-sm-3">
-              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="col-sm-3" style="text-align:right">Finish</label>
-            <div class="col-sm-3">
-              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-            </div>
-
-            <label class="col-sm-3" style="text-align:right">Label Instruction</label>
-            <div class="col-sm-3">
-              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="col-sm-3" style="text-align:right">Duty Code(HTSUS)</label>
-            <div class="col-sm-3">
-              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-            </div>
-
-            <label class="col-sm-3" style="text-align:right">Other Instruction</label>
-            <div class="col-sm-3">
-              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="col-sm-3" style="text-align:right">Description(HTSUS)</label>
-            <div class="col-sm-3">
-              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-            </div>
-
-            <label class="col-sm-3" style="text-align:right">Vendor Details</label>
-            <div class="col-sm-3">
-              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">
-              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">              
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="col-sm-3" style="text-align:right">Duty Rate</label>
-            <div class="col-sm-3">
-              <input placeholder="Buyer SKU No." class="form-control" [(ngModel)]=model.SKU_NO name="model.SKU_NO" type="text">                
-            </div>
-            
-          </div>
-
-          <div class="form-group">
-            <label class="col-sm-3" style="text-align:right">Remarks</label>
-            <div class="col-sm-7">
-              <textarea cols="5" class="form-control"></textarea>
-            </div>
-
-            <div class="col-md-2">
-              <input type="submit" value="Dimensions" class="btn btn-info" data-toggle="modal" data-target="#myModal" />
-            </div>
-            
-          </div>
-
-
-        </div>
-        <div class="row" style="padding-right: 10px">
-
-        <div class="form-group">
-        <div class="col-sm-4 col-sm-offset-2">
-              <button class="btn aqua" type="button" (click)="SaveSkuMast()">{{btnText}}</button>
-          <button class="btn btn-danger" routerLink="/SkuMastBuyer" routerLinkActive="active" type="button">Cancel</button>
-        
-        </div>
-        </div>
-</div>
-
-</form>
-</div>
-<!--Horizontal Form End -->
-</div>
-</div>
-</div>
-</div>
-
-<!-- popup windows Start -->
-<!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
-  <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-          <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">OCEAN CONTAINER DIMENSIONS</h4>
-          </div>
-          <div class="modal-body">
-              <table border="1">
-                  <tr>
-                      <td style="width:120px; text-align:center">
-                          <b>HEADING</b>
-                      </td>
-                      <td colspan="2" style="width:150px; text-align:center">
-                          <b>STANDARD 20'</b>
-                      </td>
-                      <td colspan="2" style="width:150px; text-align:center">
-                          <b>STANDARD 40'</b>
-                      </td>
-                      <td colspan="2" style="width:150px; text-align:center">
-                          <b>HIGH CUBE 40'</b>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td style="padding-left:5px">
-                          <b>INSIDE LENGHT</b>
-                      </td>
-                      <td style="border:none; text-align:left; padding-left:5px">
-                          19'4"
-                      </td>
-                      <td style="border:none; text-align:right; padding-right:5px">
-                          5.89m
-                      </td>
-                      <td style="border-right:none;text-align:left; padding-left:5px">
-                          39'5"
-                      </td>
-                      <td style="border-left:none; text-align:right; padding-right:5px">
-                          12.01m
-                      </td>
-                      <td style="border:none;text-align:left; padding-left:5px">
-                          39'5"
-                      </td>
-                      <td style="border:none;text-align:right; padding-right:5px">
-                          12.01m
-                      </td>
-                  </tr>
-                  <tr>
-                      <td style="padding-left:5px">
-                          <b>INSIDE WIDTH</b>
-                      </td>
-                      <td style="border-right:none; text-align:left; padding-left:5px">
-                          7'8"
-                      </td>
-                      <td style="border-left:none; text-align:right; padding-right:5px">
-                          2.33m
-                      </td>
-                      <td style="border-right:none;text-align:left; padding-left:5px">
-                          7'8"
-                      </td>
-                      <td style="border-left:none; text-align:right; padding-right:5px">
-                          2.33m
-                      </td>
-                      <td style="border-right:none; text-align:left; padding-left:5px">
-                          7'8"
-                      </td>
-                      <td style="border-left:none;text-align:right; padding-right:5px">
-                          2.33m
-                      </td>
-                  </tr>
-                  <tr>
-                      <td style="padding-left:5px">
-                          <b>INSIDE HEIGHT</b>
-                      </td>
-                      <td style="border-right:none; text-align:left; padding-left:5px">
-                          7'10"
-                      </td>
-                      <td style="border-left:none; text-align:right; padding-right:5px">
-                          2.38m
-                      </td>
-                      <td style="border-right:none;text-align:left; padding-left:5px">
-                          7'10"
-                      </td>
-                      <td style="border-left:none; text-align:right; padding-right:5px">
-                          2.38m
-                      </td>
-                      <td style="border-right:none; text-align:left; padding-left:5px">
-                          8'10"
-                      </td>
-                      <td style="border-left:none;text-align:right; padding-right:5px">
-                          2.69m
-                      </td>
-                  </tr>
-                  <tr>
-                      <td style="padding-left:5px">
-                          <b>DOOR WIDTH</b>
-                      </td>
-                      <td style="border-right:none; text-align:left; padding-left:5px">
-                          7'8"
-                      </td>
-                      <td style="border-left:none; text-align:right; padding-right:5px">
-                          2.33m
-                      </td>
-                      <td style="border-right:none;text-align:left; padding-left:5px">
-                          7'8"
-                      </td>
-                      <td style="border-left:none; text-align:right; padding-right:5px">
-                          2.33m
-                      </td>
-                      <td style="border-right:none; text-align:left; padding-left:5px">
-                          7'8"
-                      </td>
-                      <td style="border-left:none;text-align:right; padding-right:5px">
-                          2.33m
-                      </td>
-                  </tr>
-                  <tr>
-                      <td style="padding-left:5px">
-                          <b>DOOR HEIGHT</b>
-                      </td>
-                      <td style="border-right:none; text-align:left; padding-left:5px">
-                          7'6"
-                      </td>
-                      <td style="border-left:none; text-align:right; padding-right:5px">
-                          2.28m
-                      </td>
-                      <td style="border-right:none;text-align:left; padding-left:5px">
-                          7'6"
-                      </td>
-                      <td style="border-left:none; text-align:right; padding-right:5px">
-                          2.28m
-                      </td>
-                      <td style="border-right:none; text-align:left; padding-left:5px">
-                          8'5"
-                      </td>
-                      <td style="border-left:none;text-align:right; padding-right:5px">
-                          2.56m
-                      </td>
-                  </tr>
-                  <tr>
-                      <td style="padding-left:5px">
-                          <b>CAPACITY</b>
-                      </td>
-                      <td style="border-right:none; text-align:left; padding-left:5px">
-                          1,172 ft<sup>3</sup>
-                      </td>
-                      <td style="border-left:none; text-align:right; padding-right:5px">
-                         33.18m<sup>3</sup>
-                      </td>
-                      <td style="border-right:none;text-align:left; padding-left:5px">
-                          2,390 ft<sup>3</sup>
-                      </td>
-                      <td style="border-left:none; text-align:right; padding-right:5px">
-                          67.67 m<sup>3</sup>
-                      </td>
-                      <td style="border-right:none; text-align:left; padding-left:5px">
-                          2,694 ft<sup>3</sup>
-                      </td>
-                      <td style="border-left:none;text-align:right; padding-right:5px">
-                          67.28 m<sup>3</sup>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td style="padding-left:5px">
-                          <b>TARE WEIGHT</b>
-                      </td>
-                      <td style="border-right:none; text-align:left; padding-left:5px">
-                          4,916 lb
-                      </td>
-                      <td style="border-left:none; text-align:right; padding-right:5px">
-                          2,229 kg
-                      </td>
-                      <td style="border-right:none;text-align:left; padding-left:5px">
-                          8,160 lb
-                      </td>
-                      <td style="border-left:none; text-align:right; padding-right:5px">
-                          3,701 kg
-                      </td>
-                      <td style="border-right:none; text-align:left; padding-left:5px">
-                          8,750 lb
-                      </td>
-                      <td style="border-left:none;text-align:right; padding-right:5px">
-                          3,968 kg
-                      </td>
-                  </tr>
-                  <tr>
-                      <td style="padding-left:5px">
-                          <b>MAX CARGO</b>
-                      </td>
-                      <td style="border-right:none; text-align:left; padding-left:5px">
-                          47,999 lb
-                      </td>
-                      <td style="border-left:none; text-align:right; padding-right:5px">
-                          21,727 kg
-                      </td>
-                      <td style="border-right:none;text-align:left; padding-left:5px">
-                          59,040 lb
-                      </td>
-                      <td style="border-left:none; text-align:right; padding-right:5px">
-                          26,780 kg
-                      </td>
-                      <td style="border-right:none; text-align:left; padding-left:5px">
-                          58,450 lb
-                      </td>
-                      <td style="border-left:none;text-align:right; padding-right:5px">
-                          26,512 kg
-                      </td>
-                  </tr>
+            </tr>
+  
               </table>
+            </div>
           </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
-      </div>
-<!-- Popup windows End -->
+          <div class="row" style="padding-right: 10px">
+            <div class="form-group">
+              <label class="col-sm-3" style="text-align:right">Item Size</label>
+              <div class="col-sm-3">
+                <input placeholder="Item Size" class="form-control" [(ngModel)]=model.SIZE_CODE name="model.SIZE_CODE" type="text">                
+              </div>
+  
+              <label class="col-sm-3" style="text-align:right">Packing Instruction</label>
+              <div class="col-sm-3">
+                <input placeholder="Packing Instruction" class="form-control" [(ngModel)]=model.PACK_INS name="model.PACK_INS" type="text">                
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label class="col-sm-3" style="text-align:right">Finish</label>
+              <div class="col-sm-3">
+                <input placeholder="Finish" class="form-control" [(ngModel)]=model.FINCODE name="model.FINCODE" type="text">                
+              </div>
+  
+              <label class="col-sm-3" style="text-align:right">Label Instruction</label>
+              <div class="col-sm-3">
+                <input placeholder="Label Instruction" class="form-control" [(ngModel)]=model.LBL_INS name="model.LBL_INS" type="text">                
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label class="col-sm-3" style="text-align:right">Duty Code(HTSUS)</label>
+              <div class="col-sm-3">
+                <input placeholder="Duty Code(HTSUS)" class="form-control" [(ngModel)]=model.TARRIF name="model.TARRIF" type="text">                
+              </div>
+  
+              <label class="col-sm-3" style="text-align:right">Other Instruction</label>
+              <div class="col-sm-3">
+                <input placeholder="Other Instruction" class="form-control" [(ngModel)]=model.OTH_INS name="model.OTH_INS" type="text">                
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label class="col-sm-3" style="text-align:right">Description(HTSUS)</label>
+              <div class="col-sm-3">
+                <input placeholder="Description(HTSUS)" class="form-control" type="text">                
+              </div>
+  
+              <label class="col-sm-3" style="text-align:right">Vendor Details</label>
+              <div class="col-sm-3">
+                <input placeholder="Vendor Details1" class="form-control" [(ngModel)]=model.VND_DTL1 name="model.VND_DTL1" type="text">
+                <input placeholder="Vendor Details2" class="form-control" [(ngModel)]=model.VND_DTL2 name="model.VND_DTL2" type="text">              
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label class="col-sm-3" style="text-align:right">Duty Rate</label>
+              <div class="col-sm-3">
+                <input placeholder="Duty Rate" class="form-control" type="text">                
+              </div>
+              
+            </div>
+  
+            <div class="form-group">
+              <label class="col-sm-3" style="text-align:right">Remarks</label>
+              <div class="col-sm-7">
+                <textarea placeholder="Remarks" cols="5" class="form-control" [(ngModel)]=model.REMARKS name="model.REMARKS"></textarea>
+              </div>
+  
+              <div class="col-md-2">
+                <input type="submit" value="Dimensions" class="btn btn-info" data-toggle="modal" data-target="#myModal" />
+              </div>
+              
+            </div>
+  
+  
+          </div>
+          <div class="row" style="padding-right: 10px">
+  
+          <div class="form-group">
+          <div class="col-sm-4 col-sm-offset-2">
+                <button class="btn aqua" type="button" (click)="SaveSkuMast()">{{btnText}}</button>
+            <button class="btn btn-danger" routerLink="/SkuMastBuyer" routerLinkActive="active" type="button">Cancel</button>
+          
+          </div>
+          </div>
+  </div>
+  
+  </form>
+  </div>
+  <!--Horizontal Form End -->
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  <!-- popup windows Start -->
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+  
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">OCEAN CONTAINER DIMENSIONS</h4>
+            </div>
+            <div class="modal-body">
+                <table border="1">
+                    <tr>
+                        <td style="width:120px; text-align:center">
+                            <b>HEADING</b>
+                        </td>
+                        <td colspan="2" style="width:150px; text-align:center">
+                            <b>STANDARD 20'</b>
+                        </td>
+                        <td colspan="2" style="width:150px; text-align:center">
+                            <b>STANDARD 40'</b>
+                        </td>
+                        <td colspan="2" style="width:150px; text-align:center">
+                            <b>HIGH CUBE 40'</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:5px">
+                            <b>INSIDE LENGHT</b>
+                        </td>
+                        <td style="border:none; text-align:left; padding-left:5px">
+                            19'4"
+                        </td>
+                        <td style="border:none; text-align:right; padding-right:5px">
+                            5.89m
+                        </td>
+                        <td style="border-right:none;text-align:left; padding-left:5px">
+                            39'5"
+                        </td>
+                        <td style="border-left:none; text-align:right; padding-right:5px">
+                            12.01m
+                        </td>
+                        <td style="border:none;text-align:left; padding-left:5px">
+                            39'5"
+                        </td>
+                        <td style="border:none;text-align:right; padding-right:5px">
+                            12.01m
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:5px">
+                            <b>INSIDE WIDTH</b>
+                        </td>
+                        <td style="border-right:none; text-align:left; padding-left:5px">
+                            7'8"
+                        </td>
+                        <td style="border-left:none; text-align:right; padding-right:5px">
+                            2.33m
+                        </td>
+                        <td style="border-right:none;text-align:left; padding-left:5px">
+                            7'8"
+                        </td>
+                        <td style="border-left:none; text-align:right; padding-right:5px">
+                            2.33m
+                        </td>
+                        <td style="border-right:none; text-align:left; padding-left:5px">
+                            7'8"
+                        </td>
+                        <td style="border-left:none;text-align:right; padding-right:5px">
+                            2.33m
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:5px">
+                            <b>INSIDE HEIGHT</b>
+                        </td>
+                        <td style="border-right:none; text-align:left; padding-left:5px">
+                            7'10"
+                        </td>
+                        <td style="border-left:none; text-align:right; padding-right:5px">
+                            2.38m
+                        </td>
+                        <td style="border-right:none;text-align:left; padding-left:5px">
+                            7'10"
+                        </td>
+                        <td style="border-left:none; text-align:right; padding-right:5px">
+                            2.38m
+                        </td>
+                        <td style="border-right:none; text-align:left; padding-left:5px">
+                            8'10"
+                        </td>
+                        <td style="border-left:none;text-align:right; padding-right:5px">
+                            2.69m
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:5px">
+                            <b>DOOR WIDTH</b>
+                        </td>
+                        <td style="border-right:none; text-align:left; padding-left:5px">
+                            7'8"
+                        </td>
+                        <td style="border-left:none; text-align:right; padding-right:5px">
+                            2.33m
+                        </td>
+                        <td style="border-right:none;text-align:left; padding-left:5px">
+                            7'8"
+                        </td>
+                        <td style="border-left:none; text-align:right; padding-right:5px">
+                            2.33m
+                        </td>
+                        <td style="border-right:none; text-align:left; padding-left:5px">
+                            7'8"
+                        </td>
+                        <td style="border-left:none;text-align:right; padding-right:5px">
+                            2.33m
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:5px">
+                            <b>DOOR HEIGHT</b>
+                        </td>
+                        <td style="border-right:none; text-align:left; padding-left:5px">
+                            7'6"
+                        </td>
+                        <td style="border-left:none; text-align:right; padding-right:5px">
+                            2.28m
+                        </td>
+                        <td style="border-right:none;text-align:left; padding-left:5px">
+                            7'6"
+                        </td>
+                        <td style="border-left:none; text-align:right; padding-right:5px">
+                            2.28m
+                        </td>
+                        <td style="border-right:none; text-align:left; padding-left:5px">
+                            8'5"
+                        </td>
+                        <td style="border-left:none;text-align:right; padding-right:5px">
+                            2.56m
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:5px">
+                            <b>CAPACITY</b>
+                        </td>
+                        <td style="border-right:none; text-align:left; padding-left:5px">
+                            1,172 ft<sup>3</sup>
+                        </td>
+                        <td style="border-left:none; text-align:right; padding-right:5px">
+                           33.18m<sup>3</sup>
+                        </td>
+                        <td style="border-right:none;text-align:left; padding-left:5px">
+                            2,390 ft<sup>3</sup>
+                        </td>
+                        <td style="border-left:none; text-align:right; padding-right:5px">
+                            67.67 m<sup>3</sup>
+                        </td>
+                        <td style="border-right:none; text-align:left; padding-left:5px">
+                            2,694 ft<sup>3</sup>
+                        </td>
+                        <td style="border-left:none;text-align:right; padding-right:5px">
+                            67.28 m<sup>3</sup>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:5px">
+                            <b>TARE WEIGHT</b>
+                        </td>
+                        <td style="border-right:none; text-align:left; padding-left:5px">
+                            4,916 lb
+                        </td>
+                        <td style="border-left:none; text-align:right; padding-right:5px">
+                            2,229 kg
+                        </td>
+                        <td style="border-right:none;text-align:left; padding-left:5px">
+                            8,160 lb
+                        </td>
+                        <td style="border-left:none; text-align:right; padding-right:5px">
+                            3,701 kg
+                        </td>
+                        <td style="border-right:none; text-align:left; padding-left:5px">
+                            8,750 lb
+                        </td>
+                        <td style="border-left:none;text-align:right; padding-right:5px">
+                            3,968 kg
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:5px">
+                            <b>MAX CARGO</b>
+                        </td>
+                        <td style="border-right:none; text-align:left; padding-left:5px">
+                            47,999 lb
+                        </td>
+                        <td style="border-left:none; text-align:right; padding-right:5px">
+                            21,727 kg
+                        </td>
+                        <td style="border-right:none;text-align:left; padding-left:5px">
+                            59,040 lb
+                        </td>
+                        <td style="border-left:none; text-align:right; padding-right:5px">
+                            26,780 kg
+                        </td>
+                        <td style="border-right:none; text-align:left; padding-left:5px">
+                            58,450 lb
+                        </td>
+                        <td style="border-left:none;text-align:right; padding-right:5px">
+                            26,512 kg
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+  <!-- Popup windows End -->

@@ -12,7 +12,7 @@ namespace TurboERP_DAL.Controllers
     public class SkuMastApiController : ApiController
     {
         // GET: api/SkuMast
-        [Route("SkuMast")]
+        [Route("SkuMastBuyer")]
         public HttpResponseMessage GetSkuMasts()
         {
             var skuMasts = new SkuMastData_Crud().SkuMast_GetAll();
@@ -35,6 +35,32 @@ namespace TurboERP_DAL.Controllers
         }
 
         // POST: api/SkuMast
+        //[HttpPost]
+        //public HttpResponseMessage PostSkuMast(SkuMast skuMast)
+        //{
+        //    try
+        //    {
+        //        if (ModelState.IsValid)
+        //        {
+
+        //            var result = new SkuMastData_Crud().SkuMast_Insert(skuMast);
+
+        //            if (result != null || result != "")
+        //            {
+        //                return Request.CreateResponse(HttpStatusCode.OK, result);
+        //            }
+
+        //        }
+        //        return Request.CreateResponse(HttpStatusCode.NoContent);
+        //    }
+        //    catch
+        //    {
+        //        return Request.CreateResponse(HttpStatusCode.BadRequest);
+        //    }
+        //}
+
+
+        // POST: api/SkuMast
         [HttpPost]
         public HttpResponseMessage PostSkuMast(SkuMast skuMast)
         {
@@ -51,13 +77,17 @@ namespace TurboERP_DAL.Controllers
                     }
 
                 }
-                return Request.CreateResponse(HttpStatusCode.NoContent);
+                //return Request.CreateResponse(HttpStatusCode.NoContent);
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
             }
-            catch
+            catch(SystemException ex)
             {
-                return Request.CreateResponse(HttpStatusCode.BadRequest);
+                return Request.CreateResponse(HttpStatusCode.BadRequest + ex.Message);
+               
             }
         }
+
+
 
         // PUT: api/SkuMast/5
         [HttpPut]

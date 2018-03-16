@@ -36,7 +36,7 @@ export class ItemGrpComponent  {
     }
     LoadItemGrp(PID): void {
      
-        this._AppService.get("http://localhost:52148/api/ItemGrpApi/GetItemGrp?PID="+PID)
+        this._AppService.get(this._AppService.getProdUrl()+"/api/ItemGrpApi/GetItemGrp?PID="+PID)
         .subscribe(result => {
             let responsedata=JSON.stringify(result)
             this.Editeddata=JSON.parse(responsedata)
@@ -51,7 +51,7 @@ export class ItemGrpComponent  {
    SaveItemGrp() {
     console.log(this.model)
     if(this.PID!=0){
-       this.http.put("http://localhost:52148/api/ItemGrpApi/PutItemGrp", this.model)
+       this.http.put(this._AppService.getProdUrl()+"/api/ItemGrpApi/PutItemGrp", this.model)
         .subscribe(
             res => {
                 let responsedata=JSON.stringify(res)
@@ -65,7 +65,7 @@ export class ItemGrpComponent  {
         );
     }
     else{
-        this._AppService.post("http://localhost:52148/api/ItemGrpApi/PostItemGrp", this.model)
+        this._AppService.post(this._AppService.getProdUrl()+"/api/ItemGrpApi/PostItemGrp", this.model)
         .subscribe(
             res => {
                 console.log(res)

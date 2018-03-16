@@ -36,7 +36,7 @@ export class CurrMastComponent  {
     }
     LoadCurrMast(PID): void {
      
-        this._AppService.get("http://localhost:52148/api/CurrMastApi/GetCurrMast?PID="+PID)
+        this._AppService.get(this._AppService.getProdUrl()+"/api/CurrMastApi/GetCurrMast?PID="+PID)
         .subscribe(result => {
             let responsedata=JSON.stringify(result)
             this.Editeddata=JSON.parse(responsedata)
@@ -51,7 +51,7 @@ export class CurrMastComponent  {
    SaveCurrMast() {
     console.log(this.model)
     if(this.PID!=0){
-       this.http.put("http://localhost:52148/api/CurrMastApi/PutCurrMast", this.model)
+       this.http.put(this._AppService.getProdUrl()+"/api/CurrMastApi/PutCurrMast", this.model)
         .subscribe(
             res => {
                 let responsedata=JSON.stringify(res)
@@ -65,7 +65,7 @@ export class CurrMastComponent  {
         );
     }
     else{
-        this._AppService.post("http://localhost:52148/api/CurrMastApi/PostCurrMast", this.model)
+        this._AppService.post(this._AppService.getProdUrl()+"/api/CurrMastApi/PostCurrMast", this.model)
         .subscribe(
             res => {
                 console.log(res)
