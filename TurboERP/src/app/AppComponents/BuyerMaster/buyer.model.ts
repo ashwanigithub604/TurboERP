@@ -71,6 +71,3 @@ export class BuyerMast {
         GST_REG   : string
 }
 
-export class courier{
-
-}

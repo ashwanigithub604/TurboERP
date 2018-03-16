@@ -47,7 +47,7 @@ namespace TurboERP_DAL.Models
         public string EMAIL { get; set; }
         public string FAX { get; set; }
         public string AGNT_CODE { get; set; }
-        public string TYPE { get; set; }
+      //  public string TYPE { get; set; }
         public Nullable<decimal> CMSN { get; set; }
         public string CNT_PRSN { get; set; }
         public string PAY_TERM1 { get; set; }

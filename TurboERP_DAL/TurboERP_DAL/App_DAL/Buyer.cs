@@ -187,7 +187,7 @@ namespace TurboERP_DAL.App_DAL
             //cmd.Parameters.Add("@TELEX", SqlDbType.VarChar, 20).Value = buyer.TELEX;
             cmd.Parameters.Add("@FAX", SqlDbType.VarChar, 30).Value = buyer.FAX;
             cmd.Parameters.Add("@AGNT_CODE", SqlDbType.VarChar, 4).Value = buyer.AGNT_CODE;
-            cmd.Parameters.Add("@TYPE", SqlDbType.VarChar, 1).Value = buyer.TYPE;
+           // cmd.Parameters.Add("@TYPE", SqlDbType.VarChar, 1).Value = buyer.TYPE;
             cmd.Parameters.Add("@CMSN", SqlDbType.Decimal).Value = buyer.CMSN;
             cmd.Parameters.Add("@CNT_PRSN", SqlDbType.VarChar, 30).Value = buyer.CNT_PRSN;
             cmd.Parameters.Add("@PAY_TERM1", SqlDbType.VarChar, 50).Value = buyer.PAY_TERM1;
