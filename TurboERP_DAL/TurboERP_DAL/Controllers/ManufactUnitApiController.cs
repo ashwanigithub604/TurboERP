@@ -39,7 +39,7 @@ namespace TurboERP_DAL.Controllers
                 if (ModelState.IsValid)
                 {
                     var result = new ManufacturingUnit_CRUD().ManufacturingUnit_Insert(ManufactUnit);
-                    if (result != null || result != "")
+                    if (result != string.Empty)
                     {
                         return Request.CreateResponse(HttpStatusCode.OK, result);
                     }
