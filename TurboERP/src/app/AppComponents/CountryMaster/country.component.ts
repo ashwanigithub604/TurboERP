@@ -21,6 +21,7 @@ export class CountryMastComponent {
     selectedvalue:string;
 
 =======
+    selectedvalue:any="0";
 >>>>>>> 03929133d4bdf22aa1968358caee84aa14d73a77
     constructor(private _AppService: AppService, private route: ActivatedRoute, private router: Router, private http: Http
     ) { };
@@ -40,6 +41,7 @@ export class CountryMastComponent {
         this._AppService.get("http://localhost:52148/api/CountryMastApi/GetCountry?Pid=" + PID)
             .subscribe(result => {
                 this.ModelCountry = result;
+                this.selectedvalue=this.ModelCountry.CONT_CODE;
             },
                 error => this.msg = <any>error);
 
@@ -56,6 +58,7 @@ export class CountryMastComponent {
 
 
     SaveCountry() {
+        this.ModelCountry.CONT_CODE=this.selectedvalue; 
         if (this.PID != 0) {
             this._AppService.put("http://localhost:52148/api/CountryMastApi/PutCountry", this.ModelCountry)
                 .subscribe(
