@@ -63,14 +63,14 @@ export class ManufacturingUnitComponent {
                 .subscribe(
                     res => {
                         console.log(res)
-                        if (res != "") {
+                        if (res == null)
+                        {
+                            alert("Code can not be Duplicate");
+                        }
+                        if (res != null) {
                             this.router.navigate(['/ManufacturingUnit']);
                             alert("Saved Successfully");
-                        }
-                        else
-                        {
-                            alert("Something went wrong");
-                        }
+                        }                        
                     }
                 );
 
